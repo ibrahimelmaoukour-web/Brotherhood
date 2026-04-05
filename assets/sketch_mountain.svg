@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#161b22" />
+  <g stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.4">
+    <!-- Mountain Ridgeline -->
+    <path d="M0,250 L100,50 L200,150 L300,80 L400,250" />
+    <path d="M50,150 L150,150" stroke-dasharray="2,2" />
+    <!-- Cracks/Veins -->
+    <path d="M120,80 L140,110 L130,130" stroke="#f0883e" stroke-width="2" />
+    <path d="M280,100 L260,130" stroke="#f0883e" stroke-width="1" />
+    <!-- Scree/Rocks -->
+    <circle cx="100" cy="240" r="5" />
+    <circle cx="250" cy="245" r="4" />
+    <text x="350" y="290" fill="#58a6ff" font-family="JetBrains Mono" font-size="10" text-anchor="end">SURVEY: HIGHLAND / VOLCANIC</text>
+  </g>
+</svg>
