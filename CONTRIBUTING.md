@@ -251,4 +251,4 @@ Violations will result in warnings or removal from the project.
 
 ---
 
-_Questions? Open an issue or reach out to the maintainers._
+_Questions? Open an issue or reach out to the maintainers join the discord now: https://discord.gg/7yEFcvR6Ev._
