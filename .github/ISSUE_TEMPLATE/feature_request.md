@@ -1,0 +1,1 @@
+# ✨ Feature Request\n\n## Description\nWhat new feature would you like to see?\n\n## Problem\nWhat problem does this solve? [optional]\n\n## Proposed Solution\nHow should this work?\n\n## Alternative Solutions\nOther ways to solve this? [optional]\n\n## Additional Context\nWhy is this important? Any examples?\n\n---\n\n_Thank you for your ideas! We value community input._\n"

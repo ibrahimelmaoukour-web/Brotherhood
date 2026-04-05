@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#161b22" />
+  <g stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.4">
+    <!-- Tree Outlines -->
+    <path d="M50,250 L80,100 L110,250" />
+    <path d="M150,250 L180,80 L210,250" />
+    <path d="M250,250 L280,120 L310,250" />
+    <!-- Ground Lines -->
+    <line x1="0" y1="250" x2="400" y2="250" />
+    <path d="M0,260 C100,280 300,240 400,270" stroke-dasharray="4,4" />
+    <!-- Callout Text -->
+    <text x="350" y="290" fill="#58a6ff" font-family="JetBrains Mono" font-size="10" text-anchor="end">SURVEY: TEMPERATE WOODLAND</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#161b22" />
+  <g stroke="#c9d1d9" stroke-width="1.5" fill="none">
+    <!-- Handle -->
+    <rect x="80" y="30" width="40" height="150" stroke="#8b949e" fill="rgba(255,255,255,0.02)" />
+    
+    <!-- Stone Head -->
+    <path d="M70,80 L130,80 L115,110 L85,110 Z" fill="rgba(88, 166, 255, 0.1)" stroke="#58a6ff" />
+    
+    <!-- Binding (X-Braid) -->
+    <path d="M70,85 L130,105" stroke="#3fb950" stroke-width="2" />
+    <path d="M130,85 L70,105" stroke="#3fb950" stroke-width="2" />
+    <path d="M70,100 L130,120" stroke="#3fb950" stroke-width="2" />
+    <path d="M130,100 L70,120" stroke="#3fb950" stroke-width="2" />
+    
+    <!-- Tighten Arrows -->
+    <path d="M60,110 L45,120 M45,115 L45,120 L50,120" stroke="#ff4b2b" stroke-width="2" />
+    <path d="M140,110 L155,120 M155,115 L155,120 L150,120" stroke="#ff4b2b" stroke-width="2" />
+    
+    <!-- Text Labels -->
+    <text x="100" y="20" fill="#8b949e" font-family="JetBrains Mono" font-size="10" text-anchor="middle">HANDLE</text>
+    <text x="100" y="70" fill="#58a6ff" font-family="JetBrains Mono" font-size="10" text-anchor="middle">STONE HEAD</text>
+    <text x="20" y="135" fill="#ff4b2b" font-family="JetBrains Mono" font-size="8">TIGHTEN CORD</text>
+    <text x="140" y="135" fill="#3fb950" font-family="JetBrains Mono" font-size="8">X-BRAID</text>
+  </g>
+</svg>
