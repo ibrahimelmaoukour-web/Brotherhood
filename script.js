@@ -559,6 +559,14 @@ const blueprints = [
         category: 'resource',
         objective: 'Identify and collect knappable stone for all tool-making.',
         evolution: 'Without flint or chert, there are no axes, scrapers, burins, or blades. This is the single most critical resource of the Stone Age.',
+        upgrades: [
+            { name: 'Flake Knife', description: 'Simple flake for cutting', stage: 1 },
+            { name: 'Stone Axe', description: 'Hafted axe for woodworking', stage: 1 },
+            { name: 'End Scraper', description: 'Hide scraping tool', stage: 1 },
+            { name: 'Burin', description: 'Engraving/carving tool', stage: 1 },
+            { name: 'Microliths', description: 'Small blades for composite tools', stage: 2 },
+            { name: 'Polished Bronze', description: 'Metal tools replace stone', stage: 3 }
+        ],
         requirements: [
             { name: 'Hammerstone (for testing)', value: '1 unit' },
             { name: 'Collection bag or container', value: '1 unit' },
@@ -582,6 +590,13 @@ const blueprints = [
         category: 'resource',
         objective: 'Source volcanic glass — the sharpest material available to primitive humans.',
         evolution: 'Obsidian blades are sharper than surgical steel. Where available, it replaces flint as the premium tool-making material.',
+        upgrades: [
+            { name: 'Flake Blades', description: 'Simple obsidian flakes', stage: 1 },
+            { name: 'Pressure Flakes', description: 'Pressure-retouched blades', stage: 1 },
+            { name: 'Surgical Blades', description: 'Ultra-sharp medical tools', stage: 2 },
+            { name: 'Obsidian Glass', description: 'Modern glass alternatives', stage: 3 },
+            { name: 'Fiberglass', description: 'Glass fiber composites', stage: 4 }
+        ],
         requirements: [
             { name: 'Access to volcanic region', value: 'Essential' },
             { name: 'Hammerstone', value: '1 unit' },
@@ -644,6 +659,14 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Harvest dense, strong wood for tool handles, shafts, and structural components.',
         evolution: 'Hardwood handles multiply the effectiveness of every stone tool. A haftered axe is 10x more efficient than a hand-held stone.',
+        upgrades: [
+            { name: 'Green Wood', description: 'Freshly harvested wood', stage: 1 },
+            { name: 'Seasoned Wood', description: 'Air-dried for construction', stage: 1 },
+            { name: 'Glu-Lam Beam', description: 'Glued laminated wood', stage: 3 },
+            { name: 'Plywood', description: 'Layered wood sheets', stage: 3 },
+            { name: 'MDF', description: 'Medium-density fiberboard', stage: 4 },
+            { name: 'Composites', description: 'Engineered wood products', stage: 5 }
+        ],
         requirements: [
             { name: 'Stone Axe', value: 'For felling trees' },
             { name: 'Knowledge of wood types', value: 'Oak, Ash, Hickory, Maple' },
@@ -706,6 +729,14 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Process animal tendons into the strongest natural cordage available.',
         evolution: 'Sinew is stronger than any plant fiber. It is used for bow backing, tool lashing, sewing thread, and atlatl binding.',
+        upgrades: [
+            { name: 'Plant Fiber Cordage', description: 'Basic plant-based rope', stage: 1 },
+            { name: 'Sinew Thread', description: 'Split tendon fibers', stage: 1 },
+            { name: 'Braided Rope', description: 'Multiple-strand rope', stage: 2 },
+            { name: 'Laid Rope', description: 'Twisted rope construction', stage: 2 },
+            { name: 'Cable', description: 'Heavy-duty rope', stage: 3 },
+            { name: 'Wire', description: 'Metal wire', stage: 4 }
+        ],
         requirements: [
             { name: 'Animal Leg Tendons (deer, elk)', value: 'From butchered game' },
             { name: 'Drying area', value: 'Shaded, ventilated' },
@@ -728,6 +759,13 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Collect tree sap for adhesive, waterproofing, and fire-starting.',
         evolution: 'Pine resin is the superglue of the Stone Age. Mixed with charcoal and beeswax, it creates an adhesive stronger than many modern glues.',
+        upgrades: [
+            { name: 'Raw Resin', description: 'Collected tree sap', stage: 1 },
+            { name: 'Pine Pitch Glue', description: 'Charcoal + resin adhesive', stage: 1 },
+            { name: 'Birch Tar', description: 'Distilled adhesive', stage: 2 },
+            { name: 'Pine Tar', description: 'Wood preservation tar', stage: 2 },
+            { name: 'Synthetic Resins', description: 'Modern adhesives', stage: 5 }
+        ],
         requirements: [
             { name: 'Pine or conifer trees', value: 'With visible sap flow' },
             { name: 'Collection container', value: 'Shell, bark, or clay vessel' },
@@ -750,6 +788,13 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Locate and process clay for construction, daub, and early container-making.',
         evolution: 'Clay is the foundation of construction (daub), waterproofing, and eventually pottery. It transforms from soft earth to hard ceramic when fired.',
+        upgrades: [
+            { name: 'Wattle & Daub', description: 'Mud-wall construction', stage: 1 },
+            { name: 'Hand-built Pottery', description: 'Coil/pinch pottery containers', stage: 1 },
+            { name: 'Potter\'s Wheel', description: 'Fast wheel thrown pottery', stage: 2 },
+            { name: 'Ceramic Glazes', description: 'Glazed pottery', stage: 3 },
+            { name: 'Porcelain', description: 'High-fire refined ceramics', stage: 4 }
+        ],
         requirements: [
             { name: 'Riverbank or exposed earth', value: 'Fine-textured deposits' },
             { name: 'Water', value: 'For processing' },
@@ -765,16 +810,24 @@ id: 'sandstone',
         videoUrl: 'https://youtu.be/AUhOBxVFcFk?si=2-tXDnEzRWwPO--x'
     },
     {
-        id: 'animal-hide',
+id: 'animal-hide',
         name: 'Animal Hide (Raw)',
         stage: 1,
         icon: '🟫',
         category: 'resource',
         objective: 'Process hunted animal skins into raw hide for leather production.',
         evolution: 'Raw hide is the raw material for leather — the first engineered material. It enables clothing, shelter, and containers.',
+        upgrades: [
+            { name: 'Raw Hide', description: 'Unprocessed animal skin', stage: 1 },
+            { name: 'Brain-tanned Leather', description: 'Soft, workable leather', stage: 1 },
+            { name: 'Smoked Leather', description: ' Durable, water-resistant leather', stage: 1 },
+            { name: 'Chamois', description: 'Oil-tanned soft leather', stage: 2 },
+            { name: 'Tanned Leather', description: 'Vegetable-tanned leather', stage: 2 },
+            { name: 'tanned Leather', description: 'Chrome-tanned modern leather', stage: 4 }
+        ],
         requirements: [
             { name: 'Hunted animal (deer, elk, bison)', value: 'Fresh kill' },
-            { name: 'Flint knife', value: 'For skinning' },
+            { name: 'Flint Knife', value: 'For skinning' },
             { name: 'End Scraper', value: 'For fleshing' },
             { name: 'Salt or smoke', value: 'For preservation' }
         ],
@@ -795,6 +848,13 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Harvest and process plant fibers for cordage, weaving, and tinder.',
         evolution: 'Plant fiber is the foundation of cordage — and without cordage, there is no bow drill, no hafted axe, no atlatl, and no sewing.',
+        upgrades: [
+            { name: 'Raw Fibers', description: 'Processed plant fibers', stage: 1 },
+            { name: 'Twisted Cord', description: 'Two-ply cordage', stage: 1 },
+            { name: 'Woven Cloth', description: 'Loom-woven fabric', stage: 2 },
+            { name: 'Cotton Thread', description: 'Spun cotton fiber', stage: 2 },
+            { name: 'Synthetic Fiber', description: 'Nylon, polyester', stage: 4 }
+        ],
         requirements: [
             { name: 'Nettle stalks / Yucca leaves / Cedar bark', value: 'Seasonal harvest' },
             { name: 'Water', value: 'For retting (soaking)' },
@@ -817,6 +877,13 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Gather iron oxide pigments for paint, body art, tanning, and symbolic communication.',
         evolution: 'Ochre is the first pigment. It enables cave art, body decoration, hide tanning, and the symbolic communication that defines human culture.',
+        upgrades: [
+            { name: 'Raw Ochre', description: 'Ground iron oxide pigment', stage: 1 },
+            { name: 'Fat-bound Pigment', description: 'Ochre mixed with fat', stage: 1 },
+            { name: 'Mineral Paint', description: 'Processed earth pigments', stage: 2 },
+            { name: 'Lead White', description: 'Synthetic white pigment', stage: 3 },
+            { name: 'Synthetic Dyes', description: 'Modern chemical dyes', stage: 4 }
+        ],
         requirements: [
             { name: 'Iron-rich soil or rock', value: 'Red or yellow deposits' },
             { name: 'Grinding stone', value: 'For powdering' },
@@ -839,6 +906,12 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Produce high-carbon fuel by burning wood in a low-oxygen environment.',
         evolution: 'Charcoal burns hotter and cleaner than wood. It is the essential fuel for pottery firing, metal smelting, and glass-making.',
+        upgrades: [
+            { name: 'Wood Coal', description: 'Slow-burned coal from heap', stage: 1 },
+            { name: 'Kiln Charcoal', description: 'Controlled charcoal production', stage: 1 },
+            { name: 'Coke', description: 'Smelter fuel from coal', stage: 3 },
+            { name: 'Anthracite', description: 'High-carbon coal for industry', stage: 3 }
+        ],
         requirements: [
             { name: 'Hardwood Logs', value: '200+ kg' },
             { name: 'Earth Kiln Site', value: 'Well-drained, near wood supply' },
@@ -862,6 +935,12 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Mold and fire clay into standardized, durable building blocks.',
         evolution: 'Fired bricks enable permanent structures: kilns, furnaces, walls, and eventually cities. They are the backbone of civilization.',
+        upgrades: [
+            { name: 'Sun-Dried Bricks', description: 'Air-dried mud bricks for temporary structures', stage: 1 },
+            { name: 'Fired Clay Bricks', description: 'Kiln-fired bricks for permanent construction', stage: 1 },
+            { name: 'Roman Bricks', description: 'Standardized Roman bricks with kiln technology', stage: 3 },
+            { name: 'Concrete', description: 'Roman concrete (pozzolan) for massive structures', stage: 4 }
+        ],
         requirements: [
             { name: 'River Clay', value: 'Processed and cleaned' },
             { name: 'Sand or Grog (Crushed pottery)', value: '20% mix to prevent cracking' },
@@ -887,6 +966,14 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Locate and collect potable water from springs, rivers, and rain — the most essential resource for all life and craft.',
         evolution: 'Water is the foundation of all civilization. Every settlement requires a reliable freshwater source for drinking, cooking, processing materials, and hygiene.',
+        upgrades: [
+            { name: 'Raw Water', description: 'Collected from natural sources', stage: 1 },
+            { name: 'Filtered Water', description: 'Sand/charcoal filtered', stage: 1 },
+            { name: 'Boiled Water', description: 'Heat-purified water', stage: 1 },
+            { name: 'Distilled Water', description: 'Condensed steam water', stage: 3 },
+            { name: 'Filtered (Modern)', description: 'Activated carbon filters', stage: 4 },
+            { name: 'RO Water', description: 'Reverse osmosis water', stage: 5 }
+        ],
         requirements: [
             { name: 'Water source (spring, river, rain)', value: 'Clean, flowing' },
             { name: 'Collection containers', value: 'Baskets, shells, or clay pots' },
@@ -979,6 +1066,14 @@ id: 'sandstone',
         category: 'resource',
         objective: 'Harvest beeswax for adhesive and waterproofing, and honey for food and medicine.',
         evolution: 'Beeswax strengthens adhesives and waterproofs containers. Honey is the primary sweetener and an antiseptic wound treatment.',
+        upgrades: [
+            { name: 'Raw Honey', description: 'Wild honeycomb honey', stage: 1 },
+            { name: 'Rendered Wax', description: 'Processed beeswax cakes', stage: 1 },
+            { name: 'Honeycomb', description: 'Fresh comb with honey', stage: 1 },
+            { name: 'Beeswax Candles', description: 'Molded wax candles', stage: 2 },
+            { name: 'Refined Sugar', description: 'Crystallized/processed sugar', stage: 3 },
+            { name: 'HFCS', description: 'High-fructose corn syrup', stage: 5 }
+        ],
         requirements: [
             { name: 'Wild bee hive', value: 'Located in tree or rock' },
             { name: 'Smoke (for calming bees)', value: 'Smoldering grass' },
@@ -2958,6 +3053,24 @@ function selectBlueprint(id) {
                     <p>${bp.evolution || 'No evolution defined.'}</p>
                 </div>
             </div>
+
+            ${bp.upgrades ? `
+            <div class="upgrades-section" style="background:var(--bg-secondary); border-radius:12px; padding:1.5rem; margin:1.5rem 0; border:1px solid var(--blueprint-border);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                    <h4 style="margin:0; display:flex; align-items:center; gap:0.5rem;">⬆️ Upgrades & Evolution</h4>
+                    <span style="font-size:0.75rem; color:var(--text-secondary);">${bp.upgrades.length} upgrades</span>
+                </div>
+                <div class="upgrades-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:0.75rem;">
+                    ${bp.upgrades.map((upgrade, index) => `
+                        <div class="upgrade-card" style="background:var(--bg-primary); border-radius:8px; padding:1rem; border:1px solid var(--stage-${upgrade.stage}); position:relative; overflow:hidden;">
+                            <div style="position:absolute; top:8px; right:8px; font-size:0.7rem; background:var(--stage-${upgrade.stage}); color:#fff; padding:2px 8px; border-radius:12px; font-family:'JetBrains Mono';">S${upgrade.stage}</div>
+                            <div style="font-weight:600; margin-bottom:0.3rem; padding-right:40px;">${upgrade.name}</div>
+                            <div style="font-size:0.8rem; color:var(--text-secondary);">${upgrade.description}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ''}
 
             ${bp.videoUrl ? `
             <div class="video-section">
