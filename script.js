@@ -1,9 +1,11 @@
 const STAGES = {
-    1: { id: 1, name: 'Stone & Fire', period: 'The Survival Dawn', icon: '🪨', description: 'Master the basics: shaping stone, making fire, and surviving with raw materials from the earth.' },
-    2: { id: 2, name: 'Wood & Fiber', period: 'The Craft Age', icon: '🌲', description: 'Harness organic materials for shelter, cordage, and tools.' },
-    3: { id: 3, name: 'Clay & Metal', period: 'The Thermal Age', icon: '🔥', description: 'Fire ceramics and smelt the first metals from raw ore.' },
-    4: { id: 4, name: 'Machine & Power', period: 'The Mechanical Age', icon: '⚙️', description: 'Build mechanisms that convert natural forces into work.' },
-    5: { id: 5, name: 'Electricity', period: 'The Electromagnetic Age', icon: '⚡', description: 'Harness the electron and build the modern world.' }
+    1: { id: 1, name: 'Paleolithic Era', period: '2.5 Ma – 12,000 BCE', icon: '🔥', description: 'Hunter-gatherers master fire, stone tools, bone needles, and the first symbolic art. Every technique invented here becomes the foundation of all civilization.' },
+    2: { id: 2, name: 'Neolithic Revolution', period: '12,000 BCE – 4,000 BCE', icon: '🌾', description: 'Humans stop chasing food and start growing it. Settled agriculture, pottery, weaving, and permanent mud-brick villages transform nomadic bands into communities.' },
+    3: { id: 3, name: 'Rise of Cities & Bronze Age', period: '4,000 BCE – 1,200 BCE', icon: '🏛️', description: 'Copper and tin are combined to forge bronze — harder than any stone. The wheel is invented, writing is born, cities emerge, and trade networks span continents.' },
+    4: { id: 4, name: 'The Classical Age', period: '1,200 BCE – 500 CE', icon: '⚔️', description: 'Iron replaces bronze. Rome builds roads, aqueducts, and concrete that survives 2,000 years. Greek philosophy births science. The foundations of engineering are laid.' },
+    5: { id: 5, name: 'Post-Classical & Middle Ages', period: '500 CE – 1,500 CE', icon: '⚙️', description: 'Windmills harness wind, mechanical clocks track time, the compass enables ocean navigation, gunpowder changes warfare, and Gutenberg\'s printing press makes knowledge cheap.' },
+    6: { id: 6, name: 'The Industrial Revolution', period: '1,760 CE – 1,840 CE', icon: '🏭', description: 'James Watt\'s steam engine converts heat into mechanical power. Coal drives factories. Bessemer steel revolutionizes construction. Railways connect nations. Faraday discovers electromagnetism.' },
+    7: { id: 7, name: 'The Atomic & Space Age', period: '1,945 CE – Present', icon: '🚀', description: 'Fission splits the atom. Transistors shrink computers from rooms to chips. The internet connects humanity. Satellites orbit Earth. Rockets escape gravity. Solar cells harvest the sun.' }
 };
 
 const blueprints = [
@@ -33,7 +35,7 @@ const blueprints = [
             { text: 'Split the hardwood handle to create a slot. Insert the axe head and pack pine resin mixed with crushed charcoal into the gap. Wrap tightly with leather and let the resin cure for 24 hours.' },
             { text: 'Test the axe on a green branch. The edge should bite cleanly without chipping. Resharpen by removing small flakes from the cutting edge with the antler billet.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/b817-P9n-6Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'end-scraper',
@@ -57,7 +59,7 @@ const blueprints = [
             { text: 'Push (don\'t slice) the scraper across the hide to remove flesh and fat. The steep angle prevents cutting through the hide.' },
             { text: 'Resharpen by removing small flakes from the working edge. The tool is resharpenable hundreds of times before it becomes too small.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/W5u4ttosEmM'
+        videoUrl: 'https://youtu.be/yMRxgW5EZUk?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'burin',
@@ -79,7 +81,7 @@ const blueprints = [
             { text: 'Use the burin edge to carve grooves in bone, antler, or wood. The straight edge cuts clean channels for tool handles, harpoon barbs, or decorative art.' },
             { text: 'The burin can be resharpened by striking additional spalls from the same edge.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'microlith-blade',
@@ -105,7 +107,7 @@ const blueprints = [
             { text: 'Create composite tools: sickle (multiple microliths in a curved wood handle), spear (single microlith in bone point), or arrow (triangular microlith in shaft).' },
             { text: 'When a microlith breaks, simply pry it out and insert a new one — the tool body is reused.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'atlatl',
@@ -130,7 +132,7 @@ const blueprints = [
             { text: 'Rest the dart in the groove, hook engaging the base. Grip the atlatl with the dart aligned along your forearm.' },
             { text: 'Throw with an overhand motion, whipping the atlatl forward. The lever action multiplies velocity — darts travel 30–50m with lethal force.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'fire-plough',
@@ -154,7 +156,7 @@ const blueprints = [
             { text: 'The friction-heated dust becomes an ember (glowing coal). Carefully transfer it to the tinder bundle.' },
             { text: 'Cup the bundle and blow gently with steady, increasing breath until flame erupts. Feed small twigs to build a fire.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'bow-drill',
@@ -182,7 +184,7 @@ const blueprints = [
             { text: 'After 30–60 seconds, dark smoke and black coal dust appear in the notch. Continue until the coal glows.' },
             { text: 'Tap the hearth board to release the coal onto bark or leaf. Transfer to tinder bundle and blow into flame.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'bone-needle',
@@ -206,7 +208,7 @@ const blueprints = [
             { text: 'Thread with sinew (split into fine strands) or plant fiber. Use the needle to stitch hide garments, shelter covers, or baskets.' },
             { text: 'An awl is the same process but without an eye — used for piercing holes in leather before stitching.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'fish-hook',
@@ -230,7 +232,7 @@ const blueprints = [
             { text: 'Polish on abrasive stone until smooth. Rough hooks can cut the line.' },
             { text: 'Tie to cordage, bait with insects or small fish, and cast into rivers or coastal waters.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'harpoon',
@@ -255,7 +257,7 @@ const blueprints = [
             { text: 'Attach a detachable line: tie cordage to the harpoon head so it can separate from the shaft upon impact, preventing the animal from breaking the shaft.' },
             { text: 'The hunter throws the harpoon, the head embeds in the prey, the shaft detaches, and the line allows retrieval.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'mortar-pestle',
@@ -278,7 +280,7 @@ const blueprints = [
             { text: 'Place dried grains, nuts, or seeds in the mortar. Grind with a circular or pounding motion using the pestle.' },
             { text: 'Sift the ground material through woven fiber to separate fine flour from coarse bran. The flour is used for bread, porridge, or flatbreads.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'quern-stone',
@@ -301,7 +303,7 @@ const blueprints = [
             { text: 'Pour grain onto the quern. Slide the rubber back and forth, grinding the grain into flour. The coarse sandstone surface acts like sandpaper.' },
             { text: 'Saddle querns are the precursor to rotary querns and eventually millstones — the same principle scaled up over millennia.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'sickle',
@@ -326,7 +328,7 @@ const blueprints = [
             { text: 'Reinforce by wrapping sinew or cordage around the blades and handle. Let the resin cure for 24 hours.' },
             { text: 'Harvest grain by grasping stalks with one hand and slicing upward with the sickle in a sweeping motion. The silica in grain stalks creates a "gloss" on the blades over time — this polish is used by archaeologists to identify ancient sickles.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'stone-lamp',
@@ -350,7 +352,7 @@ const blueprints = [
             { text: 'Twist a small bundle of plant fiber or moss into a wick. Place one end in the fat, the other protruding from the spout.' },
             { text: 'Light the wick. A stone lamp burns for 4–10 hours depending on fuel volume. These lamps were used in Lascaux and other Paleolithic cave art sites.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     // === SKILLS ===
     {
@@ -375,7 +377,7 @@ const blueprints = [
             { text: 'The key is reading the stone — knowing where the next flake will go based on the angle of impact, the platform edge, and existing fracture lines.' },
             { text: 'Every tool in Stage 1 requires knapping: the axe (bifacial reduction), scraper (steep edge retouch), burin (spall removal), microliths (bladelet production and snapping), and sickle blades (trapezoidal shaping).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'fire-making',
@@ -399,7 +401,7 @@ const blueprints = [
             { text: 'The skill isn\'t just the tools — it\'s knowing your materials. Cedar, cottonwood, yucca, and willow are the best hearth boards. The spindle should be slightly harder than the hearth.' },
             { text: 'Fire making is used by: everyone, every day. It\'s the prerequisite for pottery (firing), metal (smelting), and food (cooking).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'hide-working',
@@ -423,7 +425,7 @@ const blueprints = [
             { text: 'Leather is used for: clothing (tunics, moccasins, cloaks), shelter (tipi covers, door flaps), containers (bags, water bottles), and tool bindings (axe hafts, atlatl grips).' },
             { text: 'Tools used in this skill: End Scraper (fleshing), Bone Needle & Awl (stitching), Flint Knife (cutting patterns).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/W5u4ttosEmM'
+        videoUrl: 'https://youtu.be/yMRxgW5EZUk?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'composite-tools',
@@ -448,7 +450,7 @@ const blueprints = [
             { text: 'Examples of composite tools: Sickle (8–12 microliths in a curved wood handle), Atlatl (wood shaft + antler hook + sinew lashing), Harpoon (bone point + microlith barbs + detachable line).' },
             { text: 'The genius of composite tools: when a stone blade breaks, you replace just that blade — not the entire tool.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'hunting-fishing',
@@ -473,7 +475,7 @@ const blueprints = [
             { text: 'After a successful hunt, the stone axe is used for butchering, and the end scraper processes the hide.' },
             { text: 'Tools used: Atlatl (hunting), Harpoon (aquatic hunting), Fish Hook (fishing), Stone Axe (butchering), End Scraper (hide processing).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'food-processing',
@@ -498,7 +500,7 @@ const blueprints = [
             { text: 'This skill is the direct precursor to the Neolithic agricultural revolution. Once people could process grain efficiently, they had incentive to grow it.' },
             { text: 'Tools used: Sickle (harvesting), Mortar & Pestle (small-scale grinding), Quern Stone (large-scale grinding).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'bone-carving',
@@ -522,7 +524,7 @@ const blueprints = [
             { text: 'The burin is the key tool — its straight, durable chisel edge cuts clean channels in bone that a flint blade would shatter.' },
             { text: 'Tools used: Burin (carving grooves/barbs), Stone Axe (splitting bone), Abrasive Stone (smoothing).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/qWA5nxSAK-c?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'sewing',
@@ -546,7 +548,7 @@ const blueprints = [
             { text: 'Sewn products: tailored tunics and cloaks (warmth), stitched tipi covers (shelter), water bags (containers), moccasins (footwear).' },
             { text: 'Tools used: Bone Needle (stitching), Bone Awl (pre-piercing holes).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
     // === RESOURCES ===
     {
@@ -570,7 +572,7 @@ const blueprints = [
             { text: 'Collect stones in a range of sizes: large nodules for axe blanks, medium pieces for scrapers and burins, small flakes for microliths.' },
             { text: 'Store your collection in a dry place. Wet stone can freeze and fracture in cold climates.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/rgfLMOPAAk4?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'obsidian',
@@ -592,7 +594,7 @@ const blueprints = [
             { text: 'An obsidian blade edge is approximately 3 nanometers thick — sharper than any steel scalpel.' },
             { text: 'Where obsidian is available, it was traded over thousands of kilometers in the Stone Age. It is a high-value trade commodity.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/NE4cBbn_GGc?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'basalt',
@@ -612,16 +614,16 @@ const blueprints = [
             { text: 'Large flat basalt slabs serve as grinding surfaces (quern bases) and workbenches.' },
             { text: 'Basalt is harder than most other stones — it is the preferred material for hammerstones used in knapping.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/jB58f7I0sL4'
+        videoUrl: 'https://youtu.be/RfhZfQ1EOmU?si=2-tXDnEzRWwPO--x'
     },
     {
-        id: 'sandstone',
+id: 'sandstone',
         name: 'Sandstone',
         stage: 1,
         icon: '🟫',
         category: 'resource',
         objective: 'Collect abrasive sandstone for grinding, polishing, and smoothing other materials.',
-        evolution: 'Sandstone is the sandpaper of the Stone Age. Without it, nothing can be smoothed, sharpened, or polished.',
+        evolution: 'Sandstone is the sandpaper of the Stone Age. Without it, nothing can be sharpened, or polished.',
         requirements: [
             { name: 'Sandstone outcrops', value: 'Varied grit sizes' },
             { name: 'Selection by grit', value: 'Coarse for shaping, fine for polishing' }
@@ -632,7 +634,7 @@ const blueprints = [
             { text: 'Fine sandstone is used for polishing: finishing bone needles, smoothing fish hooks, refining tool edges.' },
             { text: 'Sandstone slabs also serve as paint palettes (ochre grinding) and sharpening stones for maintained edges.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/jB58f7I0sL4'
+        videoUrl: 'https://youtu.be/VMFIzjFYnlU?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'hardwood',
@@ -653,7 +655,7 @@ const blueprints = [
             { text: 'Air-dry (season) wood for several weeks before use. Green wood will shrink and crack as it dries, loosening tool hafts.' },
             { text: 'Hardwood is used for: axe handles, atlatl shafts, spear shafts, quern legs, digging sticks, and structural frames.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/1Xfl5-ru50o?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'softwood',
@@ -673,7 +675,7 @@ const blueprints = [
             { text: 'Cut hearth boards 20–30 cm long, 2 cm thick, flat on both sides.' },
             { text: 'Softwood bark and dry inner fibers also serve as excellent tinder for catching embers.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/5kDLXa7gtjg?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'antler-bone',
@@ -694,7 +696,7 @@ const blueprints = [
             { text: 'Animal long bones (deer, elk, bison) are split longitudinally to create blanks for needles, hooks, harpoons, and awls.' },
             { text: 'Bone is ground and polished on sandstone to create smooth, functional tools. The burin carves fine details.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/k9pL5m4zN8Q'
+        videoUrl: 'https://youtu.be/tr811K5yZrA?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'sinew',
@@ -716,7 +718,7 @@ const blueprints = [
             { text: 'To use: soak dried sinew in water until pliable, then split into individual fibers. These fibers are incredibly strong — stronger than steel of the same thickness.' },
             { text: 'Sinew is used for: bow backing (lamination), tool haft binding, sewing thread, atlatl lashing, and fish line.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/EAt0pkag9YY?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'pine-resin',
@@ -738,7 +740,7 @@ const blueprints = [
             { text: 'Heat the mixture gently until it flows. Apply to tool joints, wrap with cordage, and let cool — it hardens into a rock-solid bond.' },
             { text: 'Pine resin is also waterproof (seals containers and shelters) and flammable (excellent fire starter).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/dluRhobAaco?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'clay',
@@ -760,7 +762,7 @@ const blueprints = [
             { text: 'Clay is used for: daub (wattle-and-daub walls), waterproofing containers, early hand-built pottery, and furnace linings.' },
             { text: 'When dried and fired, clay becomes ceramic — permanently hard and waterproof.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/L8zE5l46_u0'
+        videoUrl: 'https://youtu.be/AUhOBxVFcFk?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'animal-hide',
@@ -783,7 +785,7 @@ const blueprints = [
             { text: 'Raw hide is processed into leather through stretching, braining (applying animal brain paste), and smoking.' },
             { text: 'Leather products: clothing (tunics, cloaks, moccasins), shelter (tipi covers, door flaps), containers (bags, water bottles).' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/W5u4ttosEmM'
+        videoUrl: 'https://youtu.be/rcFJOcppQa4?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'plant-fiber',
@@ -805,7 +807,7 @@ const blueprints = [
             { text: 'Process fibers by twisting two bundles in opposite directions (reverse-wrap technique) to create strong cordage.' },
             { text: 'Plant fiber cordage is used for: bow drill strings, axe haft binding, atlatl lashing, sewing thread, basket weaving, and fish line.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/C5FVJVcEJco?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'ochre',
@@ -827,7 +829,7 @@ const blueprints = [
             { text: 'Uses: cave art (Lascaux, Chauvet), body decoration, hide tanning (ochre-tanned leather is more durable), and symbolic communication.' },
             { text: 'Ochre use dates back 300,000+ years — it is one of the earliest evidences of symbolic human behavior.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/ZEl-Y1NvBVI'
+        videoUrl: 'https://youtu.be/8kX2WvMnM3Q?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'charcoal',
@@ -850,7 +852,7 @@ const blueprints = [
             { text: 'Let the mound cool for 24 hours before opening. The result is pure charcoal, not ash.' },
             { text: 'Charcoal is used for: high-heat pottery kilns, iron smelting bloomeries, black pigment (drawing), and water filtration.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/xvCjJqCRNzA'
+        videoUrl: 'https://youtu.be/yxEupzz8mSY?si=2-tXDnEzRWwPO--x'
     },
     {
         id: 'clay-bricks',
@@ -874,7 +876,1594 @@ const blueprints = [
             { text: 'Fire the kiln slowly over 24–48 hours. The bricks should reach a cherry-red color and ring when struck.' },
             { text: 'Fired bricks are waterproof and can withstand 1000°C+. They are used for: kiln walls, furnace linings, house foundations, and paved floors.' }
         ],
-        videoUrl: 'https://www.youtube.com/embed/L8zE5l46_u0'
+        videoUrl: 'https://youtu.be/PjBTKe8Y44c?si=2-tXDnEzRWwPO--x'
+    },
+    // === MOTHER EARTH NATURAL RESOURCES ===
+    {
+        id: 'fresh-water',
+        name: 'Fresh Water',
+        stage: 1,
+        icon: '💧',
+        category: 'resource',
+        objective: 'Locate and collect potable water from springs, rivers, and rain — the most essential resource for all life and craft.',
+        evolution: 'Water is the foundation of all civilization. Every settlement requires a reliable freshwater source for drinking, cooking, processing materials, and hygiene.',
+        requirements: [
+            { name: 'Water source (spring, river, rain)', value: 'Clean, flowing' },
+            { name: 'Collection containers', value: 'Baskets, shells, or clay pots' },
+            { name: 'Knowledge of safe sources', value: 'Avoid stagnant water' }
+        ],
+        steps: [
+            { text: 'Locate freshwater sources: springs (underground water emerging at surface), rivers/streams, rainwater collection, or dew.' },
+            { text: 'Test water quality: flowing water is safer than stagnant water. Clear water with visible bottom is preferable.' },
+            { text: 'Collect water in containers: woven baskets lined with clay or pitch, large shells, animal stomachs, or hollowed gourds.' },
+            { text: 'If water is cloudy or muddy, filter through layers of sand, charcoal, and cloth (if available) to clarify.' },
+            { text: 'Boiling water (using hot stones dropped into containers) kills pathogens — the earliest water purification method.' },
+            { text: 'Water is used for: drinking, cooking, processing clay, retting plant fibers, tanning hides, and cleaning tools and materials.' }
+        ],
+        videoUrl: 'https://youtu.be/xzJ85rbx7QA?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'shells',
+        name: 'Shells (Marine & Freshwater)',
+        stage: 1,
+        icon: '🐚',
+        category: 'resource',
+        objective: 'Collect shells for tools, containers, ornaments, and trade items.',
+        evolution: 'Shells are among the earliest containers, tools, and ornaments. They serve as scoops, bowls, beads, and currency in trade networks.',
+        requirements: [
+            { name: 'Access to water bodies', value: 'Ocean, river, lake' },
+            { name: 'Collection knowledge', value: 'Identify useful shell types' },
+            { name: 'Stone tool (for drilling)', value: 'For making holes' }
+        ],
+        steps: [
+            { text: 'Collect shells from beaches, riverbeds, and lake shores. Look for large, intact specimens without cracks.' },
+            { text: 'Large shells (conch, clam, mussel) serve as containers, scoops, and mixing bowls. Clean thoroughly before use.' },
+            { text: 'Small, colorful shells are drilled with a stone or bone drill to create beads for necklaces, bracelets, and trade items.' },
+            { text: 'Shell edges can be sharpened on sandstone to create cutting tools — shell knives are effective for soft materials.' },
+            { text: 'Shell trumpets (large conch shells with the tip removed) are among the earliest musical instruments.' },
+            { text: 'Shells were used as currency in many ancient cultures — a universal trade item across tribes and regions.' }
+        ],
+        videoUrl: 'https://youtu.be/ZlQlGyK2u7I?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'feathers',
+        name: 'Feathers',
+        stage: 1,
+        icon: '🪶',
+        category: 'resource',
+        objective: 'Collect bird feathers for fletching, insulation, decoration, and ceremonial use.',
+        evolution: 'Feathers enable accurate arrows (fletching), provide lightweight insulation, and serve as status symbols and ceremonial objects.',
+        requirements: [
+            { name: 'Bird feathers (various species)', value: 'Flight feathers, down feathers' },
+            { name: 'Storage container', value: 'Dry, protected place' }
+        ],
+        steps: [
+            { text: 'Collect feathers from molted bird plumage or harvested birds. Different feathers serve different purposes.' },
+            { text: 'Flight feathers (from wings and tail) are stiff and curved — ideal for arrow fletching. Attach 2–3 feathers to arrow shafts with sinew and resin.' },
+            { text: 'Down feathers (soft, fluffy under-layer) provide excellent insulation. Stuff into clothing, bedding, or shelter walls for warmth.' },
+            { text: 'Decorative feathers (brightly colored or rare) are used in headdresses, ceremonial objects, and status symbols.' },
+            { text: 'Feathers are lightweight, water-resistant, and durable — they enhance hunting equipment, comfort, and cultural expression.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'natural-dyes',
+        name: 'Natural Dyes & Pigments',
+        stage: 1,
+        icon: '🎨',
+        category: 'resource',
+        objective: 'Extract colors from plants, minerals, and earth for body paint, fabric dye, and art.',
+        evolution: 'Natural dies enable personal adornment, cultural identity, artistic expression, and later, textile coloring and trade goods.',
+        requirements: [
+            { name: 'Ochre (red/yellow)', value: 'Iron oxide deposits' },
+            { name: 'Charcoal (black)', value: 'From fire pits' },
+            { name: 'Clay (white)', value: 'Kaolin or white clay' },
+            { name: 'Plant materials', value: 'Berries, bark, leaves' },
+            { name: 'Mordant (fixative)', value: 'Urine, clay, or wood ash' }
+        ],
+        steps: [
+            { text: 'Red/Yellow: Grind ochre into powder. Mix with water for paint, or with animal fat for waterproof pigment.' },
+            { text: 'Black: Collect charcoal from fire pits. Grind finely and mix with water or fat.' },
+            { text: 'White: Use kaolin clay or white chalk. Grind and mix with water for paint.' },
+            { text: 'Green/Brown/Blue: Boil or crush berries, leaves, bark, and roots. Different plants yield different colors — experimentation is key.' },
+            { text: 'Mordant (fixative): Add urine, clay, or wood ash to plant dyes to help colors bind to fabric or skin and last longer.' },
+            { text: 'Dyes are used for: body paint (ceremonial, warfare, status), fabric and leather coloring, cave art, and pottery decoration.' }
+        ],
+        videoUrl: 'https://youtu.be/_arv-ZWmbUc?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'beeswax-honey',
+        name: 'Beeswax & Honey',
+        stage: 1,
+        icon: '🍯',
+        category: 'resource',
+        objective: 'Harvest beeswax for adhesive and waterproofing, and honey for food and medicine.',
+        evolution: 'Beeswax strengthens adhesives and waterproofs containers. Honey is the primary sweetener and an antiseptic wound treatment.',
+        requirements: [
+            { name: 'Wild bee hive', value: 'Located in tree or rock' },
+            { name: 'Smoke (for calming bees)', value: 'Smoldering grass' },
+            { name: 'Collection containers', value: 'Shells, bark, or clay pots' },
+            { name: 'Protective covering', value: 'Thick clothing, smoke' }
+        ],
+        steps: [
+            { text: 'Locate wild bee hives in tree cavities, rock crevices, or underground. Follow bee flight paths at dawn/dusk.' },
+            { text: 'Use smoke (smoldering grass or wood) to calm bees before opening the hive. Work quickly and carefully.' },
+            { text: 'Harvest honeycomb — scrape honey into containers. Honey is food, medicine (antiseptic), and fermentable into mead.' },
+            { text: 'Collect beeswax by melting honeycomb over low heat. Strain to remove impurities.' },
+            { text: 'Beeswax uses: mixed with pine resin for stronger adhesive, waterproofing containers and shelters, candle-making, and leather conditioning.' }
+        ],
+        videoUrl: 'https://youtu.be/EAt0pkag9YY?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'moss-lichen',
+        name: 'Moss & Lichen',
+        stage: 1,
+        icon: '🌱',
+        category: 'resource',
+        objective: 'Gather moss and lichen for tinder, insulation, bandages, and dye.',
+        evolution: 'Moss and lichen are versatile resources — fire tinder, wound dressings, insulation, and natural dye sources.',
+        requirements: [
+            { name: 'Moss (dry)', value: 'From trees, rocks, forest floor' },
+            { name: 'Lichen', value: 'Various species on trees and rocks' }
+        ],
+        steps: [
+            { text: 'Collect dry moss from forest floors, tree trunks, and shaded rocks. Dry moss is excellent tinder for catching fire embers.' },
+            { text: 'Lichen (crusty growths on trees and rocks) is also highly flammable — collect orange, yellow, and gray varieties.' },
+            { text: 'Fresh sphagnum moss is absorbent and antiseptic — use as wound dressings and bandages in emergencies.' },
+            { text: 'Moss and lichen provide insulation: stuff into clothing, bedding, or shelter walls for warmth.' },
+            { text: 'Some lichens produce natural dyes: boil to extract yellow, orange, brown, and purple colors for fabric and body paint.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'natural-cordage-plants',
+        name: 'Natural Cordage Plants (Willow Bark, Grapevine)',
+        stage: 1,
+        icon: '🌿',
+        category: 'resource',
+        objective: 'Harvest flexible bark and vines for immediate-use cordage without extensive processing.',
+        evolution: 'Willow bark and grapevines provide ready-made cordage — stronger and faster to use than processed plant fibers.',
+        requirements: [
+            { name: 'Willow trees', value: 'Young, flexible bark' },
+            { name: 'Grapevines or similar', value: 'Long, flexible vines' },
+            { name: 'Stone knife', value: 'For harvesting' }
+        ],
+        steps: [
+            { text: 'Willow bark: Cut young willow branches and peel the inner bark in long strips. Soak in water for flexibility.' },
+            { text: 'Grapevines: Cut long, flexible vines from grape plants. Remove outer bark to reveal strong, flexible inner wood.' },
+            { text: 'Both materials can be used immediately as cordage — no twisting or processing required.' },
+            { text: 'Willow bark and vines are used for: binding tool handles, lashing shelter poles, creating baskets, tying bundles, and temporary repairs.' },
+            { text: 'Willow bark contains salicylic acid (natural aspirin) — chew for pain relief or boil for medicinal tea.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'gums-saps',
+        name: 'Tree Gums & Saps (Birch, Maple, Spruce)',
+        stage: 1,
+        icon: '🌳',
+        category: 'resource',
+        objective: 'Collect edible and useful saps from trees for food, medicine, and adhesive.',
+        evolution: 'Tree saps provide sugar, medicine, and waterproof adhesives — a versatile natural resource from multiple tree species.',
+        requirements: [
+            { name: 'Birch, Maple, or Spruce trees', value: 'Healthy, mature trees' },
+            { name: 'Collection container', value: 'Shells, bark, or clay pots' },
+            { name: 'Stone tool', value: 'For tapping or cutting' }
+        ],
+        steps: [
+            { text: 'Birch sap: Tap birch trees in early spring by making a small cut. Collect the clear, slightly sweet liquid. Rich in vitamins and minerals.' },
+            { text: 'Maple sap: Tap maple trees in late winter/early spring. Boil down to create maple sugar — concentrated energy and trade item.' },
+            { text: 'Spruce resin (spruce gum): Collect from tree bark. Chew as natural chewing gum (antiseptic), or use as waterproof adhesive.' },
+            { text: 'Tree saps and gums are used for: food (sugar, drink), medicine (antiseptic, vitamin C), adhesive (hafting, waterproofing).' },
+            { text: 'Spruce gum is antibacterial — apply directly to cuts and wounds to prevent infection. One of the earliest field medicines.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'earth-pigments',
+        name: 'Earth Pigments (Chalk, Gypsum, Manganese)',
+        stage: 1,
+        icon: '⚪',
+        category: 'resource',
+        objective: 'Mine natural minerals for white, black, and colored pigments for art and ceremony.',
+        evolution: 'Earth pigments expand the color palette beyond ochre — enabling complex art, symbolism, and cultural expression.',
+        requirements: [
+            { name: 'Chalk or gypsum deposits', value: 'White mineral sources' },
+            { name: 'Manganese ore', value: 'Black/dark purple pigment' },
+            { name: 'Grinding stone', value: 'For powdering minerals' }
+        ],
+        steps: [
+            { text: 'Chalk (calcium carbonate): Mine from exposed chalk beds or limestone formations. Grind to white powder for paint.' },
+            { text: 'Gypsum (calcium sulfate): Found in sedimentary deposits. Grind to white or translucent powder.' },
+            { text: 'Manganese ore (manganese dioxide): Mine from dark mineral deposits. Grind to black or dark purple powder — used in cave art.' },
+            { text: 'Mix mineral powders with water for paint, or with animal fat for durable, waterproof pigment.' },
+            { text: 'Earth pigments are used for: cave art (Chauvet, Altamira), body decoration, pottery decoration, and ceremonial objects.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'pumice',
+        name: 'Pumice',
+        stage: 1,
+        icon: '🫧',
+        category: 'resource',
+        objective: 'Collect lightweight volcanic rock for abrasive grinding, polishing, and smoothing.',
+        evolution: 'Pumice is a natural abrasive superior to sandstone for fine work — smoothing wood, polishing bone, and sharpening tools.',
+        requirements: [
+            { name: 'Volcanic region access', value: 'Preferred, or trade networks' },
+            { name: 'Collection container', value: 'For transport' }
+        ],
+        steps: [
+            { text: 'Pumice forms from explosive volcanic eruptions — lightweight, porous volcanic rock. Found in volcanic regions or riverbeds downstream.' },
+            { text: 'Pumice is an excellent abrasive — use for smoothing wood, polishing bone tools, and refining stone edges.' },
+            { text: 'Different pumice grades (fine, medium, coarse) serve different purposes — select based on the task.' },
+            { text: 'Pumice is also used for: cleaning hides, smoothing pottery surfaces, personal hygiene (skin exfoliation), and sharpening tools.' },
+            { text: 'If not locally available, pumice was traded over long distances due to its unique properties.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'amber',
+        name: 'Amber (Fossilized Resin)',
+        stage: 1,
+        icon: '🟠',
+        category: 'resource',
+        objective: 'Collect fossilized tree resin for ornaments, trade, and early understanding of natural electricity.',
+        evolution: 'Amber is beautiful and tradeable. When rubbed, it creates static electricity — the earliest observation of electrical phenomena.',
+        requirements: [
+            { name: 'Baltic coast or amber deposits', value: 'Primary sources' },
+            { name: 'Collection container', value: 'For transport' }
+        ],
+        steps: [
+            { text: 'Amber is fossilized tree resin, found primarily in Baltic coastal regions and ancient forest deposits.' },
+            { text: 'Collect amber from beaches (washed ashore), riverbeds, or mine from sedimentary deposits.' },
+            { text: 'Amber is carved, drilled, and polished into beads, pendants, and ornaments. Highly valued for its warm color and translucency.' },
+            { text: 'When rubbed with fur or cloth, amber attracts lightweight materials (feathers, dust) — the earliest observation of static electricity (Greek "elektron" = amber).' },
+            { text: 'Amber was traded across Europe and Asia for thousands of years — the "Amber Road" predates the Silk Road.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'peat',
+        name: 'Peat (Decomposed Organic Matter)',
+        stage: 1,
+        icon: '🟤',
+        category: 'resource',
+        objective: 'Harvest decomposed plant matter from bogs for fuel, insulation, and water filtration.',
+        evolution: 'Peat burns slowly and steadily — a valuable fuel in treeless regions. It also insulates shelters and filters water.',
+        requirements: [
+            { name: 'Bog or peatland', value: 'Wetland area' },
+            { name: 'Cutting tool', value: 'Stone or bone knife' },
+            { name: 'Drying area', value: 'Flat, ventilated ground' }
+        ],
+        steps: [
+            { text: 'Locate peat bogs — wetlands where plant matter accumulates and partially decomposes over centuries.' },
+            { text: 'Cut peat into blocks or bricks using a stone or bone knife. Fresh peat is dark, dense, and saturated.' },
+            { text: 'Dry peat blocks in the sun and wind for several days until lightweight and crumbly.' },
+            { text: 'Burn dried peat for steady, slow-burning fuel — especially valuable in regions without abundant wood.' },
+            { text: 'Peat is also used for: insulation (stuff into shelter walls), water filtration (layer in containers), and preserving organic materials (bogs preserve bodies and artifacts).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'salt-deposits',
+        name: 'Salt (Natural Deposits & Evaporation)',
+        stage: 1,
+        icon: '🧂',
+        category: 'resource',
+        objective: 'Harvest salt from deposits, springs, or seawater evaporation — essential for food preservation and health.',
+        evolution: 'Salt preserves food, flavors meals, maintains electrolyte balance, and becomes one of the most valuable trade commodities in history.',
+        requirements: [
+            { name: 'Salt deposits, springs, or seawater', value: 'Natural salt sources' },
+            { name: 'Evaporation pan', value: 'Flat stone or clay tray' },
+            { name: 'Collection container', value: 'For storage' }
+        ],
+        steps: [
+            { text: 'Locate salt sources: exposed salt rock deposits, salt springs, seawater, or salty soil in arid regions.' },
+            { text: 'Rock salt: Mine directly from exposed deposits. Crush and purify by dissolving in water and filtering.' },
+            { text: 'Seawater/spring water: Pour into shallow stone or clay pan. Allow sun and wind to evaporate water, leaving salt crystals.' },
+            { text: 'Collect and store salt in dry, covered containers. Salt absorbs moisture — keep it protected from humidity.' },
+            { text: 'Salt is used for: preserving meat and fish (prevents spoilage), flavoring food, maintaining health (electrolytes), and trade (salt was currency).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'natural-sponges',
+        name: 'Natural Sponges (Marine & Plant)',
+        stage: 1,
+        icon: '🧽',
+        category: 'resource',
+        objective: 'Harvest marine sponges or fibrous plants for cleaning, painting, and personal hygiene.',
+        evolution: 'Sponges are versatile cleaning tools — used for pottery smoothing, paint application, hygiene, and filtering.',
+        requirements: [
+            { name: 'Marine sponges (ocean)', value: 'From shallow waters' },
+            { name: 'OR fibrous plants', value: 'Loofah, dried moss' }
+        ],
+        steps: [
+            { text: 'Marine sponges: Harvest from shallow ocean waters. Clean thoroughly by rinsing in fresh water and sun-drying.' },
+            { text: 'Plant alternatives: Dried loofah (gourd interior) or dense moss bundles serve similar purposes.' },
+            { text: 'Sponges are used for: cleaning pottery surfaces (smoothing clay), applying paint and dye (stamping), personal hygiene (body cleaning), and filtering liquids.' },
+            { text: 'Sponges absorb and release liquids smoothly — making them ideal for detailed craftwork and daily hygiene.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 2 PREPARATION RESOURCES (Agriculture & Settlement) ===
+    {
+        id: 'wild-grains',
+        name: 'Wild Grains (Wheat, Barley, Rice)',
+        stage: 1,
+        icon: '🌾',
+        category: 'resource',
+        objective: 'Gather wild cereal grains — the foundation of the agricultural revolution.',
+        evolution: 'Wild grain collection leads to deliberate planting and harvesting — the birth of agriculture and settled life.',
+        requirements: [
+            { name: 'Wild grain stands', value: 'Wheat, barley, rice, or millet' },
+            { name: 'Sickle or harvesting knife', value: 'Flint blade in wood handle' },
+            { name: 'Collection baskets', value: 'Woven containers' },
+            { name: 'Quern stone', value: 'For grinding grain' }
+        ],
+        steps: [
+            { text: 'Locate wild grain stands: open grasslands, river valleys, and disturbed soil where cereals grow naturally.' },
+            { text: 'Harvest grain by grasping stalks and cutting with a flint sickle. Collect when grains are mature but before they shatter.' },
+            { text: 'Dry the harvested grain in the sun on flat stones or woven mats. This prevents sprouting and mold.' },
+            { text: 'Thresh grain by beating dried stalks to separate seeds from chaff. Winnow by tossing in the wind — chaff blows away, grain falls.' },
+            { text: 'Store surplus grain in dry, sealed pits, baskets, or clay containers. This is the first step toward food surplus and settled communities.' },
+            { text: 'Experiment with planting spilled or stored grains near camp — this leads to deliberate cultivation and the Neolithic Revolution.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wild-legumes',
+        name: 'Wild Legumes (Lentils, Peas, Beans)',
+        stage: 1,
+        icon: '🫘',
+        category: 'resource',
+        objective: 'Collect wild legumes — protein-rich complement to grains that also fix nitrogen in soil.',
+        evolution: 'Legumes provide complete nutrition with grains and improve soil fertility — essential for sustainable agriculture.',
+        requirements: [
+            { name: 'Wild legume patches', value: 'Lentils, peas, beans, vetch' },
+            { name: 'Collection basket', value: 'For harvesting' },
+            { name: 'Drying area', value: 'Sun-exposed surface' }
+        ],
+        steps: [
+            { text: 'Locate wild legumes: open fields, forest edges, and rocky slopes where lentils, peas, and beans grow naturally.' },
+            { text: 'Harvest legume pods when mature and dry. Collect by hand-picking or stripping pods from plants.' },
+            { text: 'Dry pods in the sun until they rattle. Shell by crushing pods and separating seeds.' },
+            { text: 'Legumes are protein-rich and store well — they complement grain-based diets for complete nutrition.' },
+            { text: 'Legumes fix nitrogen in soil through root bacteria — planting them with grains improves soil fertility naturally.' },
+            { text: 'The grain-legume combination is the nutritional and agricultural foundation of civilization.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'domesticable-animals',
+        name: 'Domesticable Animals (Goats, Sheep, Cattle, Pigs)',
+        stage: 1,
+        icon: '🐐',
+        category: 'resource',
+        objective: 'Identify and begin managing wild animals suitable for domestication — future sources of food, wool, milk, and labor.',
+        evolution: 'Animal domestication provides meat, milk, wool, leather, traction power, and transportation — multiplying human productive capacity.',
+        requirements: [
+            { name: 'Wild herd animals', value: 'Goats, sheep, cattle, pigs' },
+            { name: 'Enclosure area', value: 'Natural pen or fenced space' },
+            { name: 'Feed supply', value: 'Grain, forage, or grazing land' }
+        ],
+        steps: [
+            { text: 'Identify suitable animals: herd species with hierarchical social structure (will accept human as leader), not overly aggressive, and breed in captivity.' },
+            { text: 'Begin by managing hunted herds: keep young animals alive after hunts, raise them in enclosures near camp.' },
+            { text: 'Select for docile traits: keep calmest animals, breed them together. Over generations, animals become more tame.' },
+            { text: 'Provide food, water, and protection from predators. Animals provide meat, milk, wool, hides, and eventually traction power.' },
+            { text: 'Goats/sheep provide milk, wool, and meat. Cattle provide milk, meat, leather, and plowing power. Pigs provide efficient meat production.' },
+            { text: 'Domestication transforms human society: settled herders need permanent settlements, driving the Neolithic Revolution.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'fiber-plants',
+        name: 'Fiber Plants (Flax, Hemp, Cotton)',
+        stage: 1,
+        icon: '🌿',
+        category: 'resource',
+        objective: 'Cultivate plants with strong fibers for weaving, cordage, and eventually textiles.',
+        evolution: 'Fiber plants enable woven baskets, rope, nets, clothing, and sails — transforming storage, clothing, and transportation.',
+        requirements: [
+            { name: 'Flax or hemp seeds', value: 'For planting' },
+            { name: 'Suitable soil', value: 'Well-drained, fertile' },
+            { name: 'Water source', value: 'For retting (soaking)' },
+            { name: 'Rippling comb', value: 'For removing seeds' }
+        ],
+        steps: [
+            { text: 'Plant flax or hemp seeds in fertile, well-drained soil. These plants grow quickly (90–120 days) and require minimal care.' },
+            { text: 'Harvest plants when stalks are mature but before seeds shatter. Pull entire plant to maximize fiber length.' },
+            { text: 'Retting: soak stalks in water for 5–10 days. Bacteria break down pectin, separating fibers from woody core.' },
+            { text: 'Dry and break stalks. Scrape and comb to extract long, strong fibers. Remove seeds (flaxseed/linseed) for food and oil.' },
+            { text: 'Spin fibers into thread using a drop spindle. Weave thread into cloth using a simple loom.' },
+            { text: 'Textile plants revolutionize human life: woven clothing replaces sewn hides, baskets replace containers, nets enable fishing, and sails enable wind-powered boats.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'dye-plants',
+        name: 'Dye Plants (Woad, Madder, Indigo, Walnut)',
+        stage: 1,
+        icon: '🎨',
+        category: 'resource',
+        objective: 'Grow plants that produce vibrant, colorfast dyes for textiles and decoration.',
+        evolution: 'Dye plants enable colorful textiles, cultural identity through clothing patterns, and valuable trade goods.',
+        requirements: [
+            { name: 'Dye plant seeds or roots', value: 'Woad (blue), madder (red), indigo, walnut' },
+            { name: 'Dye pots', value: 'Clay or stone containers' },
+            { name: 'Mordant', value: 'Alum, urine, or wood ash' }
+        ],
+        steps: [
+            { text: 'Woad (Isatis tinctoria): grow for blue dye. Harvest leaves, ferment in water, then aerate to create blue pigment.' },
+            { text: 'Madder (Rubia tinctorum): grow for red dye. Harvest roots, dry, and grind. Boil with mordant to extract red color.' },
+            { text: 'Walnut hulls: collect green walnut husks. Boil to create rich brown dye — no mordant needed.' },
+            { text: 'Mordant (fixative): treat fabric with alum, urine, or wood ash before dyeing. Mordant helps dye bind to fibers permanently.' },
+            { text: 'Dye plants create cultural identity: specific colors and patterns identify tribes, status, and roles. They are also valuable trade items.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'orchard-trees',
+        name: 'Orchard Trees (Fruit, Nut, Oil)',
+        stage: 1,
+        icon: '🌳',
+        category: 'resource',
+        objective: 'Plant and cultivate fruit, nut, and oil-producing trees for long-term food security.',
+        evolution: 'Orchards provide reliable, predictable food sources year after year — anchoring permanent settlements.',
+        requirements: [
+            { name: 'Fruit/nut seeds or saplings', value: 'Fig, olive, apple, oak, walnut' },
+            { name: 'Suitable planting site', value: 'Sun, good soil, water access' },
+            { name: 'Protection', value: 'From animals and grazing' }
+        ],
+        steps: [
+            { text: 'Plant fruit trees (fig, olive, apple, date) and nut trees (oak/acorns, walnut, chestnut) near settlements.' },
+            { text: 'Trees take years to mature (3–10 years depending on species), but produce for decades once established.' },
+            { text: 'Fruit is eaten fresh or dried for winter storage. Nuts are eaten, pressed for oil, or stored.' },
+            { text: 'Olive trees produce oil for cooking, lighting (lamps), skin care, and religious ceremonies.' },
+            { text: 'Orchards anchor permanent settlements: people return yearly to harvest, building infrastructure around orchard sites.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'medicinal-plants',
+        name: 'Medicinal Plants (Willow, Yarrow, Plantain, Garlic)',
+        stage: 1,
+        icon: '🌿',
+        category: 'resource',
+        objective: 'Grow and identify healing plants for treating illness, wounds, and disease.',
+        evolution: 'Medicinal plants reduce mortality from infection and disease — enabling larger, healthier populations.',
+        requirements: [
+            { name: 'Medicinal plant seeds or roots', value: 'Willow, yarrow, plantain, garlic, mint' },
+            { name: 'Garden space', value: 'Near settlement for easy access' },
+            { name: 'Drying area', value: 'Shaded, ventilated space' }
+        ],
+        steps: [
+            { text: 'Willow bark: contains salicin (natural aspirin). Chew bark or boil for pain-relieving, anti-inflammatory tea.' },
+            { text: 'Yarrow: staunches bleeding and heals wounds. Apply crushed leaves to wounds or brew as tea for fever reduction.' },
+            { text: 'Plantain (not banana): drawing herb for wounds, insect bites, and infections. Crush leaves and apply as poultice.' },
+            { text: 'Garlic: antibacterial, antifungal, immune support. Eat raw or cooked. Repels insects and parasites.' },
+            { text: 'Mint: digestive aid and breath freshener. Brew as tea or chew leaves. Also repels insects.' },
+            { text: 'Medicinal gardens near settlements reduce illness and death — critical for growing Neolithic populations.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'clay-deposits-large',
+        name: 'Clay Deposits (Large-Scale for Pottery)',
+        stage: 1,
+        icon: '🏺',
+        category: 'resource',
+        objective: 'Locate and extract large quantities of quality clay for pottery production — the key technology of Stage 2.',
+        evolution: 'Pottery enables food storage, cooking without burning, water purification, and trade goods — essential for settled life.',
+        requirements: [
+            { name: 'Large clay deposit', value: 'Riverbank, exposed clay bed' },
+            { name: 'Digging tools', value: 'Stone axe, bone, or wooden digging sticks' },
+            { name: 'Water', value: 'For processing clay' },
+            { name: 'Drying area', value: 'Flat, shaded ground' }
+        ],
+        steps: [
+            { text: 'Locate substantial clay deposits: riverbanks, road cuts, exposed sedimentary layers. Look for fine, plastic clay that holds together when wet.' },
+            { text: 'Extract clay using digging sticks, stone tools, or hands if clay is soft. Remove topsoil and vegetation first.' },
+            { text: 'Process clay: dry completely, break into small pieces, soak in water, stir to create slurry. Strain through fine mesh to remove rocks and debris.' },
+            { text: 'Allow clay slurry to settle and dry to workable consistency. Knead (wedge) to remove air bubbles before use.' },
+            { text: 'Add temper (sand, crushed pottery grog, or plant fiber) to reduce cracking during drying and firing.' },
+            { text: 'Pottery is the defining technology of Stage 2: storage containers, cooking pots, water vessels, and trade goods.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'limestone-deposits',
+        name: 'Limestone Deposits',
+        stage: 1,
+        icon: '⬜',
+        category: 'resource',
+        objective: 'Mine limestone for producing lime — essential for mortar, plaster, and nixtamalization of corn.',
+        evolution: 'Lime enables permanent construction (mortar/plaster) and unlocks nutrition from corn (nixtamalization) — critical for settled societies.',
+        requirements: [
+            { name: 'Limestone outcrops', value: 'Exposed cliffs, quarries' },
+            { name: 'Mining tools', value: 'Stone hammers, antler picks' },
+            { name: 'Kiln site', value: 'Well-ventilated, near fuel source' }
+        ],
+        steps: [
+            { text: 'Locate limestone deposits: exposed cliffs, quarries, or riverbeds with white/gray sedimentary rock. Limestone is calcium carbonate (CaCO₃).' },
+            { text: 'Mine limestone by heating with fire then quenching with water (thermal shock fractures rock), or pry loose with antler picks.' },
+            { text: 'Burn limestone in kiln at 900°C+ for several hours. This drives off CO₂, producing quicklime (calcium oxide, CaO).' },
+            { text: 'Quicklime + water = slaked lime (calcium hydroxide). Use for: mortar (construction), plaster (wall coating), nixtamalization (corn processing).' },
+            { text: 'Nixtamalization: cooking corn in lime solution releases niacin (vitamin B3) — prevents malnutrition in corn-dependent societies.' },
+            { text: 'Lime mortar and plaster enable permanent, weatherproof buildings — transitioning from temporary shelters to houses.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'gypsum-deposits',
+        name: 'Gypsum Deposits',
+        stage: 1,
+        icon: '⚪',
+        category: 'resource',
+        objective: 'Mine gypsum for making plaster — the earliest wall coating and floor material for permanent structures.',
+        evolution: 'Gypsum plaster creates smooth, clean walls and floors — transforming mud huts into finished houses.',
+        requirements: [
+            { name: 'Gypsum deposits', value: 'Sedimentary formations' },
+            { name: 'Mining tools', value: 'Stone picks, digging sticks' },
+            { name: 'Grinding equipment', value: 'Quern stone or mortar' }
+        ],
+        steps: [
+            { text: 'Locate gypsum deposits: sedimentary rock formations, often associated with limestone and salt deposits. Gypsum is calcium sulfate (CaSO₄·2H₂O).' },
+            { text: 'Mine gypsum by prying loose with stone picks or digging from soft deposits. It is softer than limestone and easier to extract.' },
+            { text: 'Crush and grind gypsum to powder. Heat gently (150–180°C) to drive off water, producing plaster of Paris (calcined gypsum).' },
+            { text: 'Mix calcined gypsum with water — it rehydrates and hardens into solid plaster. Apply to walls for smooth, clean surfaces.' },
+            { text: 'Gypsum plaster floors are clean, dry, and waterproof compared to dirt floors. This is a major quality-of-life improvement in permanent settlements.' },
+            { text: 'Plaster walls can be painted with pigments — leading to interior decoration and the earliest wall art.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'sand-deposits',
+        name: 'Sand Deposits',
+        stage: 1,
+        icon: '🟡',
+        category: 'resource',
+        objective: 'Collect clean sand for mortar, filtration, pottery temper, and eventually glass-making.',
+        evolution: 'Sand is essential for mortar (construction), water filtration, pottery, and later glass-making — a versatile industrial material.',
+        requirements: [
+            { name: 'Sand deposit', value: 'Riverbed, beach, or desert' },
+            { name: 'Collection containers', value: 'Baskets or bags' }
+        ],
+        steps: [
+            { text: 'Locate clean sand deposits: riverbeds, beaches, or exposed sand layers. Avoid sand contaminated with soil or organic matter.' },
+            { text: 'Collect sand and dry thoroughly. Screen to remove large debris (sticks, leaves, rocks) if fine sand is needed.' },
+            { text: 'Sand is mixed with clay to make mortar (construction adhesive) and daub (wall coating in wattle-and-daub buildings).' },
+            { text: 'Sand is used as a filtration medium: layer sand, charcoal, and gravel in containers to purify water.' },
+            { text: 'In pottery, sand is used as temper (added to clay) to reduce cracking during drying and firing.' },
+            { text: 'Later, sand is the primary ingredient in glass-making (with soda ash and lime at high temperatures).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'gravel-deposits',
+        name: 'Gravel Deposits',
+        stage: 1,
+        icon: '🪨',
+        category: 'resource',
+        objective: 'Collect gravel for construction, drainage, road surfacing, and concrete aggregate.',
+        evolution: 'Gravel enables drainage (sanitation), road construction (transportation), and concrete (permanent buildings).',
+        requirements: [
+            { name: 'Gravel deposit', value: 'Riverbed, glacial deposit, quarry' },
+            { name: 'Collection tools', value: 'Hands, baskets' }
+        ],
+        steps: [
+            { text: 'Locate gravel deposits: riverbeds (water-sorted, rounded stones), glacial deposits (mixed sizes), or quarries.' },
+            { text: 'Collect gravel by hand — stones 2mm to 75mm in size. Sort by size if needed for specific applications.' },
+            { text: 'Gravel is used for: drainage layers (sanitation, prevent flooding), road surfacing (all-weather paths), and concrete aggregate.' },
+            { text: 'Drainage: layer gravel under buildings or latrines to prevent water accumulation. This is critical for health in permanent settlements.' },
+            { text: 'Roads: surface paths with gravel for all-weather travel. Gravel roads drain quickly and remain passable in rain.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'reeds-cattails',
+        name: 'Reeds & Cattails',
+        stage: 1,
+        icon: '🌾',
+        category: 'resource',
+        objective: 'Harvest reeds and cattails from wetlands for weaving, construction, and food.',
+        evolution: 'Reeds enable woven baskets, mats, shelter roofing, and early boats. Cattails provide edible roots and pollen.',
+        requirements: [
+            { name: 'Wetland area', value: 'Marsh, lake edge, slow river' },
+            { name: 'Cutting tool', value: 'Flint knife or sickle' },
+            { name: 'Drying area', value: 'Sun-exposed, ventilated' }
+        ],
+        steps: [
+            { text: 'Locate reed beds and cattail stands in wetlands, lake edges, and slow-moving rivers. Harvest in late summer when stalks are mature.' },
+            { text: 'Cut reeds near the base with a flint knife. Bundle and dry in the sun for several days. Dried reeds are lightweight and strong.' },
+            { text: 'Weave reeds into: baskets (storage), mats (flooring, wall covering), thatch (roofing), and fences (windbreaks).' },
+            { text: 'Cattails are edible: young shoots (vegetable), roots (starch flour), pollen (high-protein flour), and seed heads (fluff for insulation).' },
+            { text: 'Reed boats (bundled reeds tied together) are among the earliest watercraft — enabling fishing, trade, and transportation.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'rushes-grasses',
+        name: 'Rushes & Grasses (Thatching Material)',
+        stage: 1,
+        icon: '🌱',
+        category: 'resource',
+        objective: 'Collect long grasses and rushes for thatching roofs, weaving mats, and basket-making.',
+        evolution: 'Thatch roofing sheds rain and insulates — transforming shelters into weatherproof homes.',
+        requirements: [
+            { name: 'Tall grass/reed beds', value: 'Meadows, wetlands' },
+            { name: 'Cutting tool', value: 'Flint knife or sickle' },
+            { name: 'Cordage', value: 'For binding thatch' }
+        ],
+        steps: [
+            { text: 'Collect long grasses and rushes from meadows, marshes, and field edges. Harvest when mature but still flexible.' },
+            { text: 'Dry grasses and rushes thoroughly in the sun. Bundle and store in dry location to prevent mold.' },
+            { text: 'Thatch roofs: layer grasses/reeds thickly (30cm+) from bottom to top, overlapping like shingles. Secure with cordage or wooden pegs.' },
+            { text: 'Properly applied thatch sheds rain completely, insulates against heat and cold, and lasts 15–30 years before replacement.' },
+            { text: 'Grasses are also woven into: floor mats, sleeping mats, baskets, and cordage (twisted grass fiber).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'construction-timber',
+        name: 'Construction Timber',
+        stage: 1,
+        icon: '🪵',
+        category: 'resource',
+        objective: 'Harvest large, straight tree trunks for building permanent structures, fences, and boats.',
+        evolution: 'Timber framing enables permanent houses, granaries, palisades, and boats — the infrastructure of settled civilization.',
+        requirements: [
+            { name: 'Mature trees', value: 'Oak, cedar, pine, cypress' },
+            { name: 'Stone axes', value: 'Multiple for felling' },
+            { name: 'Digging tools', value: 'For post holes' },
+            { name: 'Cordage', value: 'For lashing joints' }
+        ],
+        steps: [
+            { text: 'Select mature, straight tree trunks (20–40cm diameter, 3–6m long). Oak, cedar, pine, and cypress are most rot-resistant.' },
+            { text: 'Fell trees with stone axes: cut notch on one side, then cut from opposite side until tree falls. Remove branches with axe.' },
+            { text: 'Strip bark from logs to reduce rot and insect attraction. Season (air-dry) logs for several weeks before use.' },
+            { text: 'Dig post holes (60–100cm deep). Set logs vertically for wall frames or horizontally for foundation beams.' },
+            { text: 'Lash joints with cordage or peg with wooden dowels. Fill walls with wattle-and-daub (woven sticks + clay daub).' },
+            { text: 'Timber structures: houses, granaries, palisades (defensive walls), bridges, and boats. Timber is the framework of permanent settlements.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wattle-material',
+        name: 'Wattle Material (Flexible Branches)',
+        stage: 1,
+        icon: '🌿',
+        category: 'resource',
+        objective: 'Gather flexible branches for weaving wall panels (wattle) to be coated with daub (clay).',
+        evolution: 'Wattle-and-daub walls are fast, cheap, and durable — the standard construction method for thousands of years.',
+        requirements: [
+            { name: 'Flexible branches', value: 'Willow, hazel, ash, birch' },
+            { name: 'Vertical stakes', value: 'Thicker, driven into ground' },
+            { name: 'Clay daub', value: 'Clay + straw/manure mix' }
+        ],
+        steps: [
+            { text: 'Collect flexible branches (1–2cm diameter) from willow, hazel, ash, or birch. These bend without breaking.' },
+            { text: 'Drive thicker vertical stakes (3–5cm diameter) into the ground at 15–20cm intervals. These form the wall frame.' },
+            { text: 'Weave flexible branches horizontally between vertical stakes in an over-under pattern. This creates a lattice (wattle).' },
+            { text: 'Mix clay daub: 3 parts clay, 1 part sand, add chopped straw or animal manure (binder). Add water to stiff paste consistency.' },
+            { text: 'Press daub onto both sides of wattle panel, filling all gaps. Smooth surface with wet hands. Let dry completely.' },
+            { text: 'Wattle-and-daub walls are quick to build, well-insulated, fire-resistant, and last decades with maintenance.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'straw-chaff',
+        name: 'Straw & Chaff',
+        stage: 1,
+        icon: '🌾',
+        category: 'resource',
+        objective: 'Collect grain processing byproducts for building material, animal feed, and fuel.',
+        evolution: 'Straw strengthens clay (daub, bricks), feeds animals, and provides fuel or bedding — zero waste from grain processing.',
+        requirements: [
+            { name: 'Grain harvest residue', value: 'After threshing and winnowing' },
+            { name: 'Storage area', value: 'Dry, ventilated' }
+        ],
+        steps: [
+            { text: 'After threshing and winnowing grain, collect the remaining straw (stalks) and chaff (husks). These are byproducts, not waste.' },
+            { text: 'Straw is chopped and mixed with clay daub or mud bricks. The straw acts as reinforcement, preventing cracking — like rebar in concrete.' },
+            { text: 'Straw is also used for: animal bedding (absorbs waste, provides comfort), thatching roofs, weaving baskets and mats, and fuel.' },
+            { text: 'Chaff is mixed with clay for pottery temper (reduces cracking), used as animal feed supplement, or burned as quick fuel.' },
+            { text: 'Using straw and chaff productively means zero waste from grain harvest — maximizing the value of agricultural labor.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'mushrooms-fungi',
+        name: 'Mushrooms & Fungi',
+        stage: 1,
+        icon: '🍄',
+        category: 'resource',
+        objective: 'Identify edible and useful mushrooms, plus fungi for fermentation and decomposition.',
+        evolution: 'Mushrooms provide nutrition and medicine. Fungi enable fermentation (bread, beer, preservation) and composting.',
+        requirements: [
+            { name: 'Knowledge of edible species', value: 'Critical — many mushrooms are toxic' },
+            { name: 'Collection basket', value: 'For harvesting' },
+            { name: 'Drying area', value: 'Ventilated, shaded' }
+        ],
+        steps: [
+            { text: 'Learn to identify edible mushrooms through careful observation and testing. Never eat unidentified mushrooms — many are toxic.' },
+            { text: 'Common edibles: morels, chanterelles, oyster mushrooms, puffballs. Collect when fresh and firm, not slimy or insect-damaged.' },
+            { text: 'Dry mushrooms for winter storage: string on cordage and hang in ventilated, shaded area. Dried mushrooms rehydrate well.' },
+            { text: 'Wild yeast (on fruit skins, in air) enables fermentation: bread rising, beer brewing, and food preservation (pickling).' },
+            { text: 'Decomposer fungi in compost piles break down organic matter into rich soil fertilizer — critical for sustained agriculture.' },
+            { text: 'Some fungi produce antibiotics (penicillin from mold) — the earliest understanding of invisible healing agents.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'seaweed-kelp',
+        name: 'Seaweed & Kelp',
+        stage: 1,
+        icon: '🌊',
+        category: 'resource',
+        objective: 'Harvest marine algae for food, fertilizer, and industrial applications.',
+        evolution: 'Seaweed provides minerals, soil fertilizer, and later, soda ash for glass-making — a versatile marine resource.',
+        requirements: [
+            { name: 'Coastal access', value: 'Ocean or sea shoreline' },
+            { name: 'Collection tool', value: 'Knife or hands' },
+            { name: 'Drying area', value: 'Sun-exposed, elevated' }
+        ],
+        steps: [
+            { text: 'Harvest seaweed and kelp from rocky shorelines at low tide. Cut above the holdfast (root) so plant regrows.' },
+            { text: 'Edible seaweeds: nori, kelp, dulse, wakame. Rich in iodine, calcium, iron, and vitamins. Eat fresh, dried, or roasted.' },
+            { text: 'Dry seaweed thoroughly and add to compost or directly to fields. Seaweed is excellent fertilizer — rich in trace minerals.' },
+            { text: 'Burn dried kelp to extract ash. Kelp ash contains soda ash (sodium carbonate) — essential for glass-making and soap production.' },
+            { text: 'Seaweed is also used: livestock feed supplement, pottery glaze ingredient, and insulation (packed in walls).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'bone-meal',
+        name: 'Bone Meal',
+        stage: 1,
+        icon: '⚪',
+        category: 'resource',
+        objective: 'Crush animal bones into powder for fertilizer, pigment, and soil amendment.',
+        evolution: 'Bone meal returns phosphorus and calcium to soil — essential for sustained agriculture without soil depletion.',
+        requirements: [
+            { name: 'Animal bones', value: 'From butchered game' },
+            { name: 'Fire or boiling water', value: 'For cleaning bones' },
+            { name: 'Grinding equipment', value: 'Mortar, quern, or hammerstone' }
+        ],
+        steps: [
+            { text: 'Collect bones from butchered animals. Clean by boiling or burning to remove all meat, fat, and connective tissue.' },
+            { text: 'Dry cleaned bones thoroughly in sun. Bones should be white or light-colored, not greasy.' },
+            { text: 'Crush bones with hammerstone or grind on quern stone until fine powder. Bone meal should be coarse powder to fine dust.' },
+            { text: 'Bone meal is rich in phosphorus (plant growth) and calcium (soil pH). Add to garden soil or compost to prevent nutrient depletion.' },
+            { text: 'Bone meal is also used: white pigment (calcined bone), abrasive (polishing), and source of gelatin (boiled bones).' },
+            { text: 'Returning bone meal to fields closes the nutrient loop — enabling centuries of continuous farming without soil exhaustion.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wood-ash',
+        name: 'Wood Ash',
+        stage: 1,
+        icon: '⚪',
+        category: 'resource',
+        objective: 'Collect ash from fire pits for soap-making, fertilizer, pottery glaze, and nixtamalization.',
+        evolution: 'Wood ash provides alkali for soap, potassium for plants, flux for soldering, and glaze for pottery — fire waste becomes resource.',
+        requirements: [
+            { name: 'Fire pit ash', value: 'From hardwood fires, uncontaminated' },
+            { name: 'Sifting screen', value: 'To remove charcoal and debris' },
+            { name: 'Storage container', value: 'Dry, covered' }
+        ],
+        steps: [
+            { text: 'Collect white/gray ash from fire pits after fires are completely cool. Use ash from hardwood fires — richer in minerals than softwood.' },
+            { text: 'Sift ash through fine mesh or woven fiber to remove unburned charcoal, rocks, and debris. Fine ash is more useful.' },
+            { text: 'Soap-making: mix wood ash with water, filter liquid (lye). Mix lye with animal fat — chemical reaction produces soap.' },
+            { text: 'Fertilizer: wood ash is rich in potassium (plant flowering/fruiting) and trace minerals. Sprinkle on garden soil.' },
+            { text: 'Pottery glaze: mix ash with water, apply to pottery before firing. Ash melts into natural glass glaze at high temperatures.' },
+            { text: 'Wood ash is also used: nixtamalization (corn processing), flea repellent (sprinkle on bedding), and winter traction (on ice).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 2: NEOLITHIC REVOLUTION ===
+    {
+        id: 'pottery-vessel',
+        name: 'Pottery Vessel',
+        stage: 2,
+        icon: '🏺',
+        category: 'tool',
+        objective: 'Create fired clay containers for storage, cooking, and water transportation.',
+        evolution: 'Pottery enables food storage, cooking without burning containers, water purification — essential for settled life.',
+        requirements: [
+            { name: 'Clay (processed)', value: '5–10 kg, cleaned and wedged' },
+            { name: 'Temper (sand/grog)', value: '20% of clay volume' },
+            { name: 'Paddle and anvil', value: 'Wooden paddle, stone anvil' },
+            { name: 'Kiln or pit firing site', value: 'Well-ventilated, fuel source' },
+            { name: 'Slip (liquid clay)', value: 'For surface finishing' }
+        ],
+        steps: [
+            { text: 'Prepare clay by mixing with temper (sand or crushed pottery) at 4:1 ratio. Wedge thoroughly to remove air bubbles.' },
+            { text: 'Form vessel using coiling technique: roll clay into long ropes, coil them in circles, building upward.' },
+            { text: 'Smooth walls using paddle and anvil technique. Apply slip (liquid clay) for surface finishing.' },
+            { text: 'Let vessel dry slowly in shade for 1–2 weeks until bone-dry (greenware). Rapid drying causes cracking.' },
+            { text: 'Fire in kiln or pit: start with low heat to drive off remaining moisture, then increase to 800–1000°C for several hours.' },
+            { text: 'Let kiln cool slowly over 24 hours. Finished pottery should ring when tapped and be waterproof.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'loom-weaving',
+        name: 'Loom & Weaving',
+        stage: 2,
+        icon: '🧵',
+        category: 'skill',
+        objective: 'Build a simple loom and weave plant fibers into cloth for clothing and containers.',
+        evolution: 'Weaving transforms fiber plants into textiles — replacing sewn hides with tailored clothing.',
+        requirements: [
+            { name: 'Loom frame (wood)', value: '1×1m or larger' },
+            { name: 'Warp thread (flax/hemp)', value: '500g+ spun thread' },
+            { name: 'Weft shuttle', value: 'Wooden shuttle' },
+            { name: 'Heddle sticks', value: '2–4 smooth sticks' },
+            { name: 'Beater (comb)', value: 'Wooden comb' }
+        ],
+        steps: [
+            { text: 'Build loom frame: rectangular wooden frame with horizontal beams at top and bottom.' },
+            { text: 'Set up warp: tie vertical threads (warp) from top beam to bottom beam, evenly spaced.' },
+            { text: 'Use heddle sticks to separate warp threads into two layers (shed). This creates the opening for the weft.' },
+            { text: 'Pass weft thread through shed using shuttle. Alternate which warp threads are raised for each pass.' },
+            { text: 'Beat each weft row into place with wooden comb. This creates tight, even weave.' },
+            { text: 'Continue until cloth reaches desired length. Remove from loom and finish edges to prevent unraveling.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'mud-brick',
+        name: 'Mud Brick (Adobe)',
+        stage: 2,
+        icon: '🧱',
+        category: 'tool',
+        objective: 'Mold and sun-dry mud bricks for permanent construction — the first building blocks.',
+        evolution: 'Mud bricks enable permanent houses, granaries, and city walls — the foundation of civilization.',
+        requirements: [
+            { name: 'Clay soil', value: 'Large quantity' },
+            { name: 'Straw or chaff', value: '20% of volume' },
+            { name: 'Wooden molds', value: 'Rectangular frames' },
+            { name: 'Water', value: 'For mixing' },
+            { name: 'Drying area', value: 'Flat, sunny ground' }
+        ],
+        steps: [
+            { text: 'Mix clay soil with water to create thick mud consistency. Add chopped straw or chaff (20% by volume).' },
+            { text: 'Press mud mixture into wooden molds. Remove mold to leave "green" brick.' },
+            { text: 'Dry bricks in direct sunlight for 1–2 weeks. Turn periodically for even drying.' },
+            { text: 'Stack dried bricks under cover to protect from rain. Sun-dried bricks are strong but not waterproof.' },
+            { text: 'Lay bricks with mud mortar (clay + straw mixture) for walls. Seal walls with mud plaster.' },
+            { text: 'For permanent structures, fire bricks in kiln at 800°C+ to create fired bricks (see Stage 1 clay bricks).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'plow-ard',
+        name: 'Plow (Ard)',
+        stage: 2,
+        icon: '🌾',
+        category: 'tool',
+        objective: 'Build a simple scratch plow pulled by animals or humans for tilling fields.',
+        evolution: 'Plows multiply farming productivity — one person can cultivate 10x more land than with hand tools.',
+        requirements: [
+            { name: 'Hardwood beam', value: '2m long, 10cm thick' },
+            { name: 'Plowshare (stone/wood)', value: 'Pointed tip' },
+            { name: 'Handle', value: 'For steering' },
+            { name: 'Oxen or strong animals', value: 'For pulling (optional)' },
+            { name: 'Rope or harness', value: 'For attachment' }
+        ],
+        steps: [
+            { text: 'Shape hardwood beam into plow body: long beam with angled point at one end, handle at other.' },
+            { text: 'Attach plowshare (cutting blade) to the point. Stone or hardened wood works.' },
+            { text: 'Add handle at rear for steering. The handle should be comfortable to grip while walking.' },
+            { text: 'Attach rope or harness to front of beam. Connect to oxen, or design for human pulling.' },
+            { text: 'Drag plow through field, cutting shallow furrows. The plow breaks soil, buries weeds, and prepares seedbeds.' },
+            { text: 'Plow in straight lines, overlapping slightly. One person with oxen can plow 0.5 hectares per day.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'irrigation-canal',
+        name: 'Irrigation Canal',
+        stage: 2,
+        icon: '💧',
+        category: 'skill',
+        objective: 'Dig channels to direct water from rivers to fields — enabling agriculture in dry regions.',
+        evolution: 'Irrigation multiplies crop yields and enables farming in arid regions — the key to large-scale agriculture.',
+        requirements: [
+            { name: 'Water source (river/stream)', value: 'Reliable flow' },
+            { name: 'Digging tools', value: 'Stone hoes, baskets' },
+            { name: 'Surveying stakes', value: 'For leveling' },
+            { name: 'Labor force', value: 'Community effort' }
+        ],
+        steps: [
+            { text: 'Survey land to determine slope. Canals need gentle, consistent gradient (1:1000 or gentler).' },
+            { text: 'Mark canal route with stakes. Main canal runs from water source to fields. Branch canals distribute water.' },
+            { text: 'Dig main canal: 1–2m wide, 0.5–1m deep. Use excavated soil to build up banks.' },
+            { text: 'Line canal with clay or stones to reduce seepage. Compacted clay works well.' },
+            { text: 'Build simple gates (wooden or stone) to control water flow to individual fields.' },
+            { text: 'Maintain canals: remove sediment, repair banks, clear vegetation. Community maintenance is essential.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'granary',
+        name: 'Granary (Storage Building)',
+        stage: 2,
+        icon: '🏛️',
+        category: 'tool',
+        objective: 'Construct raised storage building to protect grain from moisture, rodents, and pests.',
+        evolution: 'Granaries enable multi-year food storage — the foundation of food security and trade.',
+        requirements: [
+            { name: 'Timber posts', value: '6–8 posts, 2m long' },
+            { name: 'Wattle-and-daub materials', value: 'For walls' },
+            { name: 'Thatch roofing', value: 'Dried grass/reeds' },
+            { name: 'Raised floor materials', value: 'Wooden planks or stone' }
+        ],
+        steps: [
+            { text: 'Select elevated, well-drained site. Dig post holes in rectangle (3×4m or larger).' },
+            { text: 'Set timber posts in holes. Raise floor 1m above ground on posts — this keeps grain dry and rodent-free.' },
+            { text: 'Build walls using wattle-and-daub or mud brick. Leave small door at top for filling, bottom for removal.' },
+            { text: 'Construct thatched roof with good overhang to shed rain away from walls.' },
+            { text: 'Add ventilation holes near roof peak. Good airflow prevents mold and spoilage.' },
+            { text: 'Fill with dried grain. A well-built granary preserves grain for 2–5 years.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 3: BRONZE AGE ===
+    {
+        id: 'copper-smelting',
+        name: 'Copper Smelting',
+        stage: 3,
+        icon: '🔥',
+        category: 'skill',
+        objective: 'Extract copper from ore using high-temperature furnace — the first metal production.',
+        evolution: 'Smelting transforms stone-age technology into metal age. Copper is the first step toward bronze.',
+        requirements: [
+            { name: 'Copper ore (malachite)', value: '10–20 kg' },
+            { name: 'Charcoal', value: '50+ kg for fuel' },
+            { name: 'Furnace (clay/stone)', value: 'Capable of 1100°C+' },
+            { name: 'Bellows', value: 'For air supply' },
+            { name: 'Crucible', value: 'Clay vessel for molten metal' },
+            { name: 'Stone hammers', value: 'For ore crushing' }
+        ],
+        steps: [
+            { text: 'Mine copper ore (malachite, azurite, or native copper). Crush ore into small pieces using stone hammers.' },
+            { text: 'Build furnace: clay-lined pit or shaft furnace. Must reach 1100°C+ to melt copper.' },
+            { text: 'Layer charcoal and crushed ore in furnace. Light charcoal and use bellows to increase temperature.' },
+            { text: 'Maintain high heat for several hours. Copper melts at 1085°C and collects at bottom of crucible.' },
+            { text: 'Break open furnace after cooling. Extract copper "bloom" (spongy mass of metal and slag).' },
+            { text: 'Reheat bloom and hammer to remove slag. Pour into molds for tools, weapons, or ornaments.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'bronze-alloy',
+        name: 'Bronze Alloy',
+        stage: 3,
+        icon: '⚔️',
+        category: 'skill',
+        objective: 'Combine copper and tin to create bronze — harder and more durable than pure copper.',
+        evolution: 'Bronze revolutionizes tools and weapons. Bronze tools last longer, hold sharper edges, and can be cast into complex shapes.',
+        requirements: [
+            { name: 'Copper', value: '90% of alloy' },
+            { name: 'Tin', value: '10% of alloy' },
+            { name: 'Crucible', value: 'For melting metals' },
+            { name: 'Furnace', value: 'Capable of 1100°C+' },
+            { name: 'Molds', value: 'Stone or clay' }
+        ],
+        steps: [
+            { text: 'Obtain copper and tin. Tin is rarer than copper and often traded from distant sources.' },
+            { text: 'Mix copper (90%) and tin (10%) in crucible. Exact ratio varies: 88–92% copper, 8–12% tin.' },
+            { text: 'Heat furnace to 1100°C+. Copper melts at 1085°C, tin at 232°C — both will melt.' },
+            { text: 'Stir molten metal with clay or stone rod to ensure even mixing.' },
+            { text: 'Pour molten bronze into molds. Bronze flows better than copper, filling fine details.' },
+            { text: 'Cool and remove from molds. Bronze is harder than copper, holds sharper edges, and is more resistant to corrosion.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wheel-potters',
+        name: "Potter's Wheel",
+        stage: 3,
+        icon: '🎡',
+        category: 'tool',
+        objective: 'Build rotating wheel for rapid, symmetrical pottery production — mass-producing vessels.',
+        evolution: "The potter's wheel increases pottery production 10x. Uniform, symmetrical vessels become possible.",
+        requirements: [
+            { name: 'Heavy stone base', value: 'For stability' },
+            { name: 'Wooden wheel head', value: '40–60cm diameter' },
+            { name: 'Axle (wood/metal)', value: 'Vertical shaft' },
+            { name: 'Clay', value: 'For throwing' }
+        ],
+        steps: [
+            { text: 'Build heavy stone or wooden base. Stability is critical — wheel must not wobble.' },
+            { text: 'Mount vertical axle through center of base. Axle must be perfectly vertical.' },
+            { text: 'Attach wooden wheel head to top of axle. Wheel head is 40–60cm diameter, heavy enough for momentum.' },
+            { text: 'Sit at wheel with clay centered on wheel head. Kick wheel or use stick to spin wheel.' },
+            { text: 'Center clay by applying pressure with both hands. This is the most difficult skill to master.' },
+            { text: 'Pull walls upward while wheel spins. Symmetrical vessels form in minutes instead of hours.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'writing-tablets',
+        name: 'Writing Tablets (Cuneiform)',
+        stage: 3,
+        icon: '📝',
+        category: 'tool',
+        objective: 'Create clay tablets and stylus for recording information — the birth of written language.',
+        evolution: 'Writing enables record-keeping, laws, literature, and knowledge transmission across generations.',
+        requirements: [
+            { name: 'Fine clay', value: 'Clean, smooth clay' },
+            { name: 'Reed stylus', value: 'Cut reed with triangular tip' },
+            { name: 'Drying area', value: 'Flat, shaded surface' },
+            { name: 'Kiln (optional)', value: 'For permanent records' }
+        ],
+        steps: [
+            { text: 'Prepare fine, smooth clay. Remove all debris. Knead until uniform consistency.' },
+            { text: 'Form clay into flat tablets, 5–10cm square, 2–3cm thick. Smooth surface with wet fingers.' },
+            { text: 'Cut reed stylus with triangular or wedge-shaped tip. This creates cuneiform (wedge-shaped) marks.' },
+            { text: 'Press stylus into clay to create symbols. Cuneiform uses combinations of wedges for letters and numbers.' },
+            { text: 'Dry tablets in sun for temporary records. Fire in kiln for permanent records.' },
+            { text: 'Use writing for: record-keeping (grain stores), laws (Code of Hammurabi), literature (Epic of Gilgamesh), and correspondence.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'chariot',
+        name: 'Chariot',
+        stage: 3,
+        icon: '🏇',
+        category: 'tool',
+        objective: 'Build lightweight, two-wheeled war chariot for rapid transportation and combat.',
+        evolution: 'Chariots revolutionize warfare and transportation. They are the tanks of the Bronze Age.',
+        requirements: [
+            { name: 'Wood (ash/elm)', value: 'For frame and wheels' },
+            { name: 'Bronze fittings', value: 'For axles and decorations' },
+            { name: 'Leather', value: 'For floor and harness' },
+            { name: 'Spoked wheels', value: 'Lightweight, 4–6 spokes' },
+            { name: 'Horses', value: 'Trained for pulling' }
+        ],
+        steps: [
+            { text: 'Build frame: lightweight wooden frame with platform for driver and warrior. Keep weight minimal.' },
+            { text: 'Construct spoked wheels: 4–6 wooden spokes, bronze hub and rim. Spoked wheels are lighter than solid wheels.' },
+            { text: 'Mount wheels on bronze-fitted axle. Axle must rotate freely for smooth movement.' },
+            { text: 'Attach leather floor to platform. Leather absorbs shock better than wood.' },
+            { text: 'Build harness for horses. Horse chariots are faster than earlier donkey or onager chariots.' },
+            { text: 'Train horses to pull chariot. Chariots are used for warfare (archery platform), hunting, and racing.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 4: CLASSICAL AGE ===
+    {
+        id: 'iron-smelting',
+        name: 'Iron Smelting (Bloomery)',
+        stage: 4,
+        icon: '⚒️',
+        category: 'skill',
+        objective: 'Extract iron from ore using bloomery furnace — creating wrought iron for tools and weapons.',
+        evolution: 'Iron is stronger and more abundant than bronze. Iron tools and weapons replace bronze across the known world.',
+        requirements: [
+            { name: 'Iron ore (hematite)', value: '20–50 kg' },
+            { name: 'Charcoal', value: '100+ kg' },
+            { name: 'Bloomery furnace', value: 'Clay/stone shaft furnace' },
+            { name: 'Bellows', value: 'Large, powerful' },
+            { name: 'Hammers', value: 'For forging' }
+        ],
+        steps: [
+            { text: 'Mine iron ore (hematite, magnetite, or bog iron). Crush into 2–5cm pieces.' },
+            { text: 'Build bloomery furnace: vertical shaft of clay and stone, 1–2m tall. Line with clay.' },
+            { text: 'Layer charcoal and iron ore in furnace. Light and use large bellows to reach 1200°C.' },
+            { text: 'Iron does not fully melt (requires 1538°C). Instead, it forms spongy "bloom" mixed with slag.' },
+            { text: 'Break open furnace after cooling. Extract bloom (20–50 kg of iron and slag).' },
+            { text: 'Reheat bloom and hammer repeatedly to remove slag. Fold and weld iron to create wrought iron bar.' },
+            { text: 'Forge iron into tools, weapons, or hardware. Iron is stronger than bronze and more widely available.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'concrete-roman',
+        name: 'Roman Concrete (Opus Caementicium)',
+        stage: 4,
+        icon: '🏗️',
+        category: 'skill',
+        objective: 'Mix volcanic ash, lime, and aggregate to create hydraulic concrete that sets underwater.',
+        evolution: 'Roman concrete enables aqueducts, harbors, domes, and structures that last 2000+ years.',
+        requirements: [
+            { name: 'Lime', value: 'Burnt lime (calcium oxide)' },
+            { name: 'Volcanic ash (pozzolana)', value: 'From volcanic regions' },
+            { name: 'Aggregate', value: 'Stones, brick fragments' },
+            { name: 'Seawater', value: 'For mixing (activates pozzolana)' },
+            { name: 'Wooden forms', value: 'For shaping' }
+        ],
+        steps: [
+            { text: 'Burn limestone to produce quicklime (calcium oxide). Slake with water to create lime putty.' },
+            { text: 'Mix lime putty with volcanic ash (pozzolana) at 1:2 ratio. Pozzolana reacts with lime to create hydraulic cement.' },
+            { text: 'Add aggregate: stones, brick fragments, or rubble. Ratio is roughly 1 part lime-ash, 3 parts aggregate.' },
+            { text: 'Mix with seawater (not fresh water). Seawater activates pozzolanic reaction, creating stronger concrete.' },
+            { text: 'Pour into wooden forms or use as mortar between stones. Concrete sets underwater — unique among ancient materials.' },
+            { text: 'Let cure for weeks. Roman concrete gains strength over centuries through continued pozzolanic reaction.' },
+            { text: 'Use for: aqueducts, harbors, domes (Pantheon), foundations, and monumental architecture.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'aqueduct',
+        name: 'Aqueduct',
+        stage: 4,
+        icon: '🌊',
+        category: 'tool',
+        objective: 'Build gravity-fed water channel to transport water from sources to cities and farms.',
+        evolution: 'Aqueducts bring fresh water to cities, enabling large urban populations and public health.',
+        requirements: [
+            { name: 'Surveying tools', value: 'Chorobates (leveling device)' },
+            { name: 'Stone/concrete', value: 'For channel construction' },
+            { name: 'Arches', value: 'For crossing valleys' },
+            { name: 'Labor force', value: 'Large workforce' }
+        ],
+        steps: [
+            { text: 'Survey water source and route. Use chorobates (water level) to maintain consistent gradient (1:4800 typical).' },
+            { text: 'Dig channel or build raised structure. Channel must maintain constant downward slope from source to destination.' },
+            { text: 'Build arches to cross valleys and maintain elevation. Roman arches use concrete and stone.' },
+            { text: 'Line channel with waterproof concrete (opus signinum). This prevents water loss through seepage.' },
+            { text: 'Construct settling tanks at intervals to remove sediment. Build distribution tanks at city end.' },
+            { text: 'Maintain aqueduct: remove sediment, repair leaks, clear vegetation. Roman aqueducts delivered 1000+ liters per person per day.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'glass-blowing',
+        name: 'Glass Blowing',
+        stage: 4,
+        icon: '🫧',
+        category: 'skill',
+        objective: 'Blow molten glass into vessels, windows, and ornaments using blowpipe and tools.',
+        evolution: 'Glass blowing makes glass affordable and versatile. Windows, bottles, and decorative glass become common.',
+        requirements: [
+            { name: 'Silica sand', value: 'Pure white sand' },
+            { name: 'Soda ash', value: 'From plant ash or natron' },
+            { name: 'Lime', value: 'Stabilizer' },
+            { name: 'Furnace', value: 'Capable of 1200°C+' },
+            { name: 'Blowpipe', value: 'Iron or bronze tube' },
+            { name: 'Tools', value: 'Pincers, shears, paddles' }
+        ],
+        steps: [
+            { text: 'Mix silica sand (70%), soda ash (15%), and lime (15%). This is basic glass composition.' },
+            { text: 'Heat mixture in furnace to 1200–1400°C. Glass becomes honey-like consistency.' },
+            { text: 'Gather molten glass on end of blowpipe. Roll on marver (flat surface) to shape and cool slightly.' },
+            { text: 'Blow through pipe to create bubble (parison). Rotate constantly to maintain symmetrical shape.' },
+            { text: 'Shape with tools: pincers for handles, shears for trimming, paddles for flattening.' },
+            { text: 'Reheat as needed (glass hardens quickly). Transfer to punty rod for finishing.' },
+            { text: 'Anneal (slow cool) in lehr oven over 24–48 hours. Rapid cooling causes stress and breakage.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'paper-papyrus',
+        name: 'Papyrus (Paper)',
+        stage: 4,
+        icon: '📜',
+        category: 'tool',
+        objective: 'Process papyrus reeds into writing sheets — the first paper-like material.',
+        evolution: 'Papyrus enables books, records, and communication. It is lighter and cheaper than clay tablets.',
+        requirements: [
+            { name: 'Papyrus reeds', value: 'From Nile or wetlands' },
+            { name: 'Water', value: 'For soaking' },
+            { text: 'Press or heavy stones', value: 'For flattening' },
+            { name: 'Polishing stone', value: 'For smoothing surface' }
+        ],
+        steps: [
+            { text: 'Harvest papyrus reeds from wetlands. Cut into 30–50cm lengths.' },
+            { text: 'Peel outer layer to expose white pith. Cut pith into thin strips.' },
+            { text: 'Soak strips in water for 24–48 hours. This softens fibers.' },
+            { text: 'Lay strips side by side on flat surface, slightly overlapping. Add second layer perpendicular to first.' },
+            { text: 'Press layers together under heavy weight or in press. Natural sap acts as adhesive.' },
+            { text: 'Dry in sun for several days. Polish surface with smooth stone for writing.' },
+            { text: 'Join sheets end-to-end to create scrolls. Standard scroll is 20–30 sheets (4–6 meters).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 5: MIDDLE AGES ===
+    {
+        id: 'windmill',
+        name: 'Windmill',
+        stage: 5,
+        icon: '💨',
+        category: 'tool',
+        objective: 'Build wind-powered mill for grinding grain, sawing wood, or pumping water.',
+        evolution: 'Windmills harness wind energy — freeing human labor and enabling large-scale grain processing.',
+        requirements: [
+            { name: 'Timber', value: 'Oak or other hardwood' },
+            { name: 'Millstones', value: 'Pair of stones' },
+            { name: 'Canvas sails', value: 'For catching wind' },
+            { name: 'Rotating cap', value: 'To face wind' },
+            { name: 'Gearing', value: 'Wooden gears' }
+        ],
+        steps: [
+            { text: 'Build tower: stone or timber tower, 10–20m tall. Height captures stronger, more consistent wind.' },
+            { text: 'Construct rotating cap on top of tower. Cap holds sails and can rotate to face wind.' },
+            { text: 'Build sail frame with 4 arms. Cover with canvas sails. Adjust sail area based on wind strength.' },
+            { text: 'Install gearing: horizontal windshaft converts to vertical rotation for millstones.' },
+            { text: 'Mount millstones on lower floor. Grain is fed between stones and ground into flour.' },
+            { text: 'Add tail pole to rotate cap into wind. Miller adjusts sail angle and cap direction based on wind.' },
+            { text: 'Windmills can also power: sawmills (wood cutting), fulling mills (cloth processing), or water pumps.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'mechanical-clock',
+        name: 'Mechanical Clock',
+        stage: 5,
+        icon: '⏰',
+        category: 'tool',
+        objective: 'Build weight-driven clock with escapement — the first accurate timekeeping device.',
+        evolution: 'Mechanical clocks enable precise timekeeping, coordinating work, and scientific measurement.',
+        requirements: [
+            { name: 'Iron or brass', value: 'For gears' },
+            { name: 'Weights', value: 'Heavy weights for power' },
+            { name: 'Escapement mechanism', value: 'Verge and foliot' },
+            { name: 'Bell', value: 'For striking hours' },
+            { name: 'Clock frame', value: 'Wood or iron' }
+        ],
+        steps: [
+            { text: 'Design gear train: calculate gear ratios for hour and minute hands. Typical ratio is 12:1 for hours.' },
+            { text: 'Cut gears from iron or brass. Gear teeth must be evenly spaced for smooth operation.' },
+            { text: 'Build escapement: verge and foliot mechanism. Escapement regulates gear movement, creating "tick-tock".' },
+            { text: 'Hang weights on ropes or chains. Weights provide power as they slowly descend.' },
+            { text: 'Assemble gear train on sturdy frame. Connect weights to main gear, escapement to regulating mechanism.' },
+            { text: 'Add dial with hour markers. Early clocks had only hour hand; minute hands came later.' },
+            { text: 'Connect bell-striking mechanism for hourly chimes. Clocks in towers could be heard across cities.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'compass',
+        name: 'Magnetic Compass',
+        stage: 5,
+        icon: '🧭',
+        category: 'tool',
+        objective: 'Create magnetized needle compass for navigation — enabling ocean exploration.',
+        evolution: 'Compasses enable navigation in open ocean, leading to Age of Discovery and global trade.',
+        requirements: [
+            { name: 'Magnetized needle', value: 'Iron needle, magnetized' },
+            { name: 'Compass bowl', value: 'Wood or brass' },
+            { name: 'Pivot point', value: 'Low-friction bearing' },
+            { name: 'Lodestone', value: 'For magnetizing needle' },
+            { name: 'Compass card', value: 'Directional markings' }
+        ],
+        steps: [
+            { text: 'Magnetize iron needle by stroking with lodestone (natural magnet) in one direction, 50+ times.' },
+            { text: 'Balance needle on low-friction pivot. Needle should rotate freely and align with Earth\'s magnetic field.' },
+            { text: 'Mount needle in protective bowl. Bowl protects needle from wind and damage.' },
+            { text: 'Add compass card with directional markings (N, S, E, W). Later compasses had 32 points.' },
+            { text: 'Test compass: needle should point north. Keep away from iron objects that interfere with magnetism.' },
+            { text: 'Use compass for navigation: determine direction at sea, plot courses, and explore unknown waters.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'printing-press',
+        name: 'Printing Press',
+        stage: 5,
+        icon: '📰',
+        category: 'tool',
+        objective: 'Build movable type printing press for mass-producing books and documents.',
+        evolution: 'Printing press makes knowledge cheap and accessible. It enables the Renaissance, Reformation, and scientific revolution.',
+        requirements: [
+            { name: 'Movable type', value: 'Metal or wooden letters' },
+            { name: 'Press frame', value: 'Wooden screw press' },
+            { name: 'Ink', value: 'Oil-based ink' },
+            { name: 'Paper or parchment', value: 'For printing' },
+            { name: 'Composing stick', value: 'For arranging type' }
+        ],
+        steps: [
+            { text: 'Create movable type: cast individual letters in metal or carve in wood. Need multiple copies of common letters.' },
+            { text: 'Arrange type in composing stick to form words and lines. Type is reversed (mirror image) for printing.' },
+            { text: 'Lock type into forme (frame). Ensure type is tight and level.' },
+            { text: 'Ink type using leather balls or rollers. Oil-based ink adheres better than water-based.' },
+            { text: 'Place paper on forme. Lower press platen to apply even pressure.' },
+            { text: 'Pull printed sheet and hang to dry. Check for quality: even ink, clear letters.' },
+            { text: 'Reuse type for next page. A skilled printer produces 3600 pages per day vs 40 for hand-copying.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'gunpowder',
+        name: 'Gunpowder',
+        stage: 5,
+        icon: '💥',
+        category: 'skill',
+        objective: 'Mix saltpeter, charcoal, and sulfur to create explosive powder for weapons and mining.',
+        evolution: 'Gunpowder transforms warfare, mining, and construction. Cannons and guns replace bows and catapults.',
+        requirements: [
+            { name: 'Saltpeter (potassium nitrate)', value: '75% of mixture' },
+            { name: 'Charcoal', value: '15% of mixture' },
+            { name: 'Sulfur', value: '10% of mixture' },
+            { name: 'Mortar and pestle', value: 'For mixing' },
+            { name: 'Water', value: 'For safe mixing' }
+        ],
+        steps: [
+            { text: 'Obtain saltpeter (potassium nitrate) from composted manure, cave deposits, or mineral sources.' },
+            { text: 'Make charcoal from willow or alder wood. Fine, soft charcoal works best.' },
+            { text: 'Obtain sulfur from volcanic regions or mineral deposits.' },
+            { text: 'Grind each ingredient separately into fine powder. Never grind together — risk of explosion.' },
+            { text: 'Mix ingredients with water to create paste. Water prevents accidental ignition during mixing.' },
+            { text: 'Dry paste into "corned" powder. Corned powder burns more consistently than loose mixture.' },
+            { text: 'Test powder: small amount should ignite quickly with bright flash. Store in dry, sealed containers.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 6: INDUSTRIAL REVOLUTION ===
+    {
+        id: 'steam-engine',
+        name: 'Steam Engine',
+        stage: 6,
+        icon: '🚂',
+        category: 'tool',
+        objective: 'Build atmospheric steam engine to convert heat into mechanical power — the engine of industrialization.',
+        evolution: 'Steam engines power factories, trains, and ships. They multiply human productive capacity beyond imagination.',
+        requirements: [
+            { name: 'Cylinder (cast iron)', value: 'Precision-bored' },
+            { name: 'Piston', value: 'Fitted to cylinder' },
+            { name: 'Boiler', value: 'Copper or iron' },
+            { name: 'Coal', value: 'For heating boiler' },
+            { name: 'Condenser', value: 'Separate chamber' },
+            { name: 'Beam and linkage', value: 'For motion transfer' }
+        ],
+        steps: [
+            { text: 'Build boiler: copper or iron vessel to heat water and produce steam. Must withstand pressure.' },
+            { text: 'Cast iron cylinder with precision bore. Cylinder houses piston that converts steam pressure to motion.' },
+            { text: 'Fit piston to cylinder with packing (seal). Piston must move freely but not leak steam.' },
+            { text: 'Build separate condenser (Watt\'s improvement). Condenser cools steam, creating vacuum that pulls piston.' },
+            { text: 'Connect piston to beam. Beam rocks up and down, transferring motion to pump or machinery.' },
+            { text: 'Add valve gear to control steam flow. Valves must open and close at correct points in cycle.' },
+            { text: 'Fire boiler with coal. Steam pressure drives piston. Engine produces continuous power as long as boiler has fire.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'spinning-jenny',
+        name: 'Spinning Jenny',
+        stage: 6,
+        icon: '🧶',
+        category: 'tool',
+        objective: 'Build multi-spindle spinning frame to spin multiple threads simultaneously — mechanizing textile production.',
+        evolution: 'Spinning jenny multiplies thread production. One worker spins 8+ threads at once, enabling factory system.',
+        requirements: [
+            { name: 'Wood frame', value: 'For structure' },
+            { name: 'Spindles', value: '8–120 spindles' },
+            { name: 'Wheel', value: 'For power input' },
+            { name: 'Roving (prepared fiber)', value: 'For spinning' },
+            { name: 'Bobbins', value: 'For collecting thread' }
+        ],
+        steps: [
+            { text: 'Build wooden frame with horizontal beam. Frame holds multiple spindles (originally 8, later 120).' },
+            { text: 'Mount spindles vertically on frame. Each spindle will spin one thread.' },
+            { text: 'Add large wheel connected by belt to spindles. Turning wheel rotates all spindles simultaneously.' },
+            { text: 'Prepare roving (drawn-out fiber). Roving is fed through clamps to spindles.' },
+            { text: 'Turn wheel to spin spindles. Draw out roving while spinning to create fine, strong thread.' },
+            { text: 'One worker operates multiple spindles. Productivity increases 8–120x compared to spinning wheel.' },
+            { text: 'Spinning jenny enables factory system: centralized production, division of labor, mass-produced textiles.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'bessemer-steel',
+        name: 'Bessemer Steel Process',
+        stage: 6,
+        icon: '🏭',
+        category: 'skill',
+        objective: 'Blow air through molten iron to produce steel cheaply — enabling skyscrapers, railways, and machines.',
+        evolution: 'Bessemer process makes steel affordable. Steel replaces iron for construction, tools, and transportation.',
+        requirements: [
+            { name: 'Pig iron', value: 'Molten iron' },
+            { name: 'Bessemer converter', value: 'Pear-shaped vessel' },
+            { name: 'Air blast', value: 'Powerful bellows' },
+            { name: 'Flux', value: 'Limestone or lime' },
+            { name: 'Molds', value: 'For casting steel' }
+        ],
+        steps: [
+            { text: 'Melt pig iron in furnace. Pour molten iron into Bessemer converter (pear-shaped vessel).' },
+            { text: 'Blow air through molten iron from bottom of converter. Air oxidizes impurities (carbon, silicon, manganese).' },
+            { text: 'Oxidation generates heat, keeping iron molten. Process takes 10–20 minutes.' },
+            { text: 'Watch flame from converter mouth. Flame color indicates carbon content. Stop air when desired carbon level reached.' },
+            { text: 'Add flux (limestone) to remove impurities as slag. Pour off slag.' },
+            { text: 'Add precise amount of carbon (spiegeleisen) to create steel. Steel is iron with 0.2–2% carbon.' },
+            { text: 'Pour steel into molds. Bessemer process produces 5 tons of steel in 20 minutes vs days for older methods.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'railway',
+        name: 'Railway',
+        stage: 6,
+        icon: '🛤️',
+        category: 'tool',
+        objective: 'Build iron/steel rails and steam locomotives for rapid land transportation of goods and people.',
+        evolution: 'Railways connect nations, enable mass transportation, and create national markets. They shrink travel time from weeks to hours.',
+        requirements: [
+            { name: 'Steel rails', value: 'T-shaped profile' },
+            { name: 'Railroad ties', value: 'Wooden or concrete' },
+            { name: 'Ballast', value: 'Gravel or crushed stone' },
+            { name: 'Steam locomotive', value: 'For pulling trains' },
+            { name: 'Rolling stock', value: 'Freight and passenger cars' }
+        ],
+        steps: [
+            { text: 'Survey and grade route. Railways need gentle grades (2% or less) and wide curves.' },
+            { text: 'Lay roadbed: compacted earth topped with ballast (gravel). Ballast provides drainage and stability.' },
+            { text: 'Place railroad ties (sleepers) perpendicular to track direction, 50–60cm apart.' },
+            { text: 'Lay steel rails on ties. Rails are T-shaped for strength. Join rails with fishplates.' },
+            { text: 'Spike rails to ties. Spikes hold rails in place but allow for thermal expansion.' },
+            { text: 'Build or acquire steam locomotives. Locomotives pull trains of freight or passenger cars.' },
+            { text: 'Railways enable: 200+ ton freight trains, passenger travel at 50–100 km/h, and national integration.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'telegraph',
+        name: 'Telegraph',
+        stage: 6,
+        icon: '📡',
+        category: 'tool',
+        objective: 'Build electrical telegraph system for instant long-distance communication using Morse code.',
+        evolution: 'Telegraph enables instant communication across continents. Information travels at the speed of electricity.',
+        requirements: [
+            { name: 'Wire (copper/iron)', value: 'For transmission lines' },
+            { name: 'Batteries', value: 'For power' },
+            { name: 'Telegraph key', value: 'For sending' },
+            { name: 'Sounder', value: 'For receiving' },
+            { name: 'Insulators', value: 'For poles' }
+        ],
+        steps: [
+            { text: 'String wire between stations on poles. Wire can be copper or iron. Insulate wire from poles using glass or ceramic.' },
+            { text: 'Connect battery to wire at sending station. Battery provides electrical current.' },
+            { text: 'Install telegraph key (switch) at sending station. Key opens and closes circuit.' },
+            { text: 'Install sounder (electromagnet) at receiving station. Sounder clicks when current flows.' },
+            { text: 'Learn Morse code: dots and dashes represent letters. Short click = dot, long click = dash.' },
+            { text: 'Send messages by pressing key in Morse code patterns. Sounder clicks out message at receiving end.' },
+            { text: 'Transcontinental telegraph enables instant communication across continents. Messages that took weeks now arrive in minutes.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STAGE 7: ATOMIC & SPACE AGE ===
+    {
+        id: 'transistor',
+        name: 'Transistor',
+        stage: 7,
+        icon: '💻',
+        category: 'tool',
+        objective: 'Create semiconductor transistor to amplify and switch electronic signals — the foundation of modern electronics.',
+        evolution: 'Transistors replace vacuum tubes. They enable computers, radios, TVs, and all modern electronics in miniature form.',
+        requirements: [
+            { name: 'Semiconductor (silicon/germanium)', value: 'Ultra-pure' },
+            { name: 'Dopants', value: 'Phosphorus, boron' },
+            { name: 'Crystal puller', value: 'For growing crystals' },
+            { name: 'Photolithography', value: 'For patterning' },
+            { name: 'Clean room', value: 'Dust-free environment' }
+        ],
+        steps: [
+            { text: 'Grow ultra-pure silicon crystal using Czochralski process. Melt silicon, dip seed crystal, slowly pull and rotate.' },
+            { text: 'Slice crystal into thin wafers. Each wafer will become hundreds of transistors.' },
+            { text: 'Dope silicon with impurities (phosphorus, boron) to create N-type and P-type regions. Doping creates semiconductor properties.' },
+            { text: 'Create transistor structure: emitter, base, and collector regions. Modern transistors are nanometers in size.' },
+            { text: 'Add metal contacts (aluminum, gold) for connections. Contacts must be ohmic (low resistance).' },
+            { text: 'Package transistor in protective case. Add leads for connecting to circuits.' },
+            { text: 'Test transistor: apply small current to base, measure amplified current from collector to emitter.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'nuclear-fission',
+        name: 'Nuclear Fission Reactor',
+        stage: 7,
+        icon: '⚛️',
+        category: 'tool',
+        objective: 'Build controlled nuclear chain reaction to generate massive amounts of electricity from uranium.',
+        evolution: 'Nuclear power generates enormous energy from small amounts of fuel. One kilogram of uranium = 3 million kilograms of coal.',
+        requirements: [
+            { name: 'Uranium fuel', value: 'Enriched to 3–5% U-235' },
+            { name: 'Moderator', value: 'Water or graphite' },
+            { name: 'Control rods', value: 'Boron or cadmium' },
+            { name: 'Pressure vessel', value: 'Steel containment' },
+            { name: 'Turbine generator', value: 'For electricity production' }
+        ],
+        steps: [
+            { text: 'Enrich uranium to 3–5% U-235 (fissile isotope). Natural uranium is 99.3% U-238, 0.7% U-235.' },
+            { text: 'Form uranium into fuel rods. Bundle rods into fuel assemblies.' },
+            { text: 'Load fuel into reactor core. Core contains hundreds of fuel assemblies.' },
+            { text: 'Add moderator (water or graphite). Moderator slows neutrons, enabling chain reaction.' },
+            { text: 'Insert control rods (boron, cadmium). Control rods absorb neutrons, regulating reaction rate.' },
+            { text: 'Initiate chain reaction: withdraw control rods slowly. Neutrons split U-235 atoms, releasing energy and more neutrons.' },
+            { text: 'Heat from fission boils water, creating steam. Steam drives turbine generator, producing electricity.' },
+            { text: 'Maintain criticality: reaction self-sustaining but controlled. One kilogram of uranium produces energy equivalent to 3 million kg of coal.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'rocket',
+        name: 'Rocket (Liquid-Fuel)',
+        stage: 7,
+        icon: '🚀',
+        category: 'tool',
+        objective: 'Build liquid-fuel rocket to escape Earth\'s gravity — enabling space exploration and satellite deployment.',
+        evolution: 'Rockets escape Earth\'s gravity. They enable satellites, space stations, moon landings, and interplanetary exploration.',
+        requirements: [
+            { name: 'Rocket engine', value: 'Liquid-fuel combustion chamber' },
+            { name: 'Fuel (kerosene/hydrogen)', value: 'Propellant' },
+            { name: 'Oxidizer (liquid oxygen)', value: 'For combustion' },
+            { name: 'Turbopumps', value: 'For fuel delivery' },
+            { name: 'Guidance system', value: 'For navigation' },
+            { name: 'Payload', value: 'Satellite, capsule, or warhead' }
+        ],
+        steps: [
+            { text: 'Design rocket engine: combustion chamber, nozzle, turbopumps. Engine must produce thrust greater than rocket weight.' },
+            { text: 'Build fuel and oxidizer tanks. Tanks must be lightweight but strong enough to hold cryogenic liquids.' },
+            { text: 'Install turbopumps to deliver fuel and oxidizer to combustion chamber at high pressure.' },
+            { text: 'Add guidance system: gyroscopes, computers, and control surfaces for steering.' },
+            { text: 'Mount payload (satellite, capsule) on top of rocket. Payload is protected by fairing during ascent.' },
+            { text: 'Fuel rocket: load liquid oxygen and fuel. Liquid oxygen is -183°C, requiring special handling.' },
+            { text: 'Ignite engine: fuel and oxidizer mix in combustion chamber, ignite. Exhaust gases exit nozzle at supersonic speed.' },
+            { text: 'Rocket accelerates upward. Stages separate as fuel is exhausted. Final stage achieves orbital velocity (28,000 km/h).' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'internet',
+        name: 'Internet (Packet Switching)',
+        stage: 7,
+        icon: '🌐',
+        category: 'skill',
+        objective: 'Build global network of computers using packet switching — connecting humanity\'s knowledge.',
+        evolution: 'Internet connects billions of devices. It enables instant communication, global commerce, and access to all human knowledge.',
+        requirements: [
+            { name: 'Computers', value: 'With network interfaces' },
+            { name: 'Routers', value: 'For directing traffic' },
+            { name: 'Cables (fiber/copper)', value: 'For transmission' },
+            { name: 'Protocols', value: 'TCP/IP' },
+            { name: 'Servers', value: 'For hosting content' }
+        ],
+        steps: [
+            { text: 'Connect computers with cables (fiber optic, copper) or wireless (radio, satellite).' },
+            { text: 'Install routers at network junctions. Routers direct data packets to their destinations.' },
+            { text: 'Implement TCP/IP protocol: break data into packets, address each packet, route independently, reassemble at destination.' },
+            { text: 'Build Domain Name System (DNS): translate human-readable names (google.com) to IP addresses.' },
+            { text: 'Create World Wide Web: hypertext system for linking documents. Web uses HTTP protocol and HTML formatting.' },
+            { text: 'Deploy servers to host websites, emails, files. Servers respond to requests from client computers.' },
+            { text: 'Internet enables: email, web browsing, online commerce, social media, cloud computing, and global collaboration.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'solar-cell',
+        name: 'Solar Cell (Photovoltaic)',
+        stage: 7,
+        icon: '☀️',
+        category: 'tool',
+        objective: 'Build semiconductor device that converts sunlight directly into electricity — harvesting stellar energy.',
+        evolution: 'Solar cells provide clean, renewable energy from the sun. They enable off-grid power and sustainable energy.',
+        requirements: [
+            { name: 'Silicon wafers', value: 'N-type and P-type' },
+            { name: 'Dopants', value: 'Phosphorus, boron' },
+            { name: 'Anti-reflective coating', value: 'For efficiency' },
+            { name: 'Metal contacts', value: 'For current collection' },
+            { name: 'Encapsulation', value: 'For protection' }
+        ],
+        steps: [
+            { text: 'Create N-type silicon (doped with phosphorus) and P-type silicon (doped with boron).' },
+            { text: 'Join N-type and P-type silicon to create P-N junction. Junction creates electric field.' },
+            { text: 'Apply anti-reflective coating to top surface. Coating increases light absorption.' },
+            { text: 'Add metal contacts (grid on top, solid layer on bottom). Contacts collect electrical current.' },
+            { text: 'Encapsulate cell in protective material (glass, plastic). Encapsulation protects from weather while transmitting light.' },
+            { text: 'Connect multiple cells in series to create solar panel. Panel produces 12–24 volts DC.' },
+            { text: 'Install solar panels facing sun. Sunlight knocks electrons loose, creating current. Inverter converts DC to AC for home use.' },
+            { text: 'Solar cells produce clean energy for 25+ years. They enable off-grid power, satellites, and sustainable energy.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     }
 ];
 
@@ -1172,19 +2761,6 @@ function renderStageHub(stageId) {
     const skills = stageBlueprints.filter(bp => bp.category === 'skill');
     const resources = stageBlueprints.filter(bp => bp.category === 'resource');
 
-    function renderCardGrid(items) {
-        if (items.length === 0) return '<p style="color:var(--text-secondary); font-style:italic; text-align:center; padding:2rem;">None yet.</p>';
-        return `<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:1rem;">
-            ${items.map(bp => `
-                <button class="hub-card" onclick="selectBlueprint('${bp.id}')" style="background:#1c2128; border:1px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); border-bottom:3px solid var(--stage-${stageId});">
-                    <span style="font-size:2rem;">${renderIcon(bp.icon)}</span>
-                    <div style="font-weight:700; margin-top:0.5rem;">${bp.name}</div>
-                    <span style="font-size:0.6rem; color:var(--text-secondary); text-transform:uppercase;">REF: ${bp.id.toUpperCase()}</span>
-                </button>
-            `).join('')}
-        </div>`;
-    }
-
     view.innerHTML = `
         <div class="blueprint-card">
             <div style="border-left: 8px solid var(--stage-${stageId}); padding-left: 1.5rem;">
@@ -1202,33 +2778,139 @@ function renderStageHub(stageId) {
             ${stageBlueprints.length === 0
             ? `<p style="margin-top:2rem; color: var(--text-secondary); text-align:center;">No blueprints in this stage yet. Use "Add New Blueprint" to create one.</p>`
             : `
-                    <!-- SKILLS SECTION -->
-                    <div style="margin-top:2.5rem;">
-                        <h3 style="font-family:'Outfit',sans-serif; font-size:1.4rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
-                            🎯 Skills <span style="font-size:0.8rem; color:var(--text-secondary); font-weight:400;">(${skills.length})</span>
-                        </h3>
-                        ${renderCardGrid(skills)}
-                    </div>
+                    <!-- CATEGORY SELECTION BUTTONS -->
+                    <div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem;">
+                        
+                        <!-- SKILLS BUTTON -->
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'skills')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #3fb950, #58a6ff);"></div>
+                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">🎯</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Skills</div>
+                            <div style="font-size:0.85rem; color:var(--text-secondary);">${skills.length} blueprints</div>
+                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                        </button>
 
-                    <!-- RESOURCES SECTION -->
-                    <div style="margin-top:2.5rem;">
-                        <h3 style="font-family:'Outfit',sans-serif; font-size:1.4rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
-                             Resources <span style="font-size:0.8rem; color:var(--text-secondary); font-weight:400;">(${resources.length})</span>
-                        </h3>
-                        ${renderCardGrid(resources)}
-                    </div>
+                        <!-- RESOURCES BUTTON -->
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'resources')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #fbc02d, #ff7043);"></div>
+                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">📦</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Resources</div>
+                            <div style="font-size:0.85rem; color:var(--text-secondary);">${resources.length} blueprints</div>
+                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                        </button>
 
-                    <!-- TOOLS SECTION -->
-                    <div style="margin-top:2.5rem;">
-                        <h3 style="font-family:'Outfit',sans-serif; font-size:1.4rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
-                            🔨 Tools <span style="font-size:0.8rem; color:var(--text-secondary); font-weight:400;">(${tools.length})</span>
-                        </h3>
-                        ${renderCardGrid(tools)}
+                        <!-- TOOLS BUTTON -->
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'tools')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #4fc3f7, #9d50bb);"></div>
+                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">🔨</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Tools</div>
+                            <div style="font-size:0.85rem; color:var(--text-secondary);">${tools.length} blueprints</div>
+                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                        </button>
                     </div>
                 `
         }
         </div>
     `;
+
+    // Add hover effects
+    setTimeout(() => {
+        document.querySelectorAll('.category-nav-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function () {
+                this.style.borderColor = 'var(--accent-blue)';
+                this.style.transform = 'translateY(-4px)';
+                this.style.boxShadow = '0 8px 25px rgba(88, 166, 255, 0.2)';
+            });
+            btn.addEventListener('mouseleave', function () {
+                this.style.borderColor = 'var(--blueprint-border)';
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    }, 100);
+}
+
+function renderCategoryView(stageId, category) {
+    const stage = STAGES[stageId];
+    if (!stage) return;
+
+    const stageBlueprints = getAllBlueprints().filter(bp => bp.stage == stageId);
+    let items = [];
+    let categoryTitle = '';
+    let categoryIcon = '';
+
+    if (category === 'skills') {
+        items = stageBlueprints.filter(bp => bp.category === 'skill');
+        categoryTitle = 'Skills';
+        categoryIcon = '🎯';
+    } else if (category === 'resources') {
+        items = stageBlueprints.filter(bp => bp.category === 'resource');
+        categoryTitle = 'Resources';
+        categoryIcon = '📦';
+    } else if (category === 'tools') {
+        items = stageBlueprints.filter(bp => bp.category === 'tool' || !bp.category);
+        categoryTitle = 'Tools';
+        categoryIcon = '🔨';
+    }
+
+    updateActiveSidebar(`${categoryTitle} - Stage ${stageId}`);
+
+    const view = document.getElementById('blueprint-view');
+
+    function renderCardGrid(items) {
+        if (items.length === 0) return '<p style="color:var(--text-secondary); font-style:italic; text-align:center; padding:2rem;">No blueprints in this category yet.</p>';
+        return `<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:1.5rem;">
+            ${items.map(bp => `
+                <button class="hub-card" onclick="selectBlueprint('${bp.id}')" style="background:#1c2128; border:1px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); border-bottom:3px solid var(--stage-${stageId}); transition:all 0.3s;">
+                    <span style="font-size:2.5rem; display:block; margin-bottom:0.8rem;">${renderIcon(bp.icon)}</span>
+                    <div style="font-weight:700; margin-bottom:0.5rem; font-family:'Outfit',sans-serif;">${bp.name}</div>
+                    <span style="font-size:0.6rem; color:var(--text-secondary); text-transform:uppercase; font-family:'JetBrains Mono';">REF: ${bp.id.toUpperCase()}</span>
+                </button>
+            `).join('')}
+        </div>`;
+    }
+
+    view.innerHTML = `
+        <div class="blueprint-card">
+            <!-- BACK BUTTON & HEADER -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--blueprint-border);">
+                <button onclick="renderStageHub(${stageId})" style="background:transparent; border:1px solid var(--blueprint-border); color:var(--text-secondary); padding:0.5rem 1.2rem; border-radius:8px; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:0.85rem; transition:all 0.2s; display:flex; align-items:center; gap:0.5rem;">
+                    ← Back to Stage ${stageId}
+                </button>
+                <span style="font-size:0.75rem; color:var(--text-secondary); font-family:'JetBrains Mono';">STAGE ${stageId}</span>
+            </div>
+
+            <!-- CATEGORY HEADER -->
+            <div style="border-left: 8px solid var(--stage-${stageId}); padding-left: 1.5rem; margin-bottom:2.5rem;">
+                <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                    <span style="font-size: 3rem;">${categoryIcon}</span>
+                    <div>
+                        <h2 style="margin:0; font-family:'Outfit',sans-serif; font-size:2rem;">${categoryTitle}</h2>
+                        <div style="color: var(--accent-blue); font-family: 'JetBrains Mono'; font-size: 0.9rem;">${stage.name} • ${items.length} blueprints</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEMS GRID -->
+            ${renderCardGrid(items)}
+        </div>
+    `;
+
+    // Add hover effects to cards
+    setTimeout(() => {
+        document.querySelectorAll('.hub-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-4px)';
+                this.style.boxShadow = '0 8px 25px rgba(88, 166, 255, 0.15)';
+                this.style.borderColor = 'var(--accent-blue)';
+            });
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+                this.style.borderColor = 'var(--blueprint-border)';
+            });
+        });
+    }, 100);
 }
 
 function getYoutubeEmbedUrl(originalUrl) {
@@ -2003,6 +3685,37 @@ function filterMarketCategory(category) {
     currentMarketFilter = category;
     const input = document.getElementById('market-search-input');
     renderMarketScanner(input ? input.value : '');
+}
+
+function handleSidebarSearch(query) {
+    const term = query.toLowerCase().trim();
+    const stageGroups = document.querySelectorAll('.stage-nav-group');
+    
+    if (!term) {
+        stageGroups.forEach(g => {
+            g.style.display = 'block';
+            const items = g.querySelectorAll('li');
+            items.forEach(li => li.style.display = 'flex');
+        });
+        return;
+    }
+
+    stageGroups.forEach(group => {
+        const items = group.querySelectorAll('li');
+        let hasMatch = false;
+        
+        items.forEach(li => {
+            const text = li.textContent.toLowerCase();
+            if (text.includes(term)) {
+                li.style.display = 'flex';
+                hasMatch = true;
+            } else {
+                li.style.display = 'none';
+            }
+        });
+        
+        group.style.display = hasMatch ? 'block' : 'none';
+    });
 }
 
 init();

@@ -198,7 +198,7 @@ body {
 
 .add-blueprint-btn {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background: #238636;
     color: white;
     border: none;
@@ -213,6 +213,29 @@ body {
     transition: 0.3s;
     font-size: 0.9rem;
     box-shadow: 0 4px 15px rgba(35, 134, 54, 0.2);
+}
+
+.sidebar-search-input {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid var(--blueprint-border);
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    transition: 0.2s;
+}
+
+.sidebar-search-input:focus {
+    border-color: var(--accent-blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.1);
+}
+
+.sidebar-search-input::placeholder {
+    color: var(--text-secondary);
 }
 
 .add-blueprint-btn:hover {
@@ -1657,4 +1680,82 @@ body {
     font-size: 3rem;
     display: block;
     margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.blueprint-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.step-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+.feedback-btn:hover {
+    animation: pulse 0.3s ease-in-out;
+}
+
+.category-nav-btn {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.blueprint-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.step-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+.feedback-btn:hover {
+    animation: pulse 0.3s ease-in-out;
+}
+
+.category-nav-btn {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
