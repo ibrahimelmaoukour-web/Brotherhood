@@ -3,7 +3,15 @@
     "allow": [
       "Bash(python *)",
       "Bash(git init)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(gh *)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)",
+      "Bash(git stash)"
     ]
   },
   "$version": 3

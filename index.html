@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Primitive Blueprint Guide | Technical Reference</title>
-    <meta name="description"
-        content="A technical reference for primitive crafting. Real-life blueprints, measurements, and step-by-step guides.">
+    <title>Brotherhood | Craft Reference</title>
+    <meta name="description" content="A reference for primitive crafting techniques.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +16,13 @@
 </head>
 
 <body>
-    <!-- Forge Gate: Authentication Layer -->
+    <!-- Auth Screen -->
     <div id="auth-screen" class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
                 <span class="auth-logo">📜</span>
                 <h2>Forge Member Entry</h2>
-                <p>Entry to the Primitive Brotherhood repository requires the ancient passphrase.</p>
+                <p>Entry to the Brotherhood repository requires the ancient passphrase.</p>
             </div>
             <div class="auth-form">
                 <button onclick="handleGoogleLogin()" class="gmail-btn">
@@ -47,13 +46,17 @@
         </div>
     </div>
 
-    <!-- Main Toolkit: Hidden by default -->
+    <!-- Main App -->
     <div id="app" class="blueprint-container auth-hidden">
-        <aside class="sidebar">
+        <button class="menu-toggle-btn" onclick="toggleSidebar()">
+            <span class="hamburger-icon">☰</span>
+        </button>
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+        <aside class="sidebar" id="sidebar">
             <header class="sidebar-header">
-                <div class="logo">
+                <div class="logo" onclick="goToHome()" style="cursor:pointer;">
                     <span class="logo-icon">📜</span>
-                    <h1>Primitive Blueprints</h1>
+                    <h1>Brotherhood</h1>
                 </div>
             </header>
             <nav class="recipe-nav">
@@ -62,13 +65,13 @@
                         <span>📜</span> Add New Blueprint
                     </button>
                     <div id="stages-nav">
-                        <!-- Technological stages and items injected here dynamically -->
+                        <!-- Navigation injected here -->
                     </div>
                 </div>
             </nav>
             <footer class="sidebar-footer">
-                <button class="footer-btn admin-access" onclick="showAdminPanel()">
-                    <span>⚙️</span> Admin Management
+                <button class="footer-btn market-footer-btn" onclick="openMarketScanner()">
+                    <span>🔍</span> Market Scanner
                 </button>
                 <button class="footer-btn logout-btn" onclick="handleLogout()">
                     <span>🚪</span> Logout
@@ -80,24 +83,41 @@
             <div id="welcome-view" class="view active">
                 <div class="blueprint-card hero">
                     <h2>Welcome to the Forge</h2>
-                    <p>Select a blueprint from the sidebar to view technical specifications, required measurements (kg,
-                        ml, m), and step-by-step construction guides for real-life primitive crafting.</p>
+                    <p>Use the sidebar to browse, add, or manage blueprints.</p>
                     <div class="quick-stats">
-                        <div class="stat"><span>19</span> Blueprints Available</div>
-                        <div class="stat"><span>5</span> Craft Roadmaps</div>
-                        <div class="stat"><span>10</span> Material Encyclopedias</div>
+                        <div class="stat"><span id="blueprint-count">0</span> Blueprints</div>
                     </div>
                 </div>
             </div>
 
             <div id="blueprint-view" class="view">
-                <!-- Active blueprint content injected here -->
+                <!-- Blueprint content injected here -->
+            </div>
+
+            <div id="admin-login-view" class="view">
+                <!-- Admin login injected here -->
             </div>
 
             <div id="admin-view" class="view">
-                <!-- Admin management panel injected here -->
+                <!-- Admin panel injected here -->
+            </div>
+
+            <div id="market-view" class="view">
+                <!-- Market scanner injected here -->
             </div>
         </main>
+
+        <!-- Mobile Bottom Nav -->
+        <nav class="mobile-bottom-nav">
+            <button class="mobile-nav-btn" onclick="openMarketScanner()">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-label">Market</span>
+            </button>
+            <button class="mobile-nav-btn" onclick="handleLogout()">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-label">Logout</span>
+            </button>
+        </nav>
     </div>
 
     <script src="script.js"></script>
