@@ -9,7 +9,569 @@ const STAGES = {
 };
 
 const blueprints = [
-    // === TOOLS ===
+    // === STAGE 1: PALEOLITHIC ERA ===
+    // === FIRE & ENERGY TECHNOLOGIES ===
+    {
+        id: 'fire-control',
+        name: 'Fire Control & Maintenance',
+        stage: 1,
+        icon: '🔥',
+        category: 'skill',
+        objective: 'Master fire-making, control, and use for cooking, warmth, and protection.',
+        evolution: 'Fire fundamentally changed human biology, society, and survival — the single most important discovery in human history.',
+        upgrades: [
+            { name: 'Natural Fire', description: 'Captured lightning wildfires', stage: 1 },
+            { name: 'Drilling Fire', description: 'Friction fire production', stage: 1 },
+            { name: 'Percussion Fire', description: 'Flint/pyrite sparking', stage: 1 },
+            { name: 'Hearth Fire', description: 'Controlled fire pits', stage: 1 },
+            { name: 'Portable Fire', description: 'Coals in shells/containers', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Flint & pyrite (or iron)', value: 'For striking sparks' },
+            { name: 'Dry tinder (bark, grass)', value: 'For catching sparks' },
+            { name: 'Fuel wood', value: 'For maintaining flame' },
+            { name: 'Fire pit', value: 'Safe burning area' }
+        ],
+        steps: [
+            { text: 'Strike flint/pyrite together to create sparks. Use dry bark/grass as tinder.' },
+            { text: 'Blow gently on sparks to ignite tinder. Add small twigs once flame appears.' },
+            { text: 'Build fire in pit with stones around perimeter. Add larger logs for sustained burning.' },
+            { text: 'Use fire for cooking (kills pathogens, makes meat tender), warmth, light, and protection from predators.' },
+            { text: 'Carry coals to transport fire. Fire enabled night activity, brain development (cooked food), and social gathering.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'hearth-building',
+        name: 'Hearth & Campfire Construction',
+        stage: 1,
+        icon: '🏠',
+        category: 'skill',
+        objective: 'Build permanent hearths for sustained cooking and social centers.',
+        evolution: 'Hearths enabled extended cooking, tool hardening, and became social gathering centers.',
+        upgrades: [
+            { name: 'Open Fire', description: 'Simple ground fires', stage: 1 },
+            { name: 'Ringed Hearth', description: 'Stone-ringed fire pits', stage: 1 },
+            { name: 'Indoor Hearth', description: 'Sheltered fire places', stage: 1 },
+            { name: 'Multiple Hearths', description: 'Specialized cooking areas', stage: 1 },
+            { name: 'Ceremonial Fires', description: 'Ritual fire centers', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Stones', value: 'For fire ring' },
+            { name: 'Fuel wood', value: 'Sustained burning' },
+            { name: 'Shelter', value: 'Protection from weather' }
+        ],
+        steps: [
+            { text: 'Select sheltered location near water and wood.' },
+            { text: 'Arrange stones in circle to contain fire.' },
+            { text: 'Dig shallow pit for drainage.' },
+            { text: 'Build up sides with larger stones.' },
+            { text: 'Use for cooking, warmth, tool-making.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === STONE TOOL TECHNOLOGIES ===
+    {
+        id: 'stone-knapping-skill',
+        name: 'Advanced Stone Knapping',
+        stage: 1,
+        icon: '⚒️',
+        category: 'skill',
+        objective: 'Master the art of shaping stone into tools and weapons.',
+        evolution: 'Stone knapping enabled precise tool-making, hunting efficiency, and technological advancement.',
+        upgrades: [
+            { name: 'Simple Flakes', description: 'Basic sharp flakes', stage: 1 },
+            { name: 'Bifacial Tools', description: 'Two-sided worked tools', stage: 1 },
+            { name: 'Pressure Flaking', description: 'Fine pressure-retouched tools', stage: 1 },
+            { name: 'Blade Production', description: 'Long standardized blades', stage: 1 },
+            { name: 'Microlithic Tools', description: 'Composite tool components', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Flint/chert nodules', value: 'Quality stone' },
+            { name: 'Hard hammerstone', value: 'For initial striking' },
+            { name: 'Soft hammer', value: 'Antler tine for pressure' },
+            { name: 'Abrasives', value: 'Sandstone for grinding' }
+        ],
+        steps: [
+            { text: 'Select high-quality flint/chert. Test by striking for clear ring.' },
+            { text: 'Strike core with hammerstone to create large flakes.' },
+            { text: 'Use antler tine to pressure-flake edges for sharpness.' },
+            { text: 'Grind edges on sandstone for polish.' },
+            { text: 'Create tools: knives, scrapers, points, axes.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'bone-antler-crafting',
+        name: 'Bone & Antler Tool Crafting',
+        stage: 1,
+        icon: '🦴',
+        category: 'skill',
+        objective: 'Craft tools from animal bones and antlers.',
+        evolution: 'Bone tools provided strong, flexible alternatives to stone, enabling new tool types.',
+        upgrades: [
+            { name: 'Split Bone', description: 'Cracked long bones', stage: 1 },
+            { name: 'Grooved Bones', description: 'Notched for hafting', stage: 1 },
+            { name: 'Polished Bone', description: 'Ground smooth tools', stage: 1 },
+            { name: 'Antler Tools', description: 'Worked antler implements', stage: 1 },
+            { name: 'Composite Tools', description: 'Bone-stone combinations', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Animal bones', value: 'Fresh or dry' },
+            { name: 'Stone tools', value: 'For cutting/shaping' },
+            { name: 'Sandstone', value: 'For grinding' }
+        ],
+        steps: [
+            { text: 'Collect bones from hunted animals.' },
+            { text: 'Split long bones with stone tools.' },
+            { text: 'Shape into points, needles, awls.' },
+            { text: 'Polish on sandstone for smoothness.' },
+            { text: 'Use for sewing, drilling, engraving.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wood-shaping',
+        name: 'Wood Working & Shaping',
+        stage: 1,
+        icon: '🪵',
+        category: 'skill',
+        objective: 'Shape wood for shelters, weapons, and tools using stone tools.',
+        evolution: 'Wood working enabled shelters, spears, bows, and composite tools.',
+        upgrades: [
+            { name: 'Split Wood', description: 'Simple wood splitting', stage: 1 },
+            { name: 'Shaped Spears', description: 'Pointed wooden spears', stage: 1 },
+            { name: 'Bows & Arrows', description: 'Projectile weapons', stage: 1 },
+            { name: 'Hafted Tools', description: 'Wooden-handled stone tools', stage: 1 },
+            { name: 'Boat Building', description: 'Watercraft construction', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Hardwood', value: 'Strong wood types' },
+            { name: 'Stone axes', value: 'For felling' },
+            { name: 'Cordage', value: 'For binding' }
+        ],
+        steps: [
+            { text: 'Select straight hardwood trunks.' },
+            { text: 'Fell trees with stone axes.' },
+            { text: 'Shape with stone tools and abrasives.' },
+            { text: 'Split wood with wedges.' },
+            { text: 'Create spears, shelters, tools.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === HUNTING & GATHERING TECHNOLOGIES ===
+    {
+        id: 'spear-projectile-making',
+        name: 'Projectile Weapon Crafting',
+        stage: 1,
+        icon: '🔱',
+        category: 'skill',
+        objective: 'Create effective hunting weapons for large game.',
+        evolution: 'Projectile weapons enabled safe hunting of dangerous animals, expanding food sources.',
+        upgrades: [
+            { name: 'Wooden Spears', description: 'Simple pointed sticks', stage: 1 },
+            { name: 'Stone-tipped Spears', description: 'Flint-pointed spears', stage: 1 },
+            { name: 'Throwing Spears', description: 'Balanced throwing spears', stage: 1 },
+            { name: 'Atlatl Spears', description: 'Spear-throwing levers', stage: 1 },
+            { name: 'Composite Spears', description: 'Bone/wood/stone combinations', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Straight wood', value: 'Spear shaft' },
+            { name: 'Flint points', value: 'Spear tips' },
+            { name: 'Cordage', value: 'For binding' }
+        ],
+        steps: [
+            { text: 'Select straight hardwood shaft.' },
+            { text: 'Shape flint point with knapping.' },
+            { text: 'Groove shaft end for point.' },
+            { text: 'Bind point with sinew/cordage.' },
+            { text: 'Balance for throwing accuracy.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'atlatl-construction',
+        name: 'Atlatl Spear Thrower',
+        stage: 1,
+        icon: '🏹',
+        category: 'tool',
+        objective: 'Build spear-throwing lever for increased range and power.',
+        evolution: 'Atlatl increased spear velocity by 2x, enabling hunting of fast-moving game.',
+        upgrades: [
+            { name: 'Hand-thrown Spears', description: 'Direct spear throwing', stage: 1 },
+            { name: 'Basic Atlatl', description: 'Simple wooden lever', stage: 1 },
+            { name: 'Weighted Atlatl', description: 'Balanced throwing stick', stage: 1 },
+            { name: 'Hook Atlatl', description: 'Spear-holding hook', stage: 1 },
+            { name: 'Composite Atlatl', description: 'Antler/wood combinations', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Wood/antler', value: 'Lever material' },
+            { name: 'Cordage', value: 'For wrapping' },
+            { name: 'Balanced spear', value: 'Light throwing spear' }
+        ],
+        steps: [
+            { text: 'Carve wooden or antler lever.' },
+            { text: 'Add hook or spur for spear.' },
+            { text: 'Balance for throwing.' },
+            { text: 'Practice throwing technique.' },
+            { text: 'Increases range and accuracy.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'advanced-hunting',
+        name: 'Advanced Hunting Techniques',
+        stage: 1,
+        icon: '🪤',
+        category: 'skill',
+        objective: 'Develop sophisticated hunting and trapping techniques.',
+        evolution: 'Advanced hunting methods increased food reliability and reduced risk.',
+        upgrades: [
+            { name: 'Pursuit Hunting', description: 'Direct animal pursuit', stage: 1 },
+            { name: 'Ambush Hunting', description: 'Hidden waiting positions', stage: 1 },
+            { name: 'Pit Traps', description: 'Camouflaged pit traps', stage: 1 },
+            { name: 'Snares', description: 'Noose traps', stage: 1 },
+            { name: 'Drive Hunts', description: 'Group animal drives', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Knowledge of animals', value: 'Behavior patterns' },
+            { name: 'Camouflage', value: 'Hide clothing' },
+            { name: 'Cordage', value: 'For snares' }
+        ],
+        steps: [
+            { text: 'Study animal behavior and tracks.' },
+            { text: 'Create ambush positions.' },
+            { text: 'Build pit traps with camouflage.' },
+            { text: 'Set snares in game trails.' },
+            { text: 'Coordinate group hunts.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === GATHERING & PROCESSING ===
+    {
+        id: 'plant-knowledge',
+        name: 'Plant Foraging & Processing',
+        stage: 1,
+        icon: '🌿',
+        category: 'skill',
+        objective: 'Identify and process edible plants, nuts, and roots.',
+        evolution: 'Plant knowledge provided reliable food sources and medicinal plants.',
+        upgrades: [
+            { name: 'Basic Foraging', description: 'Simple edible plants', stage: 1 },
+            { name: 'Nut Processing', description: 'Acorn/meat processing', stage: 1 },
+            { name: 'Root Digging', description: 'Edible root harvesting', stage: 1 },
+            { name: 'Seasonal Knowledge', description: 'Plant cycle timing', stage: 1 },
+            { name: 'Medicinal Plants', description: 'Healing plant knowledge', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Digging stick', value: 'Root harvesting' },
+            { name: 'Basketry', value: 'For carrying' },
+            { name: 'Processing stones', value: 'Nut cracking' }
+        ],
+        steps: [
+            { text: 'Learn edible plant identification.' },
+            { text: 'Process acorns to remove tannins.' },
+            { text: 'Harvest roots with digging sticks.' },
+            { text: 'Store food in baskets.' },
+            { text: 'Use plants for medicine.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'basket-weaving',
+        name: 'Basketry & Cordage Making',
+        stage: 1,
+        icon: '🧺',
+        category: 'skill',
+        objective: 'Weave containers from plant fibers and bark.',
+        evolution: 'Basketry enabled food storage, transport, and fishing — foundation for agriculture.',
+        upgrades: [
+            { name: 'Twisted Fibers', description: 'Basic plant cordage', stage: 1 },
+            { name: 'Simple Baskets', description: 'Coiled fiber containers', stage: 1 },
+            { name: 'Twill Weaving', description: 'Patterned weaving', stage: 1 },
+            { name: 'Waterproof Baskets', description: 'Pitch-lined containers', stage: 1 },
+            { name: 'Storage Baskets', description: 'Large food containers', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Plant fibers', value: 'Willow, reeds, bark' },
+            { name: 'Sharp stone', value: 'For cutting' },
+            { name: 'Water', value: 'For soaking fibers' }
+        ],
+        steps: [
+            { text: 'Harvest flexible plant materials.' },
+            { text: 'Soak fibers to increase pliability.' },
+            { text: 'Twist fibers into cordage.' },
+            { text: 'Weave into baskets/containers.' },
+            { text: 'Use for carrying, storage, fishing.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === SOCIAL & COGNITIVE SKILLS ===
+    {
+        id: 'cave-symbolism',
+        name: 'Cave Art & Symbolic Communication',
+        stage: 1,
+        icon: '🖼️',
+        category: 'skill',
+        objective: 'Create art and symbols for communication and ritual.',
+        evolution: 'Symbolic communication enabled knowledge transfer, social organization, and culture.',
+        upgrades: [
+            { name: 'Rock Art', description: 'Petroglyphs on rocks', stage: 1 },
+            { name: 'Cave Paintings', description: 'Pigment cave art', stage: 1 },
+            { name: 'Symbolic Marks', description: 'Abstract symbols', stage: 1 },
+            { name: 'Narrative Art', description: 'Storytelling art', stage: 1 },
+            { name: 'Ritual Art', description: 'Ceremonial drawings', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Pigments', value: 'Ochre, charcoal' },
+            { name: 'Drawing tools', value: 'Bone/charcoal sticks' },
+            { name: 'Light source', value: 'Torches/lamps' }
+        ],
+        steps: [
+            { text: 'Mix pigments with fat/water.' },
+            { text: 'Use bone sticks for drawing.' },
+            { text: 'Create animal/human figures.' },
+            { text: 'Add symbolic marks.' },
+            { text: 'Use for hunting magic, storytelling.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'burial-customs',
+        name: 'Burial & Ritual Practices',
+        stage: 1,
+        icon: '⚰️',
+        category: 'skill',
+        objective: 'Develop burial customs and rituals for the dead.',
+        evolution: 'Burial practices indicate belief in afterlife and social organization.',
+        upgrades: [
+            { name: 'Simple Burials', description: 'Body placement', stage: 1 },
+            { name: 'Grave Goods', description: 'Tools with deceased', stage: 1 },
+            { name: 'Ochre Burials', description: 'Pigmented burials', stage: 1 },
+            { name: 'Shaft Graves', description: 'Deep burial shafts', stage: 1 },
+            { name: 'Megalithic Tombs', description: 'Stone burial chambers', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Digging tools', value: 'Wooden picks' },
+            { name: 'Grave offerings', value: 'Tools, ornaments' },
+            { name: 'Pigments', value: 'For decoration' }
+        ],
+        steps: [
+            { text: 'Select burial location.' },
+            { text: 'Dig grave pit.' },
+            { text: 'Place body with offerings.' },
+            { text: 'Cover with stones/earth.' },
+            { text: 'Mark grave with stones/art.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'seasonal-tracking',
+        name: 'Seasonal & Environmental Knowledge',
+        stage: 1,
+        icon: '🌍',
+        category: 'skill',
+        objective: 'Understand seasonal cycles, weather, and resource availability.',
+        evolution: 'Environmental knowledge enabled year-round survival and resource management.',
+        upgrades: [
+            { name: 'Seasonal Migration', description: 'Following food sources', stage: 1 },
+            { name: 'Weather Prediction', description: 'Climate pattern knowledge', stage: 1 },
+            { name: 'Resource Mapping', description: 'Territory knowledge', stage: 1 },
+            { name: 'Calendar Systems', description: 'Time tracking', stage: 1 },
+            { name: 'Sustainable Harvesting', description: 'Resource conservation', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Observation', value: 'Weather/animal patterns' },
+            { name: 'Memory', value: 'Seasonal knowledge' },
+            { name: 'Marking systems', value: 'Notches on wood' }
+        ],
+        steps: [
+            { text: 'Track animal migration patterns.' },
+            { text: 'Note plant blooming times.' },
+            { text: 'Predict weather from signs.' },
+            { text: 'Map resource locations.' },
+            { text: 'Plan seasonal activities.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === SHELTER & MOBILITY ===
+    {
+        id: 'semi-permanent-shelters',
+        name: 'Semi-permanent Shelter Construction',
+        stage: 1,
+        icon: '🏕️',
+        category: 'skill',
+        objective: 'Build semi-permanent shelters for extended stays.',
+        evolution: 'Semi-permanent shelters enabled seasonal occupation and resource exploitation.',
+        upgrades: [
+            { name: 'Caves/Rockshelters', description: 'Natural shelters', stage: 1 },
+            { name: 'Pit Houses', description: 'Semi-subterranean homes', stage: 1 },
+            { name: 'Wooden Huts', description: 'Above-ground structures', stage: 1 },
+            { name: 'Thatched Roofs', description: 'Weather protection', stage: 1 },
+            { name: 'Multiple Structures', description: 'Specialized buildings', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Wood poles', value: 'Structural support' },
+            { name: 'Animal hides', value: 'Roofing/cover' },
+            { name: 'Cordage', value: 'For binding' }
+        ],
+        steps: [
+            { text: 'Dig shallow pit for foundation.' },
+            { text: 'Build wooden frame.' },
+            { text: 'Cover with thatch/hides.' },
+            { text: 'Add internal divisions.' },
+            { text: 'Use for extended hunting camps.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'watercraft-building',
+        name: 'Watercraft Construction',
+        stage: 1,
+        icon: '🛶',
+        category: 'skill',
+        objective: 'Build watercraft for river/lake travel and fishing.',
+        evolution: 'Watercraft enabled river travel, fishing, and resource exploitation.',
+        upgrades: [
+            { name: 'Rafts', description: 'Simple floating platforms', stage: 1 },
+            { name: 'Dugout Canoes', description: 'Hollowed tree trunks', stage: 1 },
+            { name: 'Bark Canoes', description: 'Folded bark boats', stage: 1 },
+            { name: 'Paddles', description: 'Propulsion tools', stage: 1 },
+            { name: 'Fishing Boats', description: 'Specialized fishing craft', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Large trees', value: 'For dugouts' },
+            { name: 'Stone axes', value: 'For hollowing' },
+            { name: 'Fire', value: 'For burning out wood' }
+        ],
+        steps: [
+            { text: 'Select suitable tree trunk.' },
+            { text: 'Fell and trim to length.' },
+            { text: 'Burn/char wood to hollow.' },
+            { text: 'Shape with stone tools.' },
+            { text: 'Add seats and paddles.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === PROCESSING & PRESERVATION ===
+    {
+        id: 'meat-preservation',
+        name: 'Meat Processing & Preservation',
+        stage: 1,
+        icon: '🥩',
+        category: 'skill',
+        objective: 'Process and preserve animal meat for storage.',
+        evolution: 'Meat preservation enabled food storage and reduced hunting frequency.',
+        upgrades: [
+            { name: 'Fresh Consumption', description: 'Eat immediately', stage: 1 },
+            { name: 'Drying', description: 'Air-dried meat', stage: 1 },
+            { name: 'Smoking', description: 'Smoke-preserved meat', stage: 1 },
+            { name: 'Salt Curing', description: 'Salt-preserved meat', stage: 1 },
+            { name: 'Fat Rendering', description: 'Animal fat storage', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Stone knives', value: 'For butchering' },
+            { name: 'Salt sources', value: 'For curing' },
+            { name: 'Smoking racks', value: 'For preservation' }
+        ],
+        steps: [
+            { text: 'Butcher animal with stone tools.' },
+            { text: 'Slice meat into strips.' },
+            { text: 'Dry in sun or smoke over fire.' },
+            { text: 'Store in cool, dry places.' },
+            { text: 'Render fat for cooking/storage.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'tool-hafting-skill',
+        name: 'Advanced Tool Hafting',
+        stage: 1,
+        icon: '🔧',
+        category: 'skill',
+        objective: 'Attach stone tools to wooden handles.',
+        evolution: 'Hafted tools increased leverage and control, enabling new tool types.',
+        upgrades: [
+            { name: 'Hand-held Tools', description: 'Direct stone use', stage: 1 },
+            { name: 'Bound Tools', description: 'Cord-wrapped handles', stage: 1 },
+            { name: 'Glued Tools', description: 'Resin-bonded hafting', stage: 1 },
+            { name: 'Socket Hafting', description: 'Fitted handle sockets', stage: 1 },
+            { name: 'Composite Tools', description: 'Multi-material tools', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Wooden handles', value: 'Straight shafts' },
+            { name: 'Cordage/resin', value: 'Binding materials' },
+            { name: 'Stone tools', value: 'Flint blades' }
+        ],
+        steps: [
+            { text: 'Shape wooden handle to fit.' },
+            { text: 'Notch handle for stone placement.' },
+            { text: 'Bind with cordage or resin.' },
+            { text: 'Let adhesive cure.' },
+            { text: 'Test tool balance and strength.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === COGNITIVE & SOCIAL DEVELOPMENT ===
+    {
+        id: 'complex-language',
+        name: 'Language & Communication Development',
+        stage: 1,
+        icon: '💬',
+        category: 'skill',
+        objective: 'Develop complex language for coordination and knowledge transfer.',
+        evolution: 'Language enabled complex social organization, tool-making instruction, and culture.',
+        upgrades: [
+            { name: 'Gestures', description: 'Non-verbal communication', stage: 1 },
+            { name: 'Basic Language', description: 'Simple vocal communication', stage: 1 },
+            { name: 'Complex Language', description: 'Full grammatical speech', stage: 1 },
+            { name: 'Symbolic Language', description: 'Abstract concepts', stage: 1 },
+            { name: 'Written Language', description: 'Symbolic writing', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Social groups', value: 'Communication needs' },
+            { name: 'Brain development', value: 'From cooked food' },
+            { name: 'Teaching', value: 'Knowledge transmission' }
+        ],
+        steps: [
+            { text: 'Use gestures for basic needs.' },
+            { text: 'Develop vocal sounds for objects.' },
+            { text: 'Create grammar for complex ideas.' },
+            { text: 'Teach language to young.' },
+            { text: 'Use for hunting coordination.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'group-organization',
+        name: 'Social Organization & Division of Labor',
+        stage: 1,
+        icon: '👥',
+        category: 'skill',
+        objective: 'Develop complex social structures and task specialization.',
+        evolution: 'Social organization enabled large group activities and technological specialization.',
+        upgrades: [
+            { name: 'Family Units', description: 'Basic family groups', stage: 1 },
+            { name: 'Extended Families', description: 'Multi-family groups', stage: 1 },
+            { name: 'Task Specialization', description: 'Role differentiation', stage: 1 },
+            { name: 'Leadership Roles', description: 'Group coordination', stage: 1 },
+            { name: 'Ceremonial Roles', description: 'Ritual specialists', stage: 1 }
+        ],
+        requirements: [
+            { name: 'Group size', value: '20-50 people' },
+            { name: 'Resource abundance', value: 'Reliable food' },
+            { name: 'Language', value: 'Communication' }
+        ],
+        steps: [
+            { text: 'Form extended family groups.' },
+            { text: 'Assign hunting/foraging roles.' },
+            { text: 'Develop tool-making specialists.' },
+            { text: 'Create leadership structures.' },
+            { text: 'Organize large hunts/ceremonies.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === EXISTING TOOLS ===
     {
         id: 'stone-axe',
         name: 'Flint Hand Axe',
@@ -1947,6 +2509,587 @@ id: 'animal-hide',
         ],
         videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
     },
+    // === CHALCOLITHIC: NEOLITHIC TO BRONZE AGE TRANSITION ===
+    {
+        id: 'native-copper',
+        name: 'Native Copper (Cold Working)',
+        stage: 2,
+        icon: '🥉',
+        category: 'resource',
+        objective: 'Hammer native copper nuggets into usable tools and ornaments.',
+        evolution: 'Native copper is the first metal used by humans — cold-hammered without smelting.',
+        upgrades: [
+            { name: 'Native Copper', description: 'Cold-hammered nuggets', stage: 2 },
+            { name: 'Annealed Copper', description: 'Heat-treated copper', stage: 2 },
+            { name: 'Smelted Copper', description: 'Smelted from ore', stage: 3 },
+            { name: 'Bronze', description: 'Copper-tin alloy', stage: 3 },
+            { name: 'Brass', description: 'Copper-zinc alloy', stage: 3 }
+        ],
+        requirements: [
+            { name: 'Native copper nuggets', value: 'Found in deposits' },
+            { name: 'Stone hammer', value: 'For shaping' }
+        ],
+        steps: [
+            { text: 'Find native copper deposits. Look for green oxidation on rock surfaces.' },
+            { text: 'Collect copper nuggets — soft, malleable metal.' },
+            { text: 'Hammer cold to shape into tools/ornaments. Work hardens the metal.' },
+            { text: 'Anneal (heat gently) to soften when needed. Repeat hammering.' },
+            { text: 'Creates simple implements: awls, beads, pins.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'tin-ore',
+        name: 'Tin Ore (Cassiterite)',
+        stage: 2,
+        icon: '⛏️',
+        category: 'resource',
+        objective: 'Source tin ore for bronze alloy production.',
+        evolution: 'Tin is essential for bronze — harder, more durable than copper alone.',
+        upgrades: [
+            { name: 'Raw Tin Ore', description: 'Cassiterite deposits', stage: 2 },
+            { name: 'Smelted Tin', description: 'Pure tin metal', stage: 3 },
+            { name: 'Tin Bronze', description: '10-12% tin alloy', stage: 3 },
+            { name: 'Tinplate', description: 'Tin-coated iron', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Tin ore (cassiterite)', value: 'Stream sediments, hardrock' },
+            { name: 'Crushing tools', value: 'Stone crushers' }
+        ],
+        steps: [
+            { text: 'Find tin ore (cassiterite) in stream sediments or hardrock deposits.' },
+            { text: 'Look for black/wolframite grains — tin ore is heavier than other minerals.' },
+            { text: 'Pan or crush to concentrate ore.' },
+            { text: 'Smelt at 230°C to extract tin metal.' },
+            { text: 'Mix 10-12% tin with copper for bronze.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'spindle-weaving',
+        name: 'Spindle & Thread',
+        stage: 2,
+        icon: '🧶',
+        category: 'skill',
+        objective: 'Spin fibers into thread for weaving cloth.',
+        evolution: 'Thread enables weaving — transforms plant/wool into fabric.',
+        upgrades: [
+            { name: 'Drop Spindle', description: 'Simple weighted spindle', stage: 2 },
+            { name: 'Spinning Wheel', description: 'Mechanical spinning', stage: 3 },
+            { name: 'Wool Yarn', description: 'Spun wool thread', stage: 2 },
+            { name: 'Linen Thread', description: 'Flax-spun thread', stage: 2 },
+            { name: 'Cotton Thread', description: 'Cotton spinning', stage: 3 }
+        ],
+        requirements: [
+            { name: 'Wool or flax', value: 'Fiber source' },
+            { name: 'Drop spindle', value: 'Wooden rod with whorl' }
+        ],
+        steps: [
+            { text: 'Prepare fiber: wash wool, ret flax stems.' },
+            { text: 'Attach fiber to spindle.' },
+            { text: 'Spin spindle to add twist.' },
+            { text: 'Wind onto spindle as thread forms.' },
+            { text: 'Plying: twist 2+ threads for stronger yarn.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wheeled-cart',
+        name: 'Wheeled Cart',
+        stage: 2,
+        icon: '🛒',
+        category: 'transport',
+        objective: 'Build wooden cart for transporting heavy loads.',
+        evolution: 'Carts multiply transport capacity — enables trade and agriculture at scale.',
+        upgrades: [
+            { name: 'Wooden Sled', description: 'Simple drag sled', stage: 1 },
+            { name: 'Solid Wheel Cart', description: 'Solid wooden wheels', stage: 2 },
+            { name: 'Spoked Wheel', description: 'Light spoked wheels', stage: 2 },
+            { name: 'Horse Cart', description: 'Animal-drawn cart', stage: 2 },
+            { name: 'Chariot', description: 'War/racing vehicle', stage: 2 }
+        ],
+        requirements: [
+            { name: 'Hardwood wheels', value: '2-4 wheels' },
+            { name: 'Axle', value: 'Rotating axle' },
+            { name: 'Bed/box', value: 'Cargo platform' },
+            { name: 'Oxen/horse', value: 'Pulling animal' }
+        ],
+        steps: [
+            { text: 'Cut solid wood rounds for wheels. Diameter determines stability.' },
+            { text: 'Create axle that rotates within hub.' },
+            { text: 'Build cargo bed/platform.' },
+            { text: 'Attach axle to bed with rope/lashings.' },
+            { text: 'Train animal to pull. Load cargo.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'fired-bricks',
+        name: 'Fired Clay Bricks',
+        stage: 2,
+        icon: '🧱',
+        category: 'resource',
+        objective: 'Fire clay bricks in kiln for permanent construction.',
+        evolution: 'Fired bricks resist water and weather — enable lasting architecture.',
+        upgrades: [
+            { name: 'Sun-dried Bricks', description: 'Air-dried mud bricks', stage: 1 },
+            { name: 'Fired Bricks', description: 'Kiln-fired bricks', stage: 2 },
+            { name: 'Roman Bricks', description: 'Standard sized bricks', stage: 3 },
+            { name: 'Mortar Bricks', description: 'Mortar-laid bricks', stage: 3 },
+            { name: 'Concrete', description: 'Roman concrete', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Clay', value: 'Processed clay' },
+            { name: 'Mold', value: 'Brick-shaped form' },
+            { name: 'Kiln', value: 'Firing chamber' },
+            { name: 'Fuel', value: 'Wood for firing' }
+        ],
+        steps: [
+            { text: 'Mix clay with sand/temper.' },
+            { text: 'Press into molds. Dry in shade.' },
+            { text: 'Stack in kiln with fuel.' },
+            { text: 'Fire to 800°C+ for 24 hours.' },
+            { text: 'Cool slowly. Bricks are waterproof.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'wool-processing',
+        name: 'Wool Processing',
+        stage: 2,
+        icon: '🐑',
+        category: 'resource',
+        objective: 'Process sheep wool into usable fiber for textiles.',
+        evolution: 'Wool provides warm, durable clothing — revolutionizes clothing.',
+        upgrades: [
+            { name: 'Raw Wool', description: 'Sheared sheep wool', stage: 2 },
+            { name: 'Scoured Wool', description: 'Cleaned wool', stage: 2 },
+            { name: 'Carded Wool', description: 'Teased wool fibers', stage: 2 },
+            { name: 'Wool Yarn', description: 'Spun wool thread', stage: 2 },
+            { name: 'Woven Wool', description: 'Woolen cloth', stage: 2 }
+        ],
+        requirements: [
+            { name: 'Sheep', value: 'Wool source' },
+            { name: 'Shears', value: 'For shearing' },
+            { name: 'Washing', value: 'Water for scouring' },
+            { name: 'Carding', value: 'Wire cards' }
+        ],
+        steps: [
+            { text: 'Shear sheep with shears or flint knives.' },
+            { text: 'Scour (wash) wool to remove lanolin.' },
+            { text: 'Dry wool completely.' },
+            { text: 'Card (tease apart) fibers.' },
+            { text: 'Spin into yarn, weave into cloth.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    // === METALLURGY (Stage 2) ===
+    {
+        id: 'malachite-copper',
+        name: 'Copper Ore (Malachite)',
+        stage: 2,
+        icon: '🟢',
+        category: 'resource',
+        objective: 'Source copper ore for smelting into metal.',
+        evolution: 'Copper ore is the foundation of metallurgy — transforms stone into tools.',
+        upgrades: [
+            { name: 'Native Copper', description: 'Cold-hammered nuggets', stage: 2 },
+            { name: 'Malachite Ore', description: 'Green copper carbonate', stage: 2 },
+            { name: 'Smelted Copper', description: 'Smelted from ore', stage: 3 },
+            { name: 'Bronze', description: 'Copper-tin alloy', stage: 3 },
+            { name: 'Brass', description: 'Copper-zinc alloy', stage: 3 }
+        ],
+        requirements: [
+            { name: 'Copper deposits', value: 'Surface or mining' },
+            { name: 'Crushing tools', value: 'Stone crushers' }
+        ],
+        steps: [
+            { text: 'Find copper ore (malachite green, azurite blue).' },
+            { text: 'Identify by color and weight — ore is heavier.' },
+            { text: 'Crush ore into small pieces.' },
+            { text: 'Roast ore to remove impurities.' },
+            { text: 'Smelt at 1100°C+ for copper metal.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'smelting-furnace',
+        name: 'Smelting Furnace',
+        stage: 2,
+        icon: '🔥',
+        category: 'skill',
+        objective: 'Build furnace capable of 1100°C+ for copper smelting.',
+        evolution: 'High-temperature smelting transforms ore into metal — the birth of metallurgy.',
+        upgrades: [
+            { name: 'Pit Furnace', description: 'Simple pit fire', stage: 2 },
+            { name: 'Clay Furnace', description: 'Clay-lined smelter', stage: 2 },
+            { name: 'Shaft Furnace', description: 'Tall chimney design', stage: 2 },
+            { name: 'Bloomery', description: 'Iron smelter', stage: 4 },
+            { name: 'Blast Furnace', description: 'Cast iron production', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Clay/stone', value: 'Furnace walls' },
+            { name: 'Charcoal', value: 'Fuel source' },
+            { name: 'Bellows', value: 'Air supply' }
+        ],
+        steps: [
+            { text: 'Build clay-lined pit or shaft.' },
+            { text: 'Create air intake with bellows.' },
+            { text: 'Layer charcoal and ore.' },
+            { text: 'Maintain 1100°C+ with bellows.' },
+            { text: 'Extract copper bloom after cooling.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'kiln-firing',
+        name: 'Pottery Kiln',
+        stage: 2,
+        icon: '🏺',
+        category: 'skill',
+        objective: 'Build kiln for firing pottery at high temperatures.',
+        evolution: 'Kilns enable consistent high heat — creates waterproof, durable pottery.',
+        upgrades: [
+            { name: 'Pit Firing', description: 'Open fire pottery', stage: 1 },
+            { name: 'Pit Kiln', description: 'Covered firing pit', stage: 2 },
+            { name: 'Updraft Kiln', description: 'Chimney for airflow', stage: 2 },
+            { name: 'Downdraft Kiln', description: 'Flue reversal', stage: 2 },
+            { name: 'Industrial Kiln', description: 'Continuous firing', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Clay/stone', value: 'Kiln structure' },
+            { name: 'Fuel', value: 'Wood for fire' },
+            { name: 'Vent', value: 'Airflow control' }
+        ],
+        steps: [
+            { text: 'Build clay or stone chamber.' },
+            { text: 'Create firing chamber with grate.' },
+            { text: 'Add chimney for draft.' },
+            { text: 'Fire to 800-1000°C.' },
+            { text: 'Cool slowly for durable pottery.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'pottery-wheel',
+        name: 'Pottery Wheel',
+        stage: 2,
+        icon: '🎡',
+        category: 'tool',
+        objective: 'Build fast wheel for throwing pottery.',
+        evolution: 'Pottery wheels multiply production speed — enables mass pottery production.',
+        upgrades: [
+            { name: 'Hand Wheel', description: 'Slow turntable', stage: 2 },
+            { name: 'Fast Wheel', description: 'Kick wheel', stage: 2 },
+            { name: 'Kick Wheel', description: 'Foot-powered', stage: 2 },
+            { name: 'Electric Wheel', description: 'Motorized wheel', stage: 4 },
+            { name: 'CNC Wheel', description: 'Computer-controlled', stage: 5 }
+        ],
+        requirements: [
+            { name: 'Wooden wheel', value: 'Spinning platform' },
+            { name: 'Axle', value: 'Center pivot' },
+            { name: 'Drive mechanism', value: 'Kick or hand' }
+        ],
+        steps: [
+            { text: 'Build flat circular platform.' },
+            { text: 'Mount on center pivot axle.' },
+            { text: 'Add flywheel for momentum.' },
+            { text: 'Kick or hand spin wheel.' },
+            { text: 'Shape clay against spinning wheel.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'flax-processing',
+        name: 'Flax Processing',
+        stage: 2,
+        icon: '🌿',
+        category: 'resource',
+        objective: 'Process flax stems into linen fiber.',
+        evolution: 'Flax provides linen — the first fine textile cloth.',
+        upgrades: [
+            { name: 'Raw Flax', description: 'Harvested stems', stage: 2 },
+            { name: 'Retting', description: 'Water soaking', stage: 2 },
+            { name: 'Breaking', description: 'Break outer layer', stage: 2 },
+            { name: 'Scutching', description: 'Remove fibers', stage: 2 },
+            { name: 'Linen Thread', description: 'Spun flax', stage: 2 }
+        ],
+        requirements: [
+            { name: 'Flax plants', value: 'Fiber source' },
+            { name: 'Water', value: 'Retting tank' },
+            { name: 'Breaking tools', value: 'Wooden brakes' }
+        ],
+        steps: [
+            { text: 'Harvest flax when seed pods brown.' },
+            { text: 'Ret (soak) stems in water 1-2 weeks.' },
+            { text: 'Break outer tissue with wooden brakes.' },
+            { text: 'Scutch (scrape) to separate fibers.' },
+            { text: 'Spin into linen thread.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'vertical-loom',
+        name: 'Vertical Loom',
+        stage: 2,
+        icon: '🧱',
+        category: 'tool',
+        objective: 'Build warp-weighted loom for weaving cloth.',
+        evolution: 'Vertical looms enable wide cloth — transforms thread into fabric.',
+        upgrades: [
+            { name: 'Backstrap Loom', description: 'Simple tension loom', stage: 1 },
+            { name: 'Vertical Loom', description: 'Warp-weighted', stage: 2 },
+            { name: 'Treadle Loom', description: 'Foot-powered', stage: 2 },
+            { name: 'Fly Shuttle', description: 'Mechanized weft', stage: 3 },
+            { name: 'Power Loom', description: 'Steam weaving', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Frame wood', value: 'Upright posts' },
+            { name: 'Warps', value: 'Vertical threads' },
+            { name: 'Weights', value: 'Stone weights' }
+        ],
+        steps: [
+            { text: 'Build rectangular frame with uprights.' },
+            { text: 'Tie warp threads to top beam.' },
+            { text: 'Hang weights on warp ends.' },
+            { text: 'Pass weft through shed.' },
+            { text: 'Beat weft with sword, turn warp.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'spoked-wheel',
+        name: 'Spoked Wheel',
+        stage: 2,
+        icon: '⚙️',
+        category: 'transport',
+        objective: 'Build lightweight spoked wheels for vehicles.',
+        evolution: 'Spoked wheels are lighter and faster — enables chariots.',
+        upgrades: [
+            { name: 'Solid Wheel', description: 'Solid wood wheel', stage: 2 },
+            { name: 'Spoked Wheel', description: 'Light spoke wheels', stage: 2 },
+            { name: 'Iron-rimmed', description: 'Iron tire wheel', stage: 3 },
+            { name: 'Wire Wheel', description: 'Steel wire wheels', stage: 4 },
+            { name: 'Alloy Wheel', description: 'Aluminum alloy', stage: 5 }
+        ],
+        requirements: [
+            { name: 'Spokes', value: '6-12 thin rods' },
+            { name: 'Hub', value: 'Center axle housing' },
+            { name: 'Rim', value: 'Outer wheel band' }
+        ],
+        steps: [
+            { text: 'Carve center hub with hole.' },
+            { text: 'Make thin spokes (6-12).' },
+            { text: 'Assemble spokes into hub.' },
+            { text: 'Add rim around outside.' },
+            { text: 'Light, strong wheel complete.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'chariot',
+        name: 'Chariot',
+        stage: 2,
+        icon: '🏎️',
+        category: 'transport',
+        objective: 'Build horse-drawn war chariot.',
+        evolution: 'Chariots are fast war vehicles — transform warfare.',
+        upgrades: [
+            { name: 'Wooden Cart', description: 'Ox-drawn cart', stage: 2 },
+            { name: 'War Cart', description: 'Armed cart', stage: 2 },
+            { name: 'Chariot', description: 'Horse-drawn vehicle', stage: 2 },
+            { name: 'Light Chariot', description: 'Fast racing chariot', stage: 2 },
+            { name: 'Modern Carriage', description: 'Pleasure vehicle', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Chassis', value: 'Wooden frame' },
+            { name: 'Wheels', value: '2 spoked wheels' },
+            { name: 'Horse', value: 'Driving animal' },
+            { name: 'Harness', value: 'Tack and bridle' }
+        ],
+        steps: [
+            { text: 'Build lightweight chassis.' },
+            { text: 'Mount two spoked wheels.' },
+            { text: 'Create floor platform.' },
+            { text: 'Train and harness horse.' },
+            { text: 'Use for war, transport, racing.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'pack-animals',
+        name: 'Pack Animals',
+        stage: 2,
+        icon: '🐴',
+        category: 'resource',
+        objective: 'Train animals for transport and labor.',
+        evolution: 'Pack animals multiply transport capacity — enable trade at scale.',
+        upgrades: [
+            { name: 'Donkey', description: 'Pack animal', stage: 2 },
+            { name: 'Horse', description: 'Riding/transport', stage: 2 },
+            { name: 'Ox', description: 'Draft animal', stage: 2 },
+            { name: 'Camel', description: 'Desert transport', stage: 2 },
+            { name: 'Llama', description: 'Mountain carrier', stage: 2 }
+        ],
+        requirements: [
+            { name: 'Wild caught or raised', value: 'Animal source' },
+            { name: 'Training', value: 'Taming wild animals' },
+            { name: 'Harness', value: 'Tack for load' }
+        ],
+        steps: [
+            { text: 'Catch or raise young animals.' },
+            { text: 'Tame through gentle handling.' },
+            { text: 'Train to accept loads.' },
+            { text: 'Train to follow commands.' },
+            { text: 'Use for transport and labor.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'heavy-plow',
+        name: 'Heavy Plow',
+        stage: 2,
+        icon: '🌾',
+        category: 'tool',
+        objective: 'Build moldboard plow for deep tillage.',
+        evolution: 'Heavy plows turn soil completely — enables intensive agriculture.',
+        upgrades: [
+            { name: 'Ard Plow', description: 'Scratch plow', stage: 2 },
+            { name: 'Heavy Plow', description: 'Moldboard plow', stage: 2 },
+            { name: 'Iron Plow', description: 'Iron-tipped plow', stage: 3 },
+            { name: 'Steam Plow', description: 'Traction engine', stage: 4 },
+            { name: 'Tractor', description: 'Mechanical plow', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Hardwood', value: 'Plow beam and body' },
+            { name: 'Moldboard', value: 'Curved turning blade' },
+            { name: 'Oxen', value: 'Pulling animals' }
+        ],
+        steps: [
+            { text: 'Build strong wooden frame.' },
+            { text: 'Attach curved moldboard.' },
+            { name: 'Add handle for steering.' },
+            { text: 'Attach to oxen team.' },
+            { text: 'Plow turns soil completely.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'stone-masonry',
+        name: 'Stone Masonry',
+        stage: 2,
+        icon: '🪨',
+        category: 'skill',
+        objective: 'Build with dressed stone for permanent structures.',
+        evolution: 'Stone masonry creates lasting architecture — temples, walls, cities.',
+        upgrades: [
+            { name: 'Rough Stone', description: 'Uncut stone walls', stage: 1 },
+            { name: 'Dressed Stone', description: 'Cut and shaped', stage: 2 },
+            { name: 'Ashlar', description: 'Precise blocks', stage: 2 },
+            { name: 'Carved Stone', description: 'Ornamental carving', stage: 3 },
+            { name: 'Reinforced', description: 'Steel-reinforced', stage: 5 }
+        ],
+        requirements: [
+            { name: 'Stone blocks', value: 'Quarried stone' },
+            { name: 'Mason tools', value: 'Chisels, hammers' },
+            { name: 'Mortar', value: 'Lime or clay' }
+        ],
+        steps: [
+            { text: 'Quarry stone blocks.' },
+            { text: 'Rough shape with hammers.' },
+            { text: 'Dress edges with chisels.' },
+            { text: 'Lay with mortar or dry.' },
+            { text: 'Build permanent structures.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'mortar-binding',
+        name: 'Mortar & Binding',
+        stage: 2,
+        icon: '🧱',
+        category: 'resource',
+        objective: 'Create binding mortar for stone and brick construction.',
+        evolution: 'Mortar binds stones together — enables strong, lasting walls.',
+        upgrades: [
+            { name: 'Clay Mortar', description: 'Mud between stones', stage: 1 },
+            { name: 'Lime Mortar', description: 'Burnt limestone bind', stage: 2 },
+            { name: 'Pozzolana', description: 'Volcanic ash mortar', stage: 3 },
+            { name: 'Cement', description: 'Modern hydraulic', stage: 4 },
+            { name: 'Epoxy', description: 'Synthetic binding', stage: 5 }
+        ],
+        requirements: [
+            { name: 'Limestone', value: 'Source for lime' },
+            { name: 'Sand', value: 'Aggregate' },
+            { name: 'Water', value: 'Mixing' }
+        ],
+        steps: [
+            { text: 'Burn limestone to create quicklime.' },
+            { text: 'Slake quicklime in water.' },
+            { text: 'Mix with sand to make mortar.' },
+            { text: 'Apply between stones/bricks.' },
+            { text: 'Let cure to harden binding.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'roofing-tiles',
+        name: 'Roofing Tiles',
+        stage: 2,
+        icon: '🏠',
+        category: 'resource',
+        objective: 'Create clay tiles for permanent roofing.',
+        evolution: 'Roofing tiles protect homes — enable year-round living.',
+        upgrades: [
+            { name: 'Thatch', description: 'Straw reed roof', stage: 1 },
+            { name: 'Wood Shingles', description: 'Wooden tiles', stage: 2 },
+            { name: 'Clay Tiles', description: 'Fired clay roof', stage: 2 },
+            { name: 'Slate Tiles', description: 'Stone roofing', stage: 3 },
+            { name: 'Metal Roofing', description: 'Iron sheets', stage: 4 }
+        ],
+        requirements: [
+            { name: 'Clay', value: 'Tile material' },
+            { name: 'Molds', value: 'Tile forms' },
+            { name: 'Kiln', value: 'For firing' }
+        ],
+        steps: [
+            { text: 'Prepare clay with sand temper.' },
+            { text: 'Press into tile molds.' },
+            { text: 'Dry tiles in shade.' },
+            { text: 'Fire in kiln.' },
+            { text: 'Lay tiles on roof slope.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
+    {
+        id: 'trade-networks',
+        name: 'Trade Networks',
+        stage: 2,
+        icon: '🤝',
+        category: 'skill',
+        objective: 'Establish long-distance trade routes.',
+        evolution: 'Trade networks spread resources and ideas — connect cultures.',
+        upgrades: [
+            { name: 'Local Exchange', description: 'Neighborhood trade', stage: 1 },
+            { name: 'Regional Trade', description: 'Between villages', stage: 2 },
+            { name: 'Long-distance', description: 'Cross-cultural routes', stage: 2 },
+            { name: 'Silk Road', description: 'Continental trade', stage: 3 },
+            { name: 'Global Trade', description: 'Worldwide exchange', stage: 5 }
+        ],
+        requirements: [
+            { name: 'Valuable goods', value: 'Trade items' },
+            { name: 'Paths/routes', value: 'Travel routes' },
+            { name: 'Trust', value: 'Trade agreements' }
+        ],
+        steps: [
+            { text: 'Identify valuable local goods.' },
+            { text: 'Establish trade routes.' },
+            { text: 'Build trading partnerships.' },
+            { text: 'Set standards and weights.' },
+            { text: 'Expand network over time.' }
+        ],
+        videoUrl: 'https://youtu.be/m0bEoVhxFJ8?si=2-tXDnEzRWwPO--x'
+    },
     // === STAGE 3: BRONZE AGE ===
     {
         id: 'copper-smelting',
@@ -2950,34 +4093,41 @@ function renderStageHub(stageId) {
             ? `<p style="margin-top:2rem; color: var(--text-secondary); text-align:center;">No blueprints in this stage yet. Use "Add New Blueprint" to create one.</p>`
             : `
                     <!-- CATEGORY SELECTION BUTTONS -->
-                    <div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem;">
+                    <div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1rem;">
                         
                         <!-- SKILLS BUTTON -->
-                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'skills')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'skills')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
                             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #3fb950, #58a6ff);"></div>
-                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">🎯</span>
-                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Skills</div>
-                            <div style="font-size:0.85rem; color:var(--text-secondary);">${skills.length} blueprints</div>
-                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                            <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">🎯</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:0.3rem;">Skills</div>
+                            <div style="font-size:0.75rem; color:var(--text-secondary);">${skills.length} blueprints</div>
                         </button>
 
                         <!-- RESOURCES BUTTON -->
-                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'resources')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'resources')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
                             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #fbc02d, #ff7043);"></div>
-                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">📦</span>
-                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Resources</div>
-                            <div style="font-size:0.85rem; color:var(--text-secondary);">${resources.length} blueprints</div>
-                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                            <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">📦</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:0.3rem;">Resources</div>
+                            <div style="font-size:0.75rem; color:var(--text-secondary);">${resources.length} blueprints</div>
                         </button>
 
                         <!-- TOOLS BUTTON -->
-                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'tools')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:2rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'tools')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
                             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #4fc3f7, #9d50bb);"></div>
-                            <span style="font-size:3rem; display:block; margin-bottom:1rem;">🔨</span>
-                            <div style="font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Tools</div>
-                            <div style="font-size:0.85rem; color:var(--text-secondary);">${tools.length} blueprints</div>
-                            <div style="margin-top:1rem; font-size:0.75rem; color:var(--accent-blue); font-family:'JetBrains Mono';">View All →</div>
+                            <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">🔨</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:0.3rem;">Tools</div>
+                            <div style="font-size:0.75rem; color:var(--text-secondary);">${tools.length} blueprints</div>
                         </button>
+
+                        ${stageId == 2 ? `
+                        <!-- TRANSPORT BUTTON (Stage 2 only) -->
+                        <button class="category-nav-btn" onclick="renderCategoryView(${stageId}, 'transport')" style="background:#1c2128; border:2px solid var(--blueprint-border); padding:1.5rem; border-radius:12px; cursor:pointer; text-align:center; color:var(--text-primary); transition:all 0.3s; position:relative; overflow:hidden;">
+                            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #ff9800, #e91e63);"></div>
+                            <span style="font-size:2.5rem; display:block; margin-bottom:0.5rem;">🚛</span>
+                            <div style="font-family:'Outfit',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:0.3rem;">Transport</div>
+                            <div style="font-size:0.75rem; color:var(--text-secondary);">${(getAllBlueprints().filter(b => b.stage == 2 && b.category === 'transport').length)} blueprints</div>
+                        </button>
+                        ` : ''}
                     </div>
                 `
         }
