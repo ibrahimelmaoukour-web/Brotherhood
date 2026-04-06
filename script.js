@@ -1769,6 +1769,13 @@ id: 'animal-hide',
         category: 'tool',
         objective: 'Create fired clay containers for storage, cooking, and water transportation.',
         evolution: 'Pottery enables food storage, cooking without burning containers, water purification — essential for settled life.',
+        upgrades: [
+            { name: 'Hand-built Pottery', description: 'Coil/pinch pottery', stage: 2 },
+            { name: 'Wheel-thrown Pottery', description: 'Fast wheel thrown', stage: 2 },
+            { name: 'Glazed Pottery', description: 'Functional glaze coating', stage: 3 },
+            { name: 'Porcelain', description: 'High-fire refined ceramics', stage: 4 },
+            { name: 'Industrial Ceramics', description: 'Engineered ceramic components', stage: 5 }
+        ],
         requirements: [
             { name: 'Clay (processed)', value: '5–10 kg, cleaned and wedged' },
             { name: 'Temper (sand/grog)', value: '20% of clay volume' },
@@ -1918,6 +1925,14 @@ id: 'animal-hide',
         category: 'skill',
         objective: 'Extract copper from ore using high-temperature furnace — the first metal production.',
         evolution: 'Smelting transforms stone-age technology into metal age. Copper is the first step toward bronze.',
+        upgrades: [
+            { name: 'Native Copper', description: 'Cold-worked copper nuggets', stage: 3 },
+            { name: 'Smelted Copper', description: 'Smelted from ore', stage: 3 },
+            { name: 'Bronze', description: 'Copper-tin alloy', stage: 3 },
+            { name: 'Brass', description: 'Copper-zinc alloy', stage: 3 },
+            { name: 'Steel', description: 'Carbon steel', stage: 4 },
+            { name: 'Stainless Steel', description: 'Chromium-alloyed steel', stage: 5 }
+        ],
         requirements: [
             { name: 'Copper ore (malachite)', value: '10–20 kg' },
             { name: 'Charcoal', value: '50+ kg for fuel' },
@@ -2043,6 +2058,14 @@ id: 'animal-hide',
         category: 'skill',
         objective: 'Extract iron from ore using bloomery furnace — creating wrought iron for tools and weapons.',
         evolution: 'Iron is stronger and more abundant than bronze. Iron tools and weapons replace bronze across the known world.',
+        upgrades: [
+            { name: 'Bloomery Iron', description: 'Wrought iron from bloomery', stage: 4 },
+            { name: 'Blast Furnace Iron', description: 'Cast iron production', stage: 4 },
+            { name: 'Steel', description: 'Carbonized steel', stage: 4 },
+            { name: 'Bessemer Steel', description: 'Mass steel production', stage: 5 },
+            { name: 'Stainless Steel', description: 'Chromium stainless', stage: 5 },
+            { name: 'Alloy Steels', description: 'Tool steels, alloys', stage: 5 }
+        ],
         requirements: [
             { name: 'Iron ore (hematite)', value: '20–50 kg' },
             { name: 'Charcoal', value: '100+ kg' },
@@ -2095,6 +2118,13 @@ id: 'animal-hide',
         category: 'tool',
         objective: 'Build gravity-fed water channel to transport water from sources to cities and farms.',
         evolution: 'Aqueducts bring fresh water to cities, enabling large urban populations and public health.',
+        upgrades: [
+            { name: 'Roman Aqueduct', description: 'Stone arch aqueduct', stage: 4 },
+            { name: 'Lead Pipe', description: 'Lead water distribution', stage: 4 },
+            { name: 'Medieval Fountain', description: 'Public water fountain', stage: 4 },
+            { name: 'Water Tower', description: 'Pressure water system', stage: 5 },
+            { name: 'Modern Dam', description: 'Large reservoir dam', stage: 5 }
+        ],
         requirements: [
             { name: 'Surveying tools', value: 'Chorobates (leveling device)' },
             { name: 'Stone/concrete', value: 'For channel construction' },
@@ -2119,6 +2149,14 @@ id: 'animal-hide',
         category: 'skill',
         objective: 'Blow molten glass into vessels, windows, and ornaments using blowpipe and tools.',
         evolution: 'Glass blowing makes glass affordable and versatile. Windows, bottles, and decorative glass become common.',
+        upgrades: [
+            { name: 'Blown Glass', description: 'Hand-blown vessels', stage: 4 },
+            { name: 'Glass Windows', description: 'Flat glass panes', stage: 4 },
+            { name: 'Crystal Glass', description: 'Lead crystal glass', stage: 4 },
+            { name: 'Optical Glass', description: 'Lens-grade glass', stage: 4 },
+            { name: 'Fiber Optics', description: 'Light transmission glass', stage: 5 },
+            { name: 'Gorilla Glass', description: 'Tempered glass', stage: 5 }
+        ],
         requirements: [
             { name: 'Silica sand', value: 'Pure white sand' },
             { name: 'Soda ash', value: 'From plant ash or natron' },
@@ -2172,6 +2210,13 @@ id: 'animal-hide',
         category: 'tool',
         objective: 'Build wind-powered mill for grinding grain, sawing wood, or pumping water.',
         evolution: 'Windmills harness wind energy — freeing human labor and enabling large-scale grain processing.',
+        upgrades: [
+            { name: 'Post Mill', description: 'Early post-style windmill', stage: 5 },
+            { name: 'Tower Mill', description: 'Stone tower windmill', stage: 5 },
+            { name: 'Smock Mill', description: 'Wooden cladding mill', stage: 5 },
+            { name: 'Wind Turbine', description: 'Modern wind power', stage: 5 },
+            { name: 'Offshore Turbine', description: 'Large-scale wind farms', stage: 5 }
+        ],
         requirements: [
             { name: 'Timber', value: 'Oak or other hardwood' },
             { name: 'Millstones', value: 'Pair of stones' },
