@@ -1801,6 +1801,14 @@ id: 'animal-hide',
         category: 'skill',
         objective: 'Build a simple loom and weave plant fibers into cloth for clothing and containers.',
         evolution: 'Weaving transforms fiber plants into textiles — replacing sewn hides with tailored clothing.',
+        upgrades: [
+            { name: 'Backstrap Loom', description: 'Simple body-tension loom', stage: 2 },
+            { name: 'Treadle Loom', description: 'Foot-operated loom', stage: 2 },
+            { name: 'Flying Shuttle', description: 'Mechanized weft insertion', stage: 3 },
+            { name: 'Power Loom', description: 'Steam-powered weaving', stage: 4 },
+            { name: 'Automated Loom', description: 'Computer-controlled weaving', stage: 5 },
+            { name: 'Nano-fiber Weaving', description: 'Nanofiber textiles', stage: 5 }
+        ],
         requirements: [
             { name: 'Loom frame (wood)', value: '1×1m or larger' },
             { name: 'Warp thread (flax/hemp)', value: '500g+ spun thread' },
@@ -1851,6 +1859,14 @@ id: 'animal-hide',
         category: 'tool',
         objective: 'Build a simple scratch plow pulled by animals or humans for tilling fields.',
         evolution: 'Plows multiply farming productivity — one person can cultivate 10x more land than with hand tools.',
+        upgrades: [
+            { name: 'Wooden Ard', description: 'Simple scratch plow', stage: 2 },
+            { name: 'Heavy Plow', description: 'Moldboard plow', stage: 2 },
+            { name: 'Iron Plow', description: 'Iron-tipped moldboard', stage: 3 },
+            { name: 'Steam Plow', description: 'Traction engine plow', stage: 4 },
+            { name: 'Tractor', description: 'Mechanical tractor', stage: 4 },
+            { name: 'GPS Tractor', description: 'Autonomous farming', stage: 5 }
+        ],
         requirements: [
             { name: 'Hardwood beam', value: '2m long, 10cm thick' },
             { name: 'Plowshare (stone/wood)', value: 'Pointed tip' },
@@ -1876,6 +1892,14 @@ id: 'animal-hide',
         category: 'skill',
         objective: 'Dig channels to direct water from rivers to fields — enabling agriculture in dry regions.',
         evolution: 'Irrigation multiplies crop yields and enables farming in arid regions — the key to large-scale agriculture.',
+        upgrades: [
+            { name: 'Open Canal', description: 'Earth channel irrigation', stage: 2 },
+            { name: 'Stone Canal', description: 'Lined stone channels', stage: 2 },
+            { name: 'Aqueduct', description: 'Elevated water channels', stage: 4 },
+            { name: 'Reservoir', description: 'Water storage reservoir', stage: 4 },
+            { name: 'Drip Irrigation', description: 'Modern water-efficient', stage: 5 },
+            { name: 'Vertical Farm', description: 'Indoor hydroponics', stage: 5 }
+        ],
         requirements: [
             { name: 'Water source (river/stream)', value: 'Reliable flow' },
             { name: 'Digging tools', value: 'Stone hoes, baskets' },
@@ -1900,6 +1924,13 @@ id: 'animal-hide',
         category: 'tool',
         objective: 'Construct raised storage building to protect grain from moisture, rodents, and pests.',
         evolution: 'Granaries enable multi-year food storage — the foundation of food security and trade.',
+        upgrades: [
+            { name: 'Raised Granary', description: 'Elevated wooden granary', stage: 2 },
+            { name: 'Stone Silo', description: 'Stone storage tower', stage: 3 },
+            { name: 'Metal Silo', description: 'Large metal grain bin', stage: 4 },
+            { name: 'Grain Elevator', description: 'Automated grain storage', stage: 4 },
+            { name: 'Climate Control', description: ' Temperature-controlled storage', stage: 5 }
+        ],
         requirements: [
             { name: 'Timber posts', value: '6–8 posts, 2m long' },
             { name: 'Wattle-and-daub materials', value: 'For walls' },
