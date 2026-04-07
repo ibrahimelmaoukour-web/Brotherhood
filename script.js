@@ -6114,258 +6114,1747 @@ const blueprints = [
         videoUrl: 'https://youtu.be/SLoukoBs8TE?si=WoodTools'
     },
     // === STAGE 2: NEOLITHIC REVOLUTION ===
-    // === RESOURCES — Domesticated Crops ===
+
+    // === SKILLS — Metallurgy Skills ===
     {
-        id: 'emmer-wheat',
-        name: 'Emmer Wheat',
+        id: 'ore-identification',
+        name: 'Ore Identification',
+        stage: 2,
+        icon: '🔍',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Identify copper-bearing ores (malachite and azurite) in the wild.',
+        evolution: 'Recognizing metal ores was the first step in metallurgy. Malachite (green) and azurite (blue) are the most common copper ores, found in oxidized zones near copper deposits.',
+        requirements: [
+            { name: 'Knowledge of mineral colors', value: 'Green = malachite, blue = azurite' },
+            { name: 'Access to rocky outcrops', value: 'Where ores are exposed' }
+        ],
+        steps: [
+            { text: 'Search rocky outcrops and oxidized zones for brightly colored minerals.' },
+            { text: 'Malachite is bright green, often botryoidal (grape-like clusters).' },
+            { text: 'Azurite is deep blue, often found with malachite.' },
+            { text: 'Test by scratching — ores should leave colored streaks.' },
+            { text: 'Collect samples for smelting experiments.' }
+        ],
+        videoUrl: 'https://youtu.be/d6N9TNeVYfw?si=MiningStone'
+    },
+    {
+        id: 'cold-hammering',
+        name: 'Cold Hammering',
+        stage: 2,
+        icon: '🔨',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Shape native copper by hammering without heat.',
+        evolution: 'Cold hammering was the first metalworking technique. Native copper can be flattened and shaped by repeated hammering, hardening through work hardening.',
+        requirements: [
+            { name: 'Native copper nuggets', value: 'Pure copper found in nature' },
+            { name: 'Stone anvil', value: 'Hard flat surface' }
+        ],
+        steps: [
+            { text: 'Find native copper nuggets in riverbeds or surface deposits.' },
+            { text: 'Place copper on a flat stone anvil.' },
+            { text: 'Hammer repeatedly with a stone hammer to flatten and shape.' },
+            { text: 'Copper hardens as it is worked (work hardening).' },
+            { text: 'Anneal (heat) if it becomes too brittle, then continue hammering.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'annealing',
+        name: 'Annealing',
+        stage: 2,
+        icon: '🔥',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Heat copper to soften it and prevent cracking during shaping.',
+        evolution: 'Annealing allowed metalworkers to soften hardened copper, enabling further shaping without breaking. This cycle of hammering and annealing became fundamental to all metallurgy.',
+        requirements: [
+            { name: 'Copper piece', value: 'Work-hardened metal' },
+            { name: 'Fire', value: 'Capable of reaching 600-800°C' }
+        ],
+        steps: [
+            { text: 'Heat the copper piece in a fire until it glows dull red (600-800°C).' },
+            { text: 'Maintain temperature for several minutes.' },
+            { text: 'Allow to cool slowly (do not quench).' },
+            { text: 'Copper is now soft and ductile again, ready for more hammering.' },
+            { text: 'Repeat the hammer-anneal cycle as needed.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'charcoal-production',
+        name: 'Charcoal Production',
+        stage: 2,
+        icon: '⬛',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Produce charcoal in earth kilns for high-temperature smelting.',
+        evolution: 'Wood fires cannot reach smelting temperatures. Charcoal burns at 1,000°C+ and was essential for extracting copper from ore. This skill enabled all metallurgy.',
+        requirements: [
+            { name: 'Hardwood', value: 'Oak, styrax, mulberry, or willow' },
+            { name: 'Earth or turf', value: 'For covering the kiln' }
+        ],
+        steps: [
+            { text: 'Build a mound of hardwood in a shallow pit.' },
+            { text: 'Cover tightly with earth or turf to restrict oxygen.' },
+            { text: 'Light a small fire at the base to start carbonization.' },
+            { text: 'Let the mound smolder for 3-5 days without open flame.' },
+            { text: 'Cool and harvest charcoal — it burns at 1,000°C+.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'furnace-construction',
+        name: 'Furnace Construction',
+        stage: 2,
+        icon: '🏗️',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Build a clay smelting furnace capable of reaching 1,000-1,100°C.',
+        evolution: 'The furnace was the heart of early metallurgy. Proper construction with ventilation and heat retention allowed temperatures high enough to melt copper.',
+        requirements: [
+            { name: 'Clay', value: 'For furnace walls' },
+            { name: 'Straw or chaff', value: 'Binder for clay' },
+            { name: 'Stone base', value: 'For stability' }
+        ],
+        steps: [
+            { text: 'Build a circular or rectangular stone base for the furnace.' },
+            { text: 'Mix clay with straw to prevent cracking during heating.' },
+            { text: 'Build walls 50-100cm tall with ventilation holes near the base.' },
+            { text: 'Create a tap hole at the bottom for draining slag.' },
+            { text: 'Dry thoroughly before first use. Add a chimney or opening at the top.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'smelting-copper',
+        name: 'Smelting Copper',
+        stage: 2,
+        icon: '⚗️',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Extract pure copper metal from crushed malachite ore using a furnace and charcoal.',
+        evolution: 'Smelting was the defining skill of the Chalcolithic period. It transformed green rock into molten metal, enabling the creation of superior tools and weapons.',
+        requirements: [
+            { name: 'Crushed malachite ore', value: 'Pelletized for even smelting' },
+            { name: 'Charcoal', value: 'High-temperature fuel' },
+            { name: 'Furnace', value: 'Clay structure with ventilation' },
+            { name: 'Limestone flux', value: 'To remove impurities as slag' }
+        ],
+        steps: [
+            { text: 'Crush malachite ore into small pellets using stone hammers.' },
+            { text: 'Layer charcoal and ore pellets inside the furnace.' },
+            { text: 'Add limestone flux to bind with impurities.' },
+            { text: 'Light the fire and maintain for 4-10 days at 1,000°C+.' },
+            { text: 'Slag forms and floats on top — tap it off through the bottom hole.' },
+            { text: 'Molten copper pools at the bottom — pour into molds or let cool.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'temperature-control',
+        name: 'Temperature Control',
+        stage: 2,
+        icon: '🌡️',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Judge and maintain furnace temperature by observing metal and flame color.',
+        evolution: 'Temperature control was critical for successful smelting and casting. Metalworkers learned to read visual cues to maintain optimal temperatures.',
+        requirements: [
+            { name: 'Furnace', value: 'With visible fire' },
+            { name: 'Experience', value: 'Knowledge of color-temperature relationship' }
+        ],
+        steps: [
+            { text: 'Observe flame color: yellow = ~800°C, orange = ~900°C, white = 1,000°C+.' },
+            { text: 'Observe metal color: dull red = 600°C, bright red = 800°C, orange = 1,000°C.' },
+            { text: 'Adjust bellows intensity to increase or decrease temperature.' },
+            { text: 'Maintain steady temperature for proper smelting or casting.' },
+            { text: 'Overheating can damage crucibles; underheating yields incomplete smelting.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'flux-addition',
+        name: 'Flux Addition',
+        stage: 2,
+        icon: '⚪',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Add limestone flux to smelting to remove impurities as slag.',
+        evolution: 'Flux binds with rocky impurities in ore to form liquid slag, allowing pure metal to flow to the bottom. This technique drastically increased metal purity and yield.',
+        requirements: [
+            { name: 'Limestone or sand', value: 'Silica source for flux' },
+            { name: 'Crushed ore', value: 'Ready for smelting' }
+        ],
+        steps: [
+            { text: 'Collect limestone or sand as flux material.' },
+            { text: 'Crush into small pieces similar in size to ore pellets.' },
+            { text: 'Mix flux with ore and charcoal in the furnace (roughly 1:1:1 ratio).' },
+            { text: 'During smelting, flux melts and combines with impurities.' },
+            { text: 'Slag floats on molten metal and can be tapped off, leaving pure copper.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'casting',
+        name: 'Casting',
+        stage: 2,
+        icon: '🗿',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Pour molten metal into molds to create specific tool and weapon shapes.',
+        evolution: 'Casting allowed for mass production of identical, complex metal tools. It was far more efficient than hammering each tool individually.',
+        requirements: [
+            { name: 'Molten copper or bronze', value: 'In crucible or furnace' },
+            { name: 'Casting mold', value: 'Stone or clay, pre-carved' }
+        ],
+        steps: [
+            { text: 'Prepare mold by carving negative shape into stone or clay.' },
+            { text: 'Create a pouring channel (sprue) into the mold cavity.' },
+            { text: 'Heat metal until fully molten and glowing orange.' },
+            { text: 'Pour metal carefully into the mold through the sprue.' },
+            { text: 'Allow to cool completely before breaking open the mold.' },
+            { text: 'Remove casting and clean up excess metal (flash) with file or hammer.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'lost-wax-casting',
+        name: 'Lost-Wax Casting',
+        stage: 2,
+        icon: '🕯️',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Create complex metal objects using wax models encased in clay.',
+        evolution: 'Lost-wax casting (developed ~2,800 BCE) enabled intricate, complex metal objects like statues, jewelry, and detailed tools. It became the pinnacle of ancient casting technology.',
+        requirements: [
+            { name: 'Beeswax', value: 'For sculpting the model' },
+            { name: 'Clay', value: 'For encasing the wax' },
+            { name: 'Furnace', value: 'For melting wax and casting' }
+        ],
+        steps: [
+            { text: 'Sculpt the desired object in beeswax with fine details.' },
+            { text: 'Cover the wax model completely with clay, leaving a pouring hole.' },
+            { text: 'Heat the clay mold gently — wax melts and flows out (lost).' },
+            { text: 'Now the mold has a hollow cavity in the shape of the original wax.' },
+            { text: 'Pour molten bronze into the cavity.' },
+            { text: 'Break away the clay mold to reveal the cast metal object.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'tapping-and-pouring',
+        name: 'Tapping and Pouring',
+        stage: 2,
+        icon: '🫗',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Drain slag from furnace and pour molten metal safely.',
+        evolution: 'Tapping allowed continuous smelting without opening the furnace. Pouring required skill to avoid spills and ensure clean castings.',
+        requirements: [
+            { name: 'Furnace with tap hole', value: 'At the bottom' },
+            { name: 'Crucible or mold', value: 'Ready to receive metal' },
+            { name: 'Long-handled tools', value: 'For safety' }
+        ],
+        steps: [
+            { text: 'Wait until slag has fully formed and metal has settled at the bottom.' },
+            { text: 'Open the tap hole carefully with a long rod.' },
+            { text: 'Slag flows out first — let it drain into a slag pit.' },
+            { text: 'Close the tap hole when pure metal begins to flow.' },
+            { text: 'Open again to pour molten metal into a crucible or mold.' },
+            { text: 'Use tongs and pour carefully to avoid spills.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'bronze-alloying',
+        name: 'Bronze Alloying',
+        stage: 2,
+        icon: '🥇',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Mix 10% tin with 90% copper to create bronze — harder and more durable than pure copper.',
+        evolution: 'Bronze alloying was the breakthrough that defined the Bronze Age. Bronze is harder than copper, has a lower melting point, and can be recycled indefinitely without degradation.',
+        requirements: [
+            { name: 'Molten copper', value: 'At 1,084°C' },
+            { name: 'Tin metal', value: '10% of total weight' },
+            { name: 'Crucible', value: 'For mixing' }
+        ],
+        steps: [
+            { text: 'Smelt copper to obtain pure molten metal (~1,084°C).' },
+            { text: 'Measure tin carefully — target 10% tin, 90% copper ratio.' },
+            { text: 'Add tin to molten copper — it lowers melting point to ~950°C.' },
+            { text: 'Stir thoroughly for even distribution.' },
+            { text: 'Pour bronze into prepared molds.' },
+            { text: 'Bronze is harder, more durable, and recyclable compared to pure copper.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'metal-recycling',
+        name: 'Metal Recycling',
+        stage: 2,
+        icon: '♻️',
+        category: 'skill',
+        subcategory: 'Metallurgy Skills',
+        objective: 'Remelt bronze scrap and broken tools without degradation.',
+        evolution: 'Unlike arsenic copper (which released toxic fumes when remelted), tin bronze could be recycled indefinitely. This created a sustainable metal economy and reduced the need for constant smelting.',
+        requirements: [
+            { name: 'Bronze scrap', value: 'Broken tools, trimmings, old objects' },
+            { name: 'Furnace or crucible', value: 'For melting' }
+        ],
+        steps: [
+            { text: 'Collect bronze scraps, broken tools, and trimmings.' },
+            { text: 'Place in a crucible and heat in the furnace.' },
+            { text: 'Bronze melts at ~950°C (lower than pure copper).' },
+            { text: 'Pour molten bronze into new molds.' },
+            { text: 'No quality loss — bronze can be recycled endlessly.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+
+    // === SKILLS — Agricultural Skills ===
+    {
+        id: 'systematic-planting',
+        name: 'Systematic Planting',
+        stage: 2,
+        icon: '🌱',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Select best seeds, space properly, and time planting with seasons.',
+        evolution: 'Systematic planting replaced random scattering, dramatically increasing crop yields and food security.',
+        requirements: [
+            { name: 'Selected seeds', value: 'Best quality from previous harvest' },
+            { name: 'Planting stick or plow', value: 'For creating furrows' }
+        ],
+        steps: [
+            { text: 'Select the largest, healthiest seeds from the previous harvest.' },
+            { text: 'Prepare soil by clearing weeds and breaking up clumps.' },
+            { text: 'Plant seeds at uniform depth and spacing for optimal growth.' },
+            { text: 'Time planting with seasonal rains or irrigation cycles.' },
+            { text: 'Monitor growth and protect from pests and grazing animals.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'irrigation-canal-construction',
+        name: 'Irrigation Canal Construction',
+        stage: 2,
+        icon: '💧',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Dig main canals (up to 50 km) with hierarchical branching networks.',
+        evolution: 'Irrigation canals enabled farming in arid regions, creating agricultural surplus that supported cities. This was the foundation of Mesopotamian civilization.',
+        requirements: [
+            { name: 'River access', value: 'Tigris, Euphrates, or similar' },
+            { name: 'Labor force', value: 'Hundreds of workers for major canals' },
+            { name: 'Digging tools', value: 'Spades, picks, baskets' }
+        ],
+        steps: [
+            { text: 'Survey the land to determine optimal canal route and gradient.' },
+            { text: 'Dig main canal from river, wide enough for substantial water flow.' },
+            { text: 'Create secondary and tertiary branches to distribute water.' },
+            { text: 'Line canals with clay or baked bricks to prevent seepage.' },
+            { text: 'Build sluice gates for flow control to individual fields.' }
+        ],
+        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
+    },
+    {
+        id: 'water-management',
+        name: 'Water Management',
+        stage: 2,
+        icon: '🌊',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Build sluice gates, control flow, and prevent catastrophic floods.',
+        evolution: 'Water management transformed unpredictable rivers into reliable irrigation sources, enabling year-round agriculture.',
+        requirements: [
+            { name: 'Canal system', value: 'Main and branch canals' },
+            { name: 'Wood or clay', value: 'For sluice gates' },
+            { name: 'Administrative records', value: 'For water rights allocation' }
+        ],
+        steps: [
+            { text: 'Install sluice gates at canal junctions to control water flow.' },
+            { text: 'Open gates during irrigation season to flood fields.' },
+            { text: 'Close gates to prevent waterlogging and salinity buildup.' },
+            { text: 'Build dikes along rivers to prevent catastrophic flooding.' },
+            { text: 'Schedule water delivery by time and volume for each farmer.' }
+        ],
+        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
+    },
+    {
+        id: 'flood-capture',
+        name: 'Flood Capture',
+        stage: 2,
+        icon: '🌊',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Harness seasonal floods for fertile silt deposition while preventing destruction.',
+        evolution: 'Flood capture turned a destructive force into a benefit, depositing nutrient-rich silt that renewed soil fertility annually.',
+        requirements: [
+            { name: 'River with seasonal floods', value: 'Tigris/Euphrates pattern' },
+            { name: 'Dikes and basins', value: 'For flood control' }
+        ],
+        steps: [
+            { text: 'Build basins near the river to capture flood waters.' },
+            { text: 'Construct dikes to control where flood waters flow.' },
+            { text: 'Allow flood waters to deposit silt in fields.' },
+            { text: 'Drain excess water after silt deposition.' },
+            { text: 'Plant crops in the newly fertilized soil.' }
+        ],
+        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
+    },
+    {
+        id: 'salinity-control',
+        name: 'Salinity Control',
+        stage: 2,
+        icon: '🧂',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Rotate crops and manage water drainage to prevent soil poisoning.',
+        evolution: 'Salinity control prevented the gradual destruction of agricultural land, ensuring long-term food production.',
+        requirements: [
+            { name: 'Crop variety', value: 'Salt-tolerant barley, wheat, fallow periods' },
+            { name: 'Drainage ditches', value: 'To remove excess water' }
+        ],
+        steps: [
+            { text: 'Monitor soil for white salt crusts (sign of salinity).' },
+            { text: 'Rotate crops: plant salt-tolerant barley when salinity increases.' },
+            { text: 'Allow fields to lie fallow periodically to recover.' },
+            { text: 'Improve drainage to prevent waterlogging (which brings salt up).' },
+            { text: 'Flush fields with fresh water to leach out accumulated salts.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'plowing',
+        name: 'Plowing',
+        stage: 2,
+        icon: '🚜',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Hitch oxen to wooden plow (ard) and guide in straight furrows for deep tillage.',
+        evolution: 'The plow multiplied human agricultural capacity by 10x, enabling cultivation of heavy, fertile soils that hand-tools could not penetrate.',
+        requirements: [
+            { name: 'Wooden plow (ard)', value: 'With share (cutting blade)' },
+            { name: 'Oxen', value: 'Trained draft animals' },
+            { name: 'Harness', value: 'To attach oxen to plow' }
+        ],
+        steps: [
+            { text: 'Hitch oxen to the plow using a wooden harness or yoke.' },
+            { text: 'Guide the plow through the field in straight, parallel furrows.' },
+            { text: 'The plowshare cuts and turns the soil deeply.' },
+            { text: 'Turn the soil to aerate and bury weeds.' },
+            { text: 'Plant seeds in the prepared furrows.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'threshing-and-winnowing',
+        name: 'Threshing and Winnowing',
         stage: 2,
         icon: '🌾',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Cultivate Emmer wheat, the primary bread grain of the early Neolithic.',
-        evolution: 'Emmer wheat was the most important crop in the Fertile Crescent, providing the calories needed for settled civilization.',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Separate grain from stalks and chaff using sleds and wind.',
+        evolution: 'Threshing sleds mechanized grain separation, saving enormous labor and enabling large-scale grain processing.',
         requirements: [
-            { name: 'Emmer seeds', value: 'Saved from previous harvest' },
-            { name: 'Fertile soil', value: 'River valley or rain-fed plain' },
-            { name: 'Sickle', value: 'For harvesting' }
+            { name: 'Threshing sled', value: 'Wooden board with flint blades' },
+            { name: 'Draft animal', value: 'Ox or donkey to pull sled' },
+            { name: 'Winnowing basket', value: 'For separating chaff' }
         ],
         steps: [
-            { text: 'Prepare the soil by clearing weeds and breaking up the earth with a digging stick or hoe.' },
-            { text: 'Scatter Emmer seeds across the field at the start of the planting season (autumn/winter).' },
-            { text: 'Protect the field from birds and grazing animals using fences or scare tactics.' },
-            { text: 'Harvest when the stalks turn golden and the grain is hard. Cut stalks with a flint sickle.' },
-            { text: 'Thresh and winnow to separate grain. Store in sealed pits or clay jars.' }
+            { text: 'Spread harvested grain stalks on a hard threshing floor.' },
+            { text: 'Pull threshing sled over stalks using an animal.' },
+            { text: 'The blades cut stalks and release grain kernels.' },
+            { text: 'Gather the mixture and toss it in the wind (winnowing).' },
+            { text: 'Wind blows away light chaff; heavy grain falls back.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
     {
-        id: 'einkorn-wheat',
-        name: 'Einkorn Wheat',
+        id: 'grain-storage',
+        name: 'Grain Storage',
+        stage: 2,
+        icon: '🏺',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Build granaries, dry grain, and prevent pests and rot for long-term storage.',
+        evolution: 'Grain storage enabled food security through famines and droughts, supporting population growth and urbanization.',
+        requirements: [
+            { name: 'Clay or stone', value: 'For granary construction' },
+            { name: 'Dried grain', value: 'Harvested and threshed' },
+            { name: 'Sealing materials', value: 'To keep out moisture and pests' }
+        ],
+        steps: [
+            { text: 'Build a raised, airtight structure from mud brick or stone.' },
+            { text: 'Ensure grain is thoroughly dried before storage (<12% moisture).' },
+            { text: 'Fill granary with grain, leaving space for air circulation.' },
+            { text: 'Seal the top to prevent moisture, rodents, and insects.' },
+            { text: 'Monitor stored grain regularly for spoilage or pests.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'crop-rotation',
+        name: 'Crop Rotation',
+        stage: 2,
+        icon: '🔄',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Alternate crops to maintain soil fertility and prevent exhaustion.',
+        evolution: 'Crop rotation prevented soil depletion and increased long-term yields by alternating nutrient-demanding grains with nitrogen-fixing legumes.',
+        requirements: [
+            { name: 'Multiple crop types', value: 'Grains, legumes, fallow' },
+            { name: 'Knowledge of soil needs', value: 'Which crops deplete/add nutrients' }
+        ],
+        steps: [
+            { text: 'Plant nitrogen-demanding crops (wheat, barley) one season.' },
+            { text: 'Plant nitrogen-fixing crops (lentils, peas) the next season.' },
+            { text: 'Legumes restore soil nitrogen naturally.' },
+            { text: 'Allow fields to lie fallow periodically for recovery.' },
+            { text: 'Rotate systematically to maintain long-term fertility.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'animal-domestication',
+        name: 'Animal Domestication',
+        stage: 2,
+        icon: '🐑',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Select and breed animals for desirable traits (wool, milk, docility, strength).',
+        evolution: 'Domestication transformed wild animals into reliable sources of meat, milk, wool, and labor, revolutionizing human life.',
+        requirements: [
+            { name: 'Wild animal population', value: 'Sheep, goats, cattle, pigs' },
+            { name: 'Enclosures', value: 'Pens and fences for containment' },
+            { name: 'Feed supply', value: 'Grain and forage for animals' }
+        ],
+        steps: [
+            { text: 'Capture young wild animals and raise them in captivity.' },
+            { text: 'Select the most docile and productive individuals for breeding.' },
+            { text: 'Breed selectively for desired traits (wool quality, milk yield, size).' },
+            { text: 'Protect domesticated animals from predators and disease.' },
+            { text: 'Over generations, animals become fully domesticated.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'wool-processing',
+        name: 'Wool Processing',
+        stage: 2,
+        icon: '🧶',
+        category: 'skill',
+        subcategory: 'Agricultural Skills',
+        objective: 'Shear sheep, clean, card, and spin wool into yarn for textiles.',
+        evolution: 'Wool replaced plant fibers as the primary textile material, enabling warmer, more durable clothing for colder climates.',
+        requirements: [
+            { name: 'Domesticated sheep', value: 'Wool breed' },
+            { name: 'Shears or knife', value: 'For shearing' },
+            { name: 'Spindle whorl', value: 'For spinning' }
+        ],
+        steps: [
+            { text: 'Shear sheep in spring using bronze or flint shears.' },
+            { text: 'Clean wool by washing in water to remove dirt and lanolin.' },
+            { text: 'Card wool fibers to align them for spinning.' },
+            { text: 'Use spindle whorl to twist fibers into continuous yarn.' },
+            { text: 'Weave yarn on a loom to create warm wool cloth.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+
+    // === SKILLS — Pottery & Ceramic Skills ===
+    {
+        id: 'wheel-throwing',
+        name: 'Wheel Throwing',
+        stage: 2,
+        icon: '🌀',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Center clay, open, pull walls, and shape vessels on a fast-spinning wheel.',
+        evolution: 'The potter\'s wheel revolutionized ceramic production, enabling mass production of standardized vessels with thinner walls.',
+        requirements: [
+            { name: 'Potter\'s wheel', value: 'Fast-spinning stone or wood wheel' },
+            { name: 'Prepared clay', value: 'Wedged and air-bubble-free' },
+            { name: 'Water', value: 'For keeping hands wet' }
+        ],
+        steps: [
+            { text: 'Place a centered ball of clay on the spinning wheel head.' },
+            { text: 'Use centrifugal force to center the clay perfectly.' },
+            { text: 'Press thumbs into center to open the vessel.' },
+            { text: 'Pull walls upward evenly using wet hands.' },
+            { text: 'Shape the rim, curve, and base as desired.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'kiln-firing',
+        name: 'Kiln Firing',
+        stage: 2,
+        icon: '🔥',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Load kiln, control temperature (800-1,000°C), and cool slowly to prevent cracking.',
+        evolution: 'Kiln firing enabled permanent, waterproof pottery and baked bricks, essential for construction and storage.',
+        requirements: [
+            { name: 'Kiln', value: 'Clay structure with firebox and chimney' },
+            { name: 'Dry pottery', value: 'Leather-hard or bone-dry' },
+            { name: 'Fuel wood', value: 'For sustained firing' }
+        ],
+        steps: [
+            { text: 'Load pottery carefully into the kiln, allowing space for heat circulation.' },
+            { text: 'Light the firebox and gradually increase temperature.' },
+            { text: 'Maintain 800-1,000°C for several hours to vitrify clay.' },
+            { text: 'Cool slowly over 24 hours to prevent thermal shock.' },
+            { text: 'Unload hardened, waterproof pottery.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'glazing-and-decoration',
+        name: 'Glazing and Decoration',
+        stage: 2,
+        icon: '🎨',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Apply slips, paint designs, and incise patterns before firing.',
+        evolution: 'Decorated pottery became a form of artistic expression and cultural identity, with regional styles identifiable by archaeologists.',
+        requirements: [
+            { name: 'Slip (liquid clay)', value: 'For coating' },
+            { name: 'Mineral pigments', value: 'For paint' },
+            { name: 'Incising tools', value: 'For carving patterns' }
+        ],
+        steps: [
+            { text: 'Apply colored slip (liquid clay) to leather-hard pottery.' },
+            { text: 'Paint geometric or figurative designs using mineral pigments.' },
+            { text: 'Incise patterns into the surface with sharp tools.' },
+            { text: 'Burnish surface with smooth stone for glossy finish.' },
+            { text: 'Fire to permanently set decorations.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'mass-production',
+        name: 'Mass Production',
+        stage: 2,
+        icon: '🏭',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Use wheel for rapid, standardized vessel creation for trade.',
+        evolution: 'Mass production enabled pottery workshops to supply entire cities, creating the first specialized craft industry.',
+        requirements: [
+            { name: 'Potter\'s wheel', value: 'Fast-spinning' },
+            { name: 'Prepared clay', value: 'Large quantities' },
+            { name: 'Kiln', value: 'High-capacity' }
+        ],
+        steps: [
+            { text: 'Prepare large batches of uniform clay.' },
+            { text: 'Throw vessels rapidly on the wheel using standardized forms.' },
+            { text: 'Allow to dry to leather-hard stage.' },
+            { text: 'Trim and finish bases uniformly.' },
+            { text: 'Fire in large batches for efficiency.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'crucible-making',
+        name: 'Crucible Making',
+        stage: 2,
+        icon: '🥣',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Craft heat-resistant clay pots for metal smelting.',
+        evolution: 'Crucibles enabled the smelting of metals by withstanding temperatures over 1,000°C without melting.',
+        requirements: [
+            { name: 'High-temperature clay', value: 'Refractory clay' },
+            { name: 'Grog (crushed pottery)', value: 'To prevent cracking' },
+            { name: 'Kiln', value: 'For pre-firing' }
+        ],
+        steps: [
+            { text: 'Mix refractory clay with grog (crushed fired pottery).' },
+            { text: 'Shape into thick-walled cup or bowl.' },
+            { text: 'Dry thoroughly to remove all moisture.' },
+            { text: 'Pre-fire in kiln to harden and increase heat resistance.' },
+            { text: 'Use crucible to hold ore during smelting at 1,000°C+.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'brick-making',
+        name: 'Brick Making',
+        stage: 2,
+        icon: '🧱',
+        category: 'skill',
+        subcategory: 'Pottery & Ceramic Skills',
+        objective: 'Mix clay with straw, mold, sun-dry, and kiln-fire for permanent structures.',
+        evolution: 'Brick making enabled the construction of permanent buildings, city walls, and monumental architecture.',
+        requirements: [
+            { name: 'Clay', value: 'Abundant river clay' },
+            { name: 'Straw or chaff', value: 'Binder to prevent cracking' },
+            { name: 'Wooden molds', value: 'For uniform shapes' }
+        ],
+        steps: [
+            { text: 'Mix clay with water and straw to create plastic mud.' },
+            { text: 'Pack mud into wooden molds to form uniform bricks.' },
+            { text: 'Remove from molds and sun-dry for 2-3 weeks.' },
+            { text: 'For baked bricks: fire in kiln at 900°C for permanence.' },
+            { text: 'Use bricks for walls, floors, and monumental structures.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+
+    // === SKILLS — Construction & Engineering Skills ===
+    {
+        id: 'mud-brick-production',
+        name: 'Mud Brick Production',
+        stage: 2,
+        icon: '🧱',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Mix, mold, dry, and stack uniform mud bricks for walls.',
+        evolution: 'Mud bricks were the primary building material of early cities, enabling rapid construction of houses, walls, and temples.',
+        requirements: [
+            { name: 'Clay', value: 'River clay' },
+            { name: 'Straw', value: 'Binder' },
+            { name: 'Wooden molds', value: 'For shaping' }
+        ],
+        steps: [
+            { text: 'Mix clay, water, and chopped straw to uniform consistency.' },
+            { text: 'Pack mixture tightly into wooden molds.' },
+            { text: 'Remove bricks and place in sun to dry.' },
+            { text: 'Turn bricks regularly for even drying.' },
+            { text: 'Stack dried bricks for construction use.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'baked-brick-production',
+        name: 'Baked Brick Production',
+        stage: 2,
+        icon: '🔥',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Fire mud bricks in kiln for waterproof, permanent structures.',
+        evolution: 'Baked bricks were waterproof and permanent, used for temple facings, city walls, and important structures.',
+        requirements: [
+            { name: 'Mud bricks', value: 'Sun-dried' },
+            { name: 'Kiln', value: 'Large capacity' },
+            { name: 'Fuel wood', value: 'For sustained firing' }
+        ],
+        steps: [
+            { text: 'Stack sun-dried mud bricks in kiln with space for heat circulation.' },
+            { text: 'Light fire and gradually increase temperature.' },
+            { text: 'Maintain 900°C for several hours to vitrify bricks.' },
+            { text: 'Cool slowly over 24 hours.' },
+            { text: 'Unload waterproof, permanent baked bricks.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'bitumen-waterproofing',
+        name: 'Bitumen Waterproofing',
+        stage: 2,
+        icon: '⬛',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Apply natural asphalt for seals and mortar.',
+        evolution: 'Bitumen waterproofing protected structures from water damage and created watertight joints in brickwork.',
+        requirements: [
+            { name: 'Bitumen', value: 'Natural asphalt from seeps' },
+            { name: 'Fire', value: 'For heating' }
+        ],
+        steps: [
+            { text: 'Collect bitumen from natural seeps or river deposits.' },
+            { text: 'Heat bitumen over fire to soften.' },
+            { text: 'Apply between bricks as waterproof mortar.' },
+            { text: 'Use to seal canals, baths, and foundations.' },
+            { text: 'Bitumen creates permanent, waterproof joints.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'ziggurat-construction',
+        name: 'Ziggurat Construction',
+        stage: 2,
+        icon: '🏛️',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Build stepped platforms with mud brick core and baked brick facing.',
+        evolution: 'Ziggurats were the architectural marvels of the Bronze Age, symbolizing the connection between earth and heaven.',
+        requirements: [
+            { name: 'Mud bricks', value: 'Millions for core' },
+            { name: 'Baked bricks', value: 'For facing' },
+            { name: 'Bitumen', value: 'For mortar' },
+            { name: 'Thousands of workers', value: 'Labor force' }
+        ],
+        steps: [
+            { text: 'Build massive rectangular platform of mud bricks.' },
+            { text: 'Face exterior with baked bricks set in bitumen mortar.' },
+            { text: 'Create stepped terraces ascending to the top.' },
+            { text: 'Build temple on the highest terrace.' },
+            { text: 'Ziggurat becomes the city\'s central landmark.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'canal-engineering',
+        name: 'Canal Engineering',
+        stage: 2,
+        icon: '📐',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Survey gradients, dig hierarchical networks, line with clay or brick.',
+        evolution: 'Canal engineering transformed landscapes, enabling agriculture in previously uninhabitable arid regions.',
+        requirements: [
+            { name: 'Surveying tools', value: 'Measuring ropes, levels' },
+            { name: 'Labor force', value: 'Hundreds of workers' },
+            { name: 'Lining materials', value: 'Clay or baked bricks' }
+        ],
+        steps: [
+            { text: 'Survey land to determine optimal gradient (minimal slope).' },
+            { text: 'Dig main canal with uniform gradient for gravity flow.' },
+            { text: 'Create branch canals at calculated intervals.' },
+            { text: 'Line canals with clay or baked bricks to prevent seepage.' },
+            { text: 'Install sluice gates for flow control.' }
+        ],
+        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
+    },
+    {
+        id: 'temple-architecture',
+        name: 'Temple Architecture',
+        stage: 2,
+        icon: '🏛️',
+        category: 'skill',
+        subcategory: 'Construction & Engineering Skills',
+        objective: 'Design monumental public buildings, terraces, and courtyards.',
+        evolution: 'Temple architecture created the first monumental buildings, serving as religious, economic, and administrative centers.',
+        requirements: [
+            { name: 'Mud bricks', value: 'Millions' },
+            { name: 'Baked bricks', value: 'For decoration' },
+            { name: 'Timber', value: 'For roofs' },
+            { name: 'Artisans', value: 'For decoration' }
+        ],
+        steps: [
+            { text: 'Design temple with central courtyard and surrounding rooms.' },
+            { text: 'Build massive walls with buttresses for support.' },
+            { text: 'Create terraces and platforms for elevation.' },
+            { text: 'Install timber roofs with decorative elements.' },
+            { text: 'Decorate with baked brick reliefs and colored cones.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+
+    // === SKILLS — Administrative & Governance Skills ===
+    {
+        id: 'cuneiform-writing',
+        name: 'Cuneiform Writing',
+        stage: 2,
+        icon: '📝',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Press stylus into clay to create wedge-shaped records.',
+        evolution: 'Cuneiform was the first writing system, enabling complex administration, law codes, literature, and historical records.',
+        requirements: [
+            { name: 'Stylus', value: 'Reed with triangular tip' },
+            { name: 'Clay tablets', value: 'Smooth, prepared surfaces' },
+            { name: 'Scribal training', value: 'Years of education' }
+        ],
+        steps: [
+            { text: 'Prepare smooth clay tablet by flattening and drying slightly.' },
+            { text: 'Press stylus at angles to create wedge-shaped marks.' },
+            { text: 'Combine wedges to form signs representing words or sounds.' },
+            { text: 'Record transactions, laws, literature, or accounts.' },
+            { text: 'Bake tablets for permanent preservation.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'record-keeping',
+        name: 'Record Keeping',
+        stage: 2,
+        icon: '📋',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Track grain storage, trade, taxes, and labor obligations.',
+        evolution: 'Record keeping enabled the management of complex economies, tracking resources across entire city-states.',
+        requirements: [
+            { name: 'Clay tablets', value: 'For records' },
+            { name: 'Stylus', value: 'For writing' },
+            { name: 'Storage system', value: 'For archives' }
+        ],
+        steps: [
+            { text: 'Record incoming goods (grain, livestock, textiles) on tablets.' },
+            { text: 'Track outgoing distributions to workers and temples.' },
+            { text: 'Maintain accounts of trade transactions.' },
+            { text: 'Record labor obligations and tax payments.' },
+            { text: 'Store tablets in archives for future reference.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'cylinder-seal-use',
+        name: 'Cylinder Seal Use',
+        stage: 2,
+        icon: '🔏',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Mark property, authenticate documents, and track ownership.',
+        evolution: 'Cylinder seals were the ancient equivalent of signatures, providing authentication and ownership marks on documents and goods.',
+        requirements: [
+            { name: 'Cylinder seal', value: 'Carved stone cylinder' },
+            { name: 'Clay', value: 'For impressions' }
+        ],
+        steps: [
+            { text: 'Roll carved cylinder seal across wet clay.' },
+            { text: 'Create continuous impression showing owner\'s mark.' },
+            { text: 'Apply to document tablets to authenticate.' },
+            { text: 'Use to seal containers and doors.' },
+            { text: 'Each seal is unique to its owner.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'temple-administration',
+        name: 'Temple Administration',
+        stage: 2,
+        icon: '🏛️',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Manage temple lands, workers (sirkus), and surplus distribution.',
+        evolution: 'Temple administration was the first form of centralized government, managing resources for entire cities.',
+        requirements: [
+            { name: 'Scribes', value: 'For record keeping' },
+            { name: 'Administrators', value: 'Priests and officials' },
+            { name: 'Storage facilities', value: 'For surplus' }
+        ],
+        steps: [
+            { text: 'Collect agricultural surplus from temple lands.' },
+            { text: 'Store grain and goods in temple warehouses.' },
+            { text: 'Distribute rations to workers, priests, and dependents.' },
+            { text: 'Manage trade and craft production.' },
+            { text: 'Maintain detailed records of all transactions.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'labor-coordination',
+        name: 'Labor Coordination',
+        stage: 2,
+        icon: '👥',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Organize corvée labor for public works (canals, temples, walls).',
+        evolution: 'Labor coordination enabled massive public works projects that individual families could never accomplish alone.',
+        requirements: [
+            { name: 'Administrative system', value: 'For tracking obligations' },
+            { name: 'Supervisors', value: 'Overseers for work crews' },
+            { name: 'Food supply', value: 'To feed workers' }
+        ],
+        steps: [
+            { text: 'Determine labor needs for public project.' },
+            { text: 'Assign quotas to villages and districts.' },
+            { text: 'Organize workers into supervised crews.' },
+            { text: 'Provide food and tools for workers.' },
+            { text: 'Rotate labor to prevent overburdening any group.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'water-rights-management',
+        name: 'Water Rights Management',
+        stage: 2,
+        icon: '⚖️',
+        category: 'skill',
+        subcategory: 'Administrative & Governance Skills',
+        objective: 'Codify allocation, schedule delivery, and resolve disputes.',
+        evolution: 'Water rights management prevented conflicts and ensured fair distribution of the most critical resource.',
+        requirements: [
+            { name: 'Legal code', value: 'Written water laws' },
+            { name: 'Judges', value: 'For dispute resolution' },
+            { name: 'Records', value: 'Of water allocations' }
+        ],
+        steps: [
+            { text: 'Survey all fields and determine water needs.' },
+            { text: 'Allocate specific water volumes and delivery times.' },
+            { text: 'Record allocations on clay tablets.' },
+            { text: 'Monitor compliance and resolve disputes.' },
+            { text: 'Adjust allocations based on changing conditions.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+
+    // === SKILLS — Craft Specialization Skills ===
+    {
+        id: 'weaving',
+        name: 'Weaving',
+        stage: 2,
+        icon: '🧵',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Set warp, weave weft, and beat tightly on loom to create cloth.',
+        evolution: 'Weaving transformed fibers into durable textiles, enabling clothing, sails, and trade goods.',
+        requirements: [
+            { name: 'Loom', value: 'Vertical or horizontal' },
+            { name: 'Yarn', value: 'Wool or linen' },
+            { name: 'Shuttle', value: 'For passing weft' }
+        ],
+        steps: [
+            { text: 'Set up warp threads on the loom under tension.' },
+            { text: 'Pass weft thread through warp using a shuttle.' },
+            { text: 'Beat weft tightly against previous row.' },
+            { text: 'Alternate over-under pattern for plain weave.' },
+            { text: 'Create complex patterns with twill or tapestry techniques.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'spinning',
+        name: 'Spinning',
+        stage: 2,
+        icon: '🧶',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Use spindle whorl to twist fibers into consistent yarn.',
+        evolution: 'Spinning transformed raw fibers into strong, continuous yarn, the foundation of all textile production.',
+        requirements: [
+            { name: 'Fibers', value: 'Wool, flax, or cotton' },
+            { name: 'Spindle whorl', value: 'Weighted disc' },
+            { name: 'Distaff', value: 'For holding fibers' }
+        ],
+        steps: [
+            { text: 'Attach fibers to spindle and give it a twist.' },
+            { text: 'Draft fibers while spinning to create even thickness.' },
+            { text: 'Allow spindle to twist fibers together.' },
+            { text: 'Wind finished yarn onto spindle.' },
+            { text: 'Repeat to create continuous length of yarn.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'dyeing',
+        name: 'Dyeing',
+        stage: 2,
+        icon: '🎨',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Extract colors from plants/minerals and fix dyes to cloth.',
+        evolution: 'Dyeing added color and value to textiles, with certain colors (purple, red) becoming status symbols.',
+        requirements: [
+            { name: 'Dye materials', value: 'Plants, minerals, or shells' },
+            { name: 'Mordant', value: 'To fix dye to fiber' },
+            { name: 'Dye vat', value: 'For heating dye bath' }
+        ],
+        steps: [
+            { text: 'Collect dye materials (madder for red, indigo for blue).' },
+            { text: 'Boil materials to extract color.' },
+            { text: 'Add mordant (alum, iron) to fix dye to fibers.' },
+            { text: 'Immerse cloth in dye bath.' },
+            { text: 'Rinse and dry dyed cloth.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'basket-weaving',
+        name: 'Basket Weaving',
+        stage: 2,
+        icon: '🧺',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Create containers, mats, and carrying vessels from reeds.',
+        evolution: 'Basket weaving provided essential containers before pottery, and remained important for carrying and storage.',
+        requirements: [
+            { name: 'Reeds or fibers', value: 'Flexible plant materials' },
+            { name: 'Sharp knife', value: 'For cutting' }
+        ],
+        steps: [
+            { text: 'Gather and prepare flexible reeds or plant fibers.' },
+            { text: 'Create a base using interwoven strips.' },
+            { text: 'Weave sides upward in spiral or coiled pattern.' },
+            { text: 'Tighten weave for strength and water resistance.' },
+            { text: 'Finish rim and add handles if needed.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'leather-working',
+        name: 'Leather Working',
+        stage: 2,
+        icon: '🥾',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Tan hides, cut, and sew for harnesses, bags, and clothing.',
+        evolution: 'Leather working produced durable, waterproof materials for harnesses, bags, armor, and footwear.',
+        requirements: [
+            { name: 'Animal hides', value: 'From cattle, sheep, goats' },
+            { name: 'Tanning agents', value: 'Bark, alum, or brain tanning' },
+            { name: 'Cutting tools', value: 'Flint or copper knives' }
+        ],
+        steps: [
+            { text: 'Soak hides in water and scrape off hair and flesh.' },
+            { text: 'Treat with tanning agents (bark, alum, or brains).' },
+            { text: 'Stretch and soften leather by working.' },
+            { text: 'Cut leather into desired shapes.' },
+            { text: 'Sew pieces together with sinew thread.' }
+        ],
+        videoUrl: 'https://youtu.be/kCsy7iNnG84?si=HideTanning'
+    },
+    {
+        id: 'stone-carving',
+        name: 'Stone Carving',
+        stage: 2,
+        icon: '🗿',
+        category: 'skill',
+        subcategory: 'Craft Specialization Skills',
+        objective: 'Shape seals, statues, and decorative elements from stone.',
+        evolution: 'Stone carving produced cylinder seals, statues of gods and rulers, and decorative architectural elements.',
+        requirements: [
+            { name: 'Stone blocks', value: 'Limestone, diorite, or softer stones' },
+            { name: 'Copper chisels', value: 'For carving' },
+            { name: 'Abrasives', value: 'Sand for polishing' }
+        ],
+        steps: [
+            { text: 'Select appropriate stone for the project.' },
+            { text: 'Rough-shape block with hammer and chisel.' },
+            { text: 'Carve fine details with smaller tools.' },
+            { text: 'Sand surface smooth with abrasives.' },
+            { text: 'Polish to desired finish.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+
+    // === SKILLS — Social & Organizational Skills ===
+    {
+        id: 'surplus-management',
+        name: 'Surplus Management',
+        stage: 2,
+        icon: '📦',
+        category: 'skill',
+        subcategory: 'Social & Organizational Skills',
+        objective: 'Collect, store, and redistribute food to non-farming specialists.',
+        evolution: 'Surplus management enabled craft specialization by ensuring food security for artisans, priests, and administrators.',
+        requirements: [
+            { name: 'Granaries', value: 'For storage' },
+            { name: 'Administrative system', value: 'For tracking' },
+            { name: 'Redistribution network', value: 'To allocate resources' }
+        ],
+        steps: [
+            { text: 'Collect agricultural surplus as tax or temple offering.' },
+            { text: 'Store in centralized granaries and warehouses.' },
+            { text: 'Track inventory with detailed records.' },
+            { text: 'Redistribute to specialists (artisans, priests, officials).' },
+            { text: 'Maintain reserves for famine and emergency.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'occupational-training',
+        name: 'Occupational Training',
+        stage: 2,
+        icon: '🎓',
+        category: 'skill',
+        subcategory: 'Social & Organizational Skills',
+        objective: 'Establish apprenticeships for metalworkers, potters, and scribes.',
+        evolution: 'Occupational training preserved and transmitted specialized knowledge across generations, ensuring technological continuity.',
+        requirements: [
+            { name: 'Master craftsmen', value: 'Experienced teachers' },
+            { name: 'Apprentices', value: 'Young learners' },
+            { name: 'Training materials', value: 'Tools and raw materials' }
+        ],
+        steps: [
+            { text: 'Select promising young people for specialized training.' },
+            { text: 'Assign apprentices to master craftsmen.' },
+            { text: 'Begin with basic tasks, gradually increasing complexity.' },
+            { text: 'Practice repeatedly until skills are mastered.' },
+            { text: 'Apprentice becomes journeyman and eventually master.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'conflict-resolution',
+        name: 'Conflict Resolution',
+        stage: 2,
+        icon: '⚖️',
+        category: 'skill',
+        subcategory: 'Social & Organizational Skills',
+        objective: 'Establish laws, judges, and standardized punishments.',
+        evolution: 'Conflict resolution maintained social order in growing cities, preventing feuds and ensuring justice.',
+        requirements: [
+            { name: 'Legal code', value: 'Written laws' },
+            { name: 'Judges', value: 'Impartial arbiters' },
+            { name: 'Enforcement', value: 'Guards or officials' }
+        ],
+        steps: [
+            { text: 'Codify laws covering property, trade, and personal conduct.' },
+            { text: 'Appoint judges to hear disputes.' },
+            { text: 'Hear testimony from both parties.' },
+            { text: 'Apply law consistently and impartially.' },
+            { text: 'Enforce judgments through appointed officials.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+    {
+        id: 'religious-organization',
+        name: 'Religious Organization',
+        stage: 2,
+        icon: '🙏',
+        category: 'skill',
+        subcategory: 'Social & Organizational Skills',
+        objective: 'Coordinate festivals, temple rituals, and community cohesion.',
+        evolution: 'Religious organization unified diverse populations under shared beliefs and practices, strengthening civic identity.',
+        requirements: [
+            { name: 'Priesthood', value: 'Religious officials' },
+            { name: 'Temple', value: 'Central worship site' },
+            { name: 'Ritual calendar', value: 'For festivals' }
+        ],
+        steps: [
+            { text: 'Establish annual religious calendar with festivals.' },
+            { text: 'Organize temple rituals and sacrifices.' },
+            { text: 'Lead community festivals and processions.' },
+            { text: 'Maintain temple and religious structures.' },
+            { text: 'Use religious events to reinforce social cohesion.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
+    },
+
+    // === TOOLS — Metallurgy Tools ===
+    {
+        id: 'smelting-furnace',
+        name: 'Smelting Furnace',
+        stage: 2,
+        icon: '🏭',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Build a clay smelting furnace capable of reaching 1,000-1,100°C.',
+        evolution: 'The furnace was the heart of early metallurgy, transforming ore into metal and enabling the Bronze Age.',
+        requirements: [
+            { name: 'Clay', value: 'For furnace walls' },
+            { name: 'Straw', value: 'Binder' },
+            { name: 'Stone base', value: 'For stability' }
+        ],
+        steps: [
+            { text: 'Build circular or rectangular stone base.' },
+            { text: 'Mix clay with straw and build walls 50-100cm tall.' },
+            { text: 'Create ventilation holes near the base.' },
+            { text: 'Add tap hole at bottom for draining slag.' },
+            { text: 'Dry thoroughly before first use.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'bellows',
+        name: 'Bellows',
+        stage: 2,
+        icon: '💨',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Construct leather bellows to pump air into furnace for higher temperatures.',
+        evolution: 'Bellows forced oxygen into the fire, raising temperatures enough to smelt copper ore. This was the "heart" of the smelting process.',
+        requirements: [
+            { name: 'Goat leather', value: 'For air bag' },
+            { name: 'Wood frame', value: 'For structure' },
+            { name: 'Reed pipes', value: 'For air delivery' }
+        ],
+        steps: [
+            { text: 'Build wooden frame with expanding/contracting leather skin.' },
+            { text: 'Attach reed pipe nozzle directed at furnace.' },
+            { text: 'Operate bellows rhythmically to pump air.' },
+            { text: 'Increased oxygen creates hotter, more efficient fire.' },
+            { text: 'Maintain steady pumping for consistent temperature.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'crucible',
+        name: 'Crucible',
+        stage: 2,
+        icon: '🥣',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Create heat-resistant clay pot for holding molten metal.',
+        evolution: 'Crucibles withstood temperatures over 1,000°C, enabling the smelting and casting of metals.',
+        requirements: [
+            { name: 'Refractory clay', value: 'Heat-resistant' },
+            { name: 'Grog', value: 'Crushed pottery for strength' }
+        ],
+        steps: [
+            { text: 'Mix refractory clay with grog.' },
+            { text: 'Shape into thick-walled cup or bowl.' },
+            { text: 'Dry thoroughly to remove moisture.' },
+            { text: 'Pre-fire in kiln to harden.' },
+            { text: 'Use to hold ore during smelting at 1,000°C+.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'casting-molds',
+        name: 'Casting Molds',
+        stage: 2,
+        icon: '🗿',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Carve stone or clay molds for casting molten metal into tool shapes.',
+        evolution: 'Casting molds enabled mass production of identical metal tools, far more efficient than hammering each individually.',
+        requirements: [
+            { name: 'Soft stone or clay', value: 'For mold material' },
+            { name: 'Carving tools', value: 'For shaping' }
+        ],
+        steps: [
+            { text: 'Carve negative shape of desired tool into stone or clay.' },
+            { text: 'Create pouring channel (sprue) into mold cavity.' },
+            { text: 'Apply release agent (fat, flour, oil) for easy extraction.' },
+            { text: 'Pour molten metal into mold.' },
+            { text: 'Break open mold after cooling to retrieve casting.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'anvil',
+        name: 'Anvil',
+        stage: 2,
+        icon: '🔨',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Use flat granite or basalt stone for hammering hot metal.',
+        evolution: 'The anvil provided a solid surface for shaping metal, essential for forging tools and weapons.',
+        requirements: [
+            { name: 'Large flat stone', value: 'Granite or basalt' }
+        ],
+        steps: [
+            { text: 'Select large, flat-topped stone.' },
+            { text: 'Place near furnace for easy access.' },
+            { text: 'Use to hammer hot metal into shape.' },
+            { text: 'Anvil absorbs shock and provides hard surface.' },
+            { text: 'Essential for all metalworking.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+    {
+        id: 'tongs-and-hammers',
+        name: 'Tongs and Hammers',
+        stage: 2,
+        icon: '🔧',
+        category: 'tool',
+        subcategory: 'Metallurgy Tools',
+        objective: 'Craft copper or bronze tools for handling hot metal.',
+        evolution: 'Specialized metalworking tools enabled safe handling of hot metal and precise shaping.',
+        requirements: [
+            { name: 'Copper or bronze', value: 'For tool heads' },
+            { name: 'Wood', value: 'For handles' }
+        ],
+        steps: [
+            { text: 'Cast or forge tongs from copper or bronze.' },
+            { text: 'Attach wooden handles for insulation.' },
+            { text: 'Forge hammers with flat and rounded faces.' },
+            { text: 'Use tongs to hold hot metal safely.' },
+            { text: 'Use hammers to shape metal on anvil.' }
+        ],
+        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+    },
+
+    // === TOOLS — Agricultural Tools ===
+    {
+        id: 'wooden-plow',
+        name: 'Wooden Plow (Ard)',
+        stage: 2,
+        icon: '🚜',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Build wooden plow pulled by oxen for deep tillage.',
+        evolution: 'The plow multiplied agricultural capacity by 10x, enabling cultivation of heavy, fertile soils.',
+        requirements: [
+            { name: 'Timber', value: 'For plow beam' },
+            { name: 'Oxen', value: 'Draft animals' },
+            { name: 'Harness', value: 'For attachment' }
+        ],
+        steps: [
+            { text: 'Shape curved wooden beam with share (cutting blade).' },
+            { text: 'Attach harness for oxen.' },
+            { text: 'Drive oxen to pull plow through field.' },
+            { text: 'Plow breaks up soil, aerating and burying weeds.' },
+            { text: 'Dramatically increases land one family can farm.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'threshing-sled',
+        name: 'Threshing Sled',
         stage: 2,
         icon: '🌾',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Grow Einkorn wheat, the first domesticated wheat species.',
-        evolution: 'Einkorn was the earliest domesticated wheat, easier to grow in poor soils but lower yielding than Emmer.',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Create sled with embedded flint blades for threshing grain.',
+        evolution: 'The threshing sled mechanized grain separation, saving enormous labor.',
         requirements: [
-            { name: 'Einkorn seeds', value: 'From wild or domesticated sources' },
-            { name: 'Digging stick', value: 'For planting' },
-            { name: 'Storage jars', value: 'For grain storage' }
+            { name: 'Wooden board', value: 'Base of sled' },
+            { name: 'Flint blades', value: 'Embedded in bottom' },
+            { name: 'Draft animal', value: 'To pull sled' }
         ],
         steps: [
-            { text: 'Select a field with well-drained soil. Einkorn tolerates poorer soils than Emmer.' },
-            { text: 'Plant seeds in rows or broadcast them evenly.' },
-            { text: 'Weed the field regularly to prevent competition.' },
-            { text: 'Harvest when the heads are dry and golden.' },
-            { text: 'Thresh carefully as Einkorn grains are tightly enclosed in chaff.' }
+            { text: 'Embed sharp flint blades into wooden board.' },
+            { text: 'Drag sled over harvested grain using animal.' },
+            { text: 'Blades cut stalks and release grain.' },
+            { text: 'Winnow to separate grain from chaff.' },
+            { text: 'Made large-scale grain processing efficient.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
     {
-        id: 'barley',
-        name: 'Barley',
+        id: 'sickle',
+        name: 'Sickle',
         stage: 2,
         icon: '🌾',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Cultivate barley, a hardy grain used for bread, beer, and animal fodder.',
-        evolution: 'Barley was more drought-resistant than wheat, allowing farming in drier regions of the Neolithic world.',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Craft flint or copper blades set in wooden handle for harvesting.',
+        evolution: 'Sickles enabled efficient harvesting of grain, essential for agricultural surplus.',
         requirements: [
-            { name: 'Barley seeds', value: 'Hulled or hulled-less variety' },
-            { name: 'Irrigation', value: 'Optional, for dry climates' },
-            { name: 'Quern stone', value: 'For grinding' }
+            { name: 'Flint blades or copper', value: 'For cutting edge' },
+            { name: 'Wooden handle', value: 'Curved for ergonomics' },
+            { name: 'Resin or pitch', value: 'For attaching blades' }
         ],
         steps: [
-            { text: 'Plant barley in late autumn or early spring depending on climate.' },
-            { text: 'Barley grows quickly and matures in about 3-4 months.' },
-            { text: 'Harvest by cutting stalks with a sickle.' },
-            { text: 'Use for bread, porridge, or malting for beer production.' },
-            { text: 'Straw is used for thatching roofs and animal bedding.' }
+            { text: 'Shape curved wooden handle.' },
+            { text: 'Set flint blades or copper blade in handle.' },
+            { text: 'Secure with resin or pitch.' },
+            { text: 'Use to cut grain stalks at harvest.' },
+            { text: 'Sharp edge enables rapid harvesting.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
     {
-        id: 'lentils',
-        name: 'Lentils',
+        id: 'shaduf',
+        name: 'Shaduf',
         stage: 2,
-        icon: '🫘',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Grow lentils, a protein-rich legume that fixes nitrogen in the soil.',
-        evolution: 'Lentils provided essential protein to complement grain diets and improved soil fertility for subsequent crops.',
+        icon: '💧',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Build counterweighted bucket for lifting water from rivers.',
+        evolution: 'The shaduf enabled irrigation of fields above river level, expanding cultivable land.',
         requirements: [
-            { name: 'Lentil seeds', value: 'Large-seeded domesticated variety' },
-            { name: 'Well-drained soil', value: 'Lentils rot in wet soil' },
-            { name: 'Harvest basket', value: 'For collection' }
+            { name: 'Long pole', value: 'For lever arm' },
+            { name: 'Bucket', value: 'For water' },
+            { name: 'Counterweight', value: 'Stone or clay' }
         ],
         steps: [
-            { text: 'Plant lentil seeds in cool weather, as they tolerate frost.' },
-            { text: 'Lentils are low-growing plants that suppress weeds naturally.' },
-            { text: 'Harvest when pods turn brown and rattle.' },
-            { text: 'Dry the pods thoroughly before threshing.' },
-            { text: 'Store dried lentils in airtight containers. They last for years.' }
+            { text: 'Set up vertical support near river.' },
+            { text: 'Attach long pole with bucket on one end.' },
+            { text: 'Add counterweight on other end.' },
+            { text: 'Lower bucket into river, fill with water.' },
+            { text: 'Counterweight helps lift water to irrigation canal.' }
+        ],
+        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
+    },
+    {
+        id: 'quern-stone',
+        name: 'Quern Stone',
+        stage: 2,
+        icon: '⚙️',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Use basalt saddle stones for grinding grain into flour.',
+        evolution: 'Quern stones enabled grain processing into flour, the foundation of bread and porridge.',
+        requirements: [
+            { name: 'Basalt or granite', value: 'Hard stone for grinding' },
+            { name: 'Grain', value: 'To grind' }
+        ],
+        steps: [
+            { text: 'Select flat basalt stone as base.' },
+            { text: 'Use smaller stone as hand stone (rubber).' },
+            { text: 'Place grain on base stone.' },
+            { text: 'Rub hand stone back and forth to grind.' },
+            { text: 'Collect flour for bread or porridge.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
     {
-        id: 'peas',
-        name: 'Peas',
+        id: 'granary',
+        name: 'Granary',
         stage: 2,
-        icon: '🫛',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Cultivate peas, a climbing legume rich in protein and vitamins.',
-        evolution: 'Peas were among the first domesticated legumes, providing fresh food in spring and dried food in winter.',
+        icon: '🏺',
+        category: 'tool',
+        subcategory: 'Agricultural Tools',
+        objective: 'Build raised, airtight clay or stone structure for grain storage.',
+        evolution: 'Granaries enabled long-term food storage, ensuring security through famines and droughts.',
         requirements: [
-            { name: 'Pea seeds', value: 'Domesticated variety' },
-            { name: 'Support stakes', value: 'For climbing varieties' },
-            { name: 'Trellis or brush', value: 'For support' }
+            { name: 'Mud bricks or stone', value: 'For construction' },
+            { name: 'Bitumen', value: 'For waterproofing' }
         ],
         steps: [
-            { text: 'Plant pea seeds in early spring as soon as soil can be worked.' },
-            { text: 'Provide support for climbing varieties using brush or stakes.' },
-            { text: 'Harvest green peas for fresh eating or let dry for storage.' },
-            { text: 'Dried peas can be stored for winter consumption.' },
-            { text: 'Pea vines fix nitrogen, improving soil for next year\'s crops.' }
+            { text: 'Build raised platform to prevent moisture.' },
+            { text: 'Construct walls from mud bricks or stone.' },
+            { text: 'Waterproof with bitumen.' },
+            { text: 'Add ventilation for air circulation.' },
+            { text: 'Seal top to keep out pests and moisture.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+
+    // === TOOLS — Pottery & Ceramic Tools ===
+    {
+        id: 'potters-wheel',
+        name: "Potter's Wheel",
+        stage: 2,
+        icon: '🌀',
+        category: 'tool',
+        subcategory: 'Pottery & Ceramic Tools',
+        objective: 'Build fast-spinning stone or wood wheel for shaping pottery.',
+        evolution: "The potter's wheel revolutionized ceramic production, enabling mass production of standardized vessels.",
+        requirements: [
+            { name: 'Stone or wood', value: 'For wheel head' },
+            { name: 'Axle', value: 'For rotation' }
+        ],
+        steps: [
+            { text: 'Build heavy wheel head mounted on vertical axle.' },
+            { text: 'Spin wheel using stick or by hand.' },
+            { text: 'Center clay on spinning head.' },
+            { text: 'Shape vessel using centrifugal force.' },
+            { text: 'Produces symmetrical pots much faster than hand-building.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
     },
     {
-        id: 'flax',
-        name: 'Flax',
+        id: 'kiln',
+        name: 'Kiln',
         stage: 2,
-        icon: '🌿',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Grow flax for linen fiber and linseed oil.',
-        evolution: 'Flax revolutionized clothing with linen and provided oil for cooking and lamps.',
+        icon: '🔥',
+        category: 'tool',
+        subcategory: 'Pottery & Ceramic Tools',
+        objective: 'Construct clay kiln with firebox and chimney for high-temperature firing.',
+        evolution: 'Kilns enabled permanent, waterproof pottery and baked bricks through controlled high-temperature firing.',
         requirements: [
-            { name: 'Flax seeds', value: 'Fiber or oil variety' },
-            { name: 'Rippling comb', value: 'For removing seeds' },
-            { name: 'Retting pool', value: 'Water for retting' }
+            { name: 'Clay', value: 'For kiln structure' },
+            { name: 'Fuel wood', value: 'For firing' }
         ],
         steps: [
-            { text: 'Plant flax densely to encourage tall, straight stems with few branches.' },
-            { text: 'Harvest by pulling entire plants to maximize fiber length.' },
-            { text: 'Ripple to remove seeds (linseed). Ret stems in water to soften fibers.' },
-            { text: 'Break, scutch, and hackle to extract fine linen fibers.' },
-            { text: 'Spin into thread and weave into linen cloth.' }
+            { text: 'Build clay structure with firebox at bottom.' },
+            { text: 'Add chimney at top for draft.' },
+            { text: 'Load pottery carefully with space for heat circulation.' },
+            { text: 'Fire gradually to 800-1,000°C.' },
+            { text: 'Cool slowly to prevent cracking.' }
         ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
     },
     {
-        id: 'hemp',
-        name: 'Hemp',
+        id: 'brick-molds',
+        name: 'Brick Molds',
         stage: 2,
-        icon: '🌿',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Cultivate hemp for strong cordage, canvas, and rope.',
-        evolution: 'Hemp provided the strongest natural fiber for ropes, nets, and sails, enabling trade and travel.',
+        icon: '🧱',
+        category: 'tool',
+        subcategory: 'Pottery & Ceramic Tools',
+        objective: 'Create wooden frames for shaping uniform mud bricks.',
+        evolution: 'Brick molds standardized construction materials, enabling rapid building of cities.',
         requirements: [
-            { name: 'Hemp seeds', value: 'Industrial hemp variety' },
-            { name: 'Breaking tool', value: 'For processing stalks' },
-            { name: 'Scutcher', value: 'For cleaning fibers' }
+            { name: 'Wood', value: 'For mold construction' }
         ],
         steps: [
-            { text: 'Plant hemp seeds in fertile, well-drained soil.' },
-            { text: 'Hemp grows rapidly and suppresses weeds naturally.' },
-            { text: 'Harvest when plants flower for best fiber quality.' },
-            { text: 'Ret stalks in water or dew to separate fibers from woody core.' },
-            { text: 'Break, scutch, and hackle to produce strong hemp cordage.' }
+            { text: 'Build rectangular wooden frame without top or bottom.' },
+            { text: 'Place frame on flat surface.' },
+            { text: 'Fill with mud mixture.' },
+            { text: 'Remove frame to leave shaped brick.' },
+            { text: 'Repeat for mass production.' }
         ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+
+    // === TOOLS — Administrative Tools ===
+    {
+        id: 'stylus',
+        name: 'Stylus',
+        stage: 2,
+        icon: '🖊️',
+        category: 'tool',
+        subcategory: 'Administrative Tools',
+        objective: 'Craft reed with triangular tip for pressing cuneiform into clay.',
+        evolution: 'The stylus enabled the first writing system, creating permanent records of transactions, laws, and literature.',
+        requirements: [
+            { name: 'Reed', value: 'Straight, hollow stem' }
+        ],
+        steps: [
+            { text: 'Cut reed to appropriate length.' },
+            { text: 'Sharpen one end to triangular point.' },
+            { text: 'Press into wet clay at angles.' },
+            { text: 'Create wedge-shaped marks.' },
+            { text: 'Combine marks to form signs and words.' }
+        ],
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
     },
     {
-        id: 'chickpeas',
-        name: 'Chickpeas',
+        id: 'clay-tablets',
+        name: 'Clay Tablets',
         stage: 2,
-        icon: '🫘',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Grow chickpeas, a drought-resistant protein source.',
-        evolution: 'Chickpeas thrived in dry Mediterranean climates, providing reliable protein where other crops failed.',
+        icon: '📜',
+        category: 'tool',
+        subcategory: 'Administrative Tools',
+        objective: 'Prepare smooth clay surfaces for writing and record-keeping.',
+        evolution: 'Clay tablets were the "paper" of the ancient world, preserving records for thousands of years.',
         requirements: [
-            { name: 'Chickpea seeds', value: 'Desi or Kabuli variety' },
-            { name: 'Dry soil', value: 'Chickpeas hate wet feet' },
-            { name: 'Harvest basket', value: 'For collection' }
+            { name: 'Clay', value: 'Fine, smooth clay' }
         ],
         steps: [
-            { text: 'Plant chickpeas in warm, dry soil after last frost.' },
-            { text: 'Chickpeas are drought-tolerant and require little water.' },
-            { text: 'Harvest when pods turn yellow and dry.' },
-            { text: 'Thresh to remove seeds from pods.' },
-            { text: 'Store dried chickpeas for long-term food security.' }
+            { text: 'Knead clay to uniform consistency.' },
+            { text: 'Form into flat, rectangular shape.' },
+            { text: 'Smooth surface for writing.' },
+            { text: 'Allow to dry slightly before writing.' },
+            { text: 'Bake for permanent preservation.' }
         ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
     },
     {
-        id: 'bitter-vetch',
-        name: 'Bitter Vetch',
+        id: 'cylinder-seal',
+        name: 'Cylinder Seal',
         stage: 2,
-        icon: '🫘',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Cultivate bitter vetch for animal fodder and emergency human food.',
-        evolution: 'Bitter vetch was a crucial backup crop, feeding livestock and humans during grain failures.',
+        icon: '🔏',
+        category: 'tool',
+        subcategory: 'Administrative Tools',
+        objective: 'Carve stone cylinder for marking property and authenticating documents.',
+        evolution: 'Cylinder seals were the ancient equivalent of signatures, providing authentication and ownership marks.',
         requirements: [
-            { name: 'Vetch seeds', value: 'Domesticated variety' },
-            { name: 'Leaching water', value: 'To remove toxins for human use' },
-            { name: 'Storage bin', value: 'For seeds' }
+            { name: 'Stone', value: 'Limestone, hematite, or lapis' },
+            { name: 'Carving tools', value: 'Copper or flint' }
         ],
         steps: [
-            { text: 'Plant bitter vetch in poor soils where other crops struggle.' },
-            { text: 'Harvest pods when dry.' },
-            { text: 'For animal feed: dry and store directly.' },
-            { text: 'For human food: soak and boil repeatedly to remove toxic compounds.' },
-            { text: 'Use as a famine food or livestock supplement.' }
+            { text: 'Shape stone into small cylinder.' },
+            { text: 'Carve intricate design around surface.' },
+            { text: 'Drill hole through center for suspension.' },
+            { text: 'Roll across wet clay to create impression.' },
+            { text: 'Each seal is unique to its owner.' }
         ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
     },
     {
-        id: 'linseed',
-        name: 'Linseed (Flax Seed)',
+        id: 'balance-scales',
+        name: 'Balance Scales',
         stage: 2,
-        icon: '🌰',
-        category: 'resource',
-        subcategory: 'Domesticated Crops',
-        objective: 'Harvest linseed from flax plants for oil production.',
-        evolution: 'Linseed oil provided light for lamps, waterproofing for wood, and nutrition for humans.',
+        icon: '⚖️',
+        category: 'tool',
+        subcategory: 'Administrative Tools',
+        objective: 'Build scales for weighing metals and trade goods.',
+        evolution: 'Balance scales enabled fair trade and standardized commerce, essential for complex economies.',
         requirements: [
-            { name: 'Flax plants', value: 'Grown for seed' },
-            { name: 'Press', value: 'For extracting oil' },
-            { name: 'Container', value: 'For storing oil' }
+            { name: 'Wood or bone', value: 'For beam' },
+            { name: 'String or chain', value: 'For pans' },
+            { name: 'Standard weights', value: 'Stone or metal' }
         ],
         steps: [
-            { text: 'Allow flax plants to mature fully until seed pods are brown.' },
-            { text: 'Thresh plants to release linseeds.' },
-            { text: 'Grind seeds into meal or press for oil.' },
-            { text: 'Linseed oil is used for lamps, wood treatment, and cooking.' },
-            { text: 'Linseed meal is high-protein animal feed.' }
+            { text: 'Craft balanced beam with central pivot.' },
+            { text: 'Attach pans on each side.' },
+            { text: 'Create standardized weights.' },
+            { text: 'Place goods on one pan, weights on other.' },
+            { text: 'When balanced, weight is known.' }
         ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
     },
-    // === STAGE 2: NEOLITHIC REVOLUTION ===
+
+    // === TOOLS — Textile & Craft Tools ===
+    {
+        id: 'loom',
+        name: 'Loom',
+        stage: 2,
+        icon: '🧵',
+        category: 'tool',
+        subcategory: 'Textile & Craft Tools',
+        objective: 'Build vertical or horizontal frame for weaving cloth.',
+        evolution: 'The loom enabled efficient weaving of textiles, producing clothing, sails, and trade goods.',
+        requirements: [
+            { name: 'Wood', value: 'For frame construction' }
+        ],
+        steps: [
+            { text: 'Build rectangular wooden frame.' },
+            { text: 'Set up warp threads under tension.' },
+            { text: 'Pass weft through warp using shuttle.' },
+            { text: 'Beat weft tightly against previous row.' },
+            { text: 'Create cloth of desired size.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'spindle-whorl',
+        name: 'Spindle Whorl',
+        stage: 2,
+        icon: '🧶',
+        category: 'tool',
+        subcategory: 'Textile & Craft Tools',
+        objective: 'Use weighted disc for spinning fibers into yarn.',
+        evolution: 'The spindle whorl transformed raw fibers into continuous yarn, the foundation of all textile production.',
+        requirements: [
+            { name: 'Clay, stone, or wood', value: 'For whorl' },
+            { name: 'Spindle', value: 'Wooden rod' }
+        ],
+        steps: [
+            { text: 'Shape weighted disc with center hole.' },
+            { text: 'Mount on wooden spindle.' },
+            { text: 'Attach fibers and give twist.' },
+            { text: 'Allow whorl to spin and twist fibers.' },
+            { text: 'Wind finished yarn onto spindle.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+    {
+        id: 'carding-combs',
+        name: 'Carding Combs',
+        stage: 2,
+        icon: '',
+        category: 'tool',
+        subcategory: 'Textile & Craft Tools',
+        objective: 'Align wool or flax fibers for spinning.',
+        evolution: 'Carding combs prepared fibers for spinning, ensuring even yarn thickness.',
+        requirements: [
+            { name: 'Wood with teeth', value: 'Or bone combs' }
+        ],
+        steps: [
+            { text: 'Place fibers between combs.' },
+            { text: 'Pull combs apart to align fibers.' },
+            { text: 'Remove tangles and short fibers.' },
+            { text: 'Create uniform fiber mass for spinning.' },
+            { text: 'Essential preparation step for quality yarn.' }
+        ],
+        videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
+    },
+
     // === RESOURCES — Metal Ores ===
     {
-        id: 'copper-ore',
-        name: 'Copper Ore (Malachite)',
+        id: 'malachite-ore',
+        name: 'Malachite Ore',
         stage: 2,
         icon: '🟢',
         category: 'resource',
         subcategory: 'Metal Ores',
-        objective: 'Locate and mine malachite ore, the primary source of copper for early metallurgy.',
-        evolution: 'Copper was the first metal used by humans. Mining malachite allowed for the production of superior tools and weapons, marking the transition to the Bronze Age.',
+        objective: 'Mine green copper carbonate ore, the primary source of copper.',
+        evolution: 'Malachite was the most important copper ore, yielding ~50% copper by weight and enabling early metallurgy.',
         requirements: [
-            { name: 'Malachite deposits', value: 'Green copper carbonate ore' },
+            { name: 'Malachite deposits', value: 'Green copper carbonate' },
             { name: 'Mining tools', value: 'Stone picks, antler tools' }
         ],
         steps: [
-            { text: 'Locate green mineral deposits (malachite) in oxidized zones of copper ore bodies.' },
-            { text: 'Mine the ore using stone picks and fire-setting to crack the rock.' },
-            { text: 'Crush the ore into small pieces using stone hammers and grinding stones.' },
-            { text: 'The crushed ore is now ready for smelting. Malachite yields about 50% copper by weight.' },
-            { text: 'Trade surplus ore with specialists who have smelting knowledge.' }
+            { text: 'Locate bright green mineral in oxidized copper zones.' },
+            { text: 'Mine ore using stone picks and fire-setting.' },
+            { text: 'Crush into small pieces for smelting.' },
+            { text: 'Smelt with charcoal and flux at 1,000°C+.' },
+            { text: 'Extract pure copper metal.' }
+        ],
+        videoUrl: 'https://youtu.be/d6N9TNeVYfw?si=MiningStone'
+    },
+    {
+        id: 'cassiterite-ore',
+        name: 'Cassiterite (Tin Ore)',
+        stage: 2,
+        icon: '⚪',
+        category: 'resource',
+        subcategory: 'Metal Ores',
+        objective: 'Source tin ore from distant regions for bronze production.',
+        evolution: 'Tin ore was extremely rare and had to be traded from distant sources (Afghanistan, Cornwall). Its scarcity made bronze valuable.',
+        requirements: [
+            { name: 'River gravels', value: 'Where cassiterite is found' },
+            { name: 'Trade networks', value: 'To obtain from distant sources' }
+        ],
+        steps: [
+            { text: 'Search alluvial deposits for heavy tin stones.' },
+            { text: 'Tin is much rarer than copper, requiring trade.' },
+            { text: 'Smelt separately or add to molten copper.' },
+            { text: 'Create bronze alloy (10% tin, 90% copper).' },
+            { text: 'Bronze is harder and more durable than pure copper.' }
         ],
         videoUrl: 'https://youtu.be/d6N9TNeVYfw?si=MiningStone'
     },
@@ -6376,130 +7865,152 @@ const blueprints = [
         icon: '🟠',
         category: 'resource',
         subcategory: 'Metal Ores',
-        objective: 'Collect native copper nuggets found naturally in the earth.',
-        evolution: 'Native copper requires no smelting — it can be hammered directly into tools, teaching early humans the properties of metal.',
+        objective: 'Collect pure copper nuggets found naturally in riverbeds.',
+        evolution: 'Native copper required no smelting and could be hammered directly into tools, teaching early humans the properties of metal.',
         requirements: [
             { name: 'Surface deposits', value: 'Riverbeds or rock outcrops' },
             { name: 'Stone hammer', value: 'For shaping' }
         ],
         steps: [
-            { text: 'Search riverbeds and rock outcrops for reddish-brown metal nuggets.' },
-            { text: 'Test by hammering — if it dents rather than breaks, it is metal.' },
-            { text: 'Clean the nuggets and hammer them into shape (cold working).' },
-            { text: 'Heat the metal to anneal (soften) it, preventing cracking.' },
-            { text: 'Native copper was the first "metal age" before smelting was invented.' }
+            { text: 'Search riverbeds for reddish-brown metal nuggets.' },
+            { text: 'Test by hammering — if it dents, it is metal.' },
+            { text: 'Clean and hammer into shape (cold working).' },
+            { text: 'Anneal (heat) to soften if it becomes brittle.' },
+            { text: 'First metal used before smelting was invented.' }
         ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
+        videoUrl: 'https://youtu.be/d6N9TNeVYfw?si=MiningStone'
     },
     {
-        id: 'tin-ore',
-        name: 'Tin Ore (Cassiterite)',
-        stage: 2,
-        icon: '⚪',
-        category: 'resource',
-        subcategory: 'Metal Ores',
-        objective: 'Source tin ore to mix with copper for making bronze.',
-        evolution: 'Tin is rare. Its discovery and trade with copper created the first international trade networks and the Bronze Age.',
-        requirements: [
-            { name: 'River gravels', value: 'Tin is often found in stream beds' },
-            { name: 'Trade partners', value: 'To exchange for other goods' }
-        ],
-        steps: [
-            { text: 'Search alluvial deposits (river gravels) for heavy, dark tin stones (cassiterite).' },
-            { text: 'Tin is much rarer than copper, often requiring long-distance trade.' },
-            { text: 'Smelt tin separately or add it to molten copper (10% tin to 90% copper).' },
-            { text: 'The resulting alloy is Bronze — harder and more durable than pure copper.' },
-            { text: 'Control of tin sources gave civilizations a massive military and economic advantage.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    {
-        id: 'gold-nugget',
-        name: 'Gold Nugget',
+        id: 'gold-nuggets',
+        name: 'Gold Nuggets',
         stage: 2,
         icon: '🟡',
         category: 'resource',
         subcategory: 'Metal Ores',
-        objective: 'Collect gold nuggets for ornamentation and status symbols.',
-        evolution: 'Gold was the first metal used purely for decoration and status, as it is too soft for tools.',
+        objective: 'Pan for gold in river sediments for ornaments and trade.',
+        evolution: 'Gold was the first metal used purely for decoration and status, too soft for tools but highly valued.',
         requirements: [
             { name: 'Gold deposits', value: 'River pans or quartz veins' },
-            { name: 'Gold panning', value: 'Water and a pan' }
+            { name: 'Gold panning', value: 'Water and pan' }
         ],
         steps: [
-            { text: 'Pan for gold in river sediments — gold is very heavy and settles at the bottom.' },
-            { text: 'Alternatively, mine quartz veins containing visible gold.' },
-            { text: 'Gold is easily shaped by hammering (malleable) without melting.' },
-            { text: 'Use for jewelry, religious icons, and trade currency.' },
-            { text: 'Gold does not corrode, symbolizing eternal life and power.' }
+            { text: 'Pan for gold in river sediments.' },
+            { text: 'Gold is very heavy and settles at bottom.' },
+            { text: 'Gold is easily shaped by hammering.' },
+            { text: 'Use for jewelry and religious icons.' },
+            { text: 'Does not corrode, symbolizing eternal life.' }
+        ],
+        videoUrl: 'https://youtu.be/d6N9TNeVYfw?si=MiningStone'
+    },
+    {
+        id: 'limestone-flux',
+        name: 'Limestone (Flux)',
+        stage: 2,
+        icon: '⚪',
+        category: 'resource',
+        subcategory: 'Metal Ores',
+        objective: 'Source limestone for use as flux in metal smelting.',
+        evolution: 'Flux binds with impurities in ore to form slag, allowing pure metal to flow to the bottom. Essential for clean smelting.',
+        requirements: [
+            { name: 'Limestone deposits', value: 'Sedimentary rock formations' }
+        ],
+        steps: [
+            { text: 'Locate limestone deposits (soft sedimentary rock).' },
+            { text: 'Extract and crush into small pieces.' },
+            { text: 'Mix with ore and charcoal in furnace.' },
+            { text: 'Flux melts and combines with impurities.' },
+            { text: 'Slag floats on metal and is tapped off.' }
         ],
         videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
     },
-    // === RESOURCES — Fuel & Flux ===
+
+    // === RESOURCES — Fuel Resources ===
     {
         id: 'charcoal',
         name: 'Charcoal',
         stage: 2,
         icon: '⬛',
         category: 'resource',
-        subcategory: 'Fuel & Flux',
-        objective: 'Produce charcoal for high-temperature smelting of metals.',
-        evolution: 'Wood fires are not hot enough to smelt copper. Charcoal burns hotter and is essential for metallurgy.',
+        subcategory: 'Fuel Resources',
+        objective: 'Produce charcoal in earth kilns for high-temperature smelting.',
+        evolution: 'Charcoal burns at 1,000°C+ and was essential for smelting metals. Wood fires alone cannot reach smelting temperatures.',
         requirements: [
-            { name: 'Wood', value: 'Hardwood like oak or charcoal-friendly wood' },
+            { name: 'Hardwood', value: 'Oak, styrax, mulberry, or willow' },
             { name: 'Earth kiln', value: 'Covered pit for oxygen restriction' }
         ],
         steps: [
-            { text: 'Build a mound of wood and cover it with earth to restrict oxygen.' },
-            { text: 'Light a small fire to start the carbonization process.' },
-            { text: 'Let the mound smolder for several days. Do not let it burn with open flame.' },
-            { text: 'The result is charcoal — a fuel that burns at 1000°C+.' },
-            { text: 'Charcoal is the backbone of all early metal production.' }
+            { text: 'Build mound of hardwood in shallow pit.' },
+            { text: 'Cover tightly with earth to restrict oxygen.' },
+            { text: 'Light small fire to start carbonization.' },
+            { text: 'Let smolder for 3-5 days without open flame.' },
+            { text: 'Harvest charcoal — burns at 1,000°C+.' }
         ],
         videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
     },
     {
-        id: 'flux',
-        name: 'Flux (Limestone/Sand)',
+        id: 'hardwood',
+        name: 'Hardwood',
         stage: 2,
-        icon: '⚪',
+        icon: '🪵',
         category: 'resource',
-        subcategory: 'Fuel & Flux',
-        objective: 'Add flux to the smelt to remove impurities from the metal.',
-        evolution: 'Flux binds with the rocky impurities in ore to form slag, allowing pure metal to flow to the bottom.',
+        subcategory: 'Fuel Resources',
+        objective: 'Source hardwood for charcoal production and construction.',
+        evolution: 'Hardwood was essential for making high-quality charcoal and for construction of buildings, carts, and boats.',
         requirements: [
-            { name: 'Limestone or sand', value: 'Silica source' },
-            { name: 'Knowledge of ratios', value: 'Correct flux-to-ore ratio' }
+            { name: 'Forest access', value: 'Oak, styrax, mulberry, or willow' }
         ],
         steps: [
-            { text: 'Collect limestone or sand.' },
-            { text: 'Mix flux with crushed copper ore before smelting.' },
-            { text: 'The flux melts and combines with impurities to form liquid slag.' },
-            { text: 'Slag floats on top of the molten copper and can be poured off.' },
-            { text: 'This technique drastically increases metal purity and quality.' }
+            { text: 'Identify hardwood trees in forest.' },
+            { text: 'Cut trees and shape into logs.' },
+            { text: 'Use for charcoal production.' },
+            { text: 'Use for construction and tool handles.' },
+            { text: 'Essential resource for Stage 2 technology.' }
         ],
         videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
     },
-    // === RESOURCES — Agricultural Surplus ===
+
+    // === RESOURCES — Agricultural Resources ===
     {
-        id: 'grain-silo',
-        name: 'Grain Silo',
+        id: 'emmer-wheat',
+        name: 'Emmer Wheat',
         stage: 2,
-        icon: '🏺',
+        icon: '🌾',
         category: 'resource',
-        subcategory: 'Agricultural Surplus',
-        objective: 'Build a silo for long-term storage of surplus grain.',
-        evolution: 'Surplus grain allowed for population growth and supported non-farming specialists like metalworkers.',
+        subcategory: 'Agricultural Resources',
+        objective: 'Cultivate emmer wheat, the primary bread grain of the early Neolithic.',
+        evolution: 'Emmer wheat was the most important crop in the Fertile Crescent, providing calories needed for settled civilization.',
         requirements: [
-            { name: 'Clay or stone', value: 'For construction' },
-            { name: 'Dry grain', value: 'Stored product' }
+            { name: 'Emmer seeds', value: 'Saved from previous harvest' },
+            { name: 'Fertile soil', value: 'River valley or rain-fed plain' }
         ],
         steps: [
-            { text: 'Build a raised, airtight container from mud brick or stone.' },
-            { text: 'Ensure the interior is dry and pest-proof.' },
-            { text: 'Fill with harvested and dried grain.' },
-            { text: 'Seal the top to prevent moisture and rodents.' },
-            { text: 'Silos allow communities to survive famines and trade surplus food.' }
+            { text: 'Prepare soil by clearing weeds.' },
+            { text: 'Scatter seeds at start of planting season.' },
+            { text: 'Protect field from birds and animals.' },
+            { text: 'Harvest when stalks turn golden.' },
+            { text: 'Thresh and winnow to separate grain.' }
+        ],
+        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
+    },
+    {
+        id: 'barley',
+        name: 'Barley',
+        stage: 2,
+        icon: '🌾',
+        category: 'resource',
+        subcategory: 'Agricultural Resources',
+        objective: 'Cultivate barley, a hardy grain for bread, beer, and animal fodder.',
+        evolution: 'Barley was more drought-resistant than wheat, allowing farming in drier regions.',
+        requirements: [
+            { name: 'Barley seeds', value: 'Hulled or hulled-less variety' },
+            { name: 'Irrigation', value: 'Optional for dry climates' }
+        ],
+        steps: [
+            { text: 'Plant in late autumn or early spring.' },
+            { text: 'Barley matures in 3-4 months.' },
+            { text: 'Harvest by cutting stalks with sickle.' },
+            { text: 'Use for bread, porridge, or malting for beer.' },
+            { text: 'Straw used for thatching and animal bedding.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
@@ -6509,380 +8020,131 @@ const blueprints = [
         stage: 2,
         icon: '🐑',
         category: 'resource',
-        subcategory: 'Agricultural Surplus',
+        subcategory: 'Agricultural Resources',
         objective: 'Harvest wool from domesticated sheep for textiles.',
-        evolution: 'Wool replaced plant fibers as the primary textile material, enabling warmer clothing and trade.',
+        evolution: 'Wool replaced plant fibers as primary textile material, enabling warmer clothing for colder climates.',
         requirements: [
             { name: 'Sheep', value: 'Domesticated wool breed' },
-            { name: 'Shears or knife', value: 'For harvesting' }
+            { name: 'Shears', value: 'Bronze or flint' }
         ],
         steps: [
-            { text: 'Raise sheep specifically for their thick fleece.' },
-            { text: 'Shear the sheep in spring using bronze or flint shears.' },
-            { text: 'Clean the wool by washing in water and natural soap.' },
-            { text: 'Card the wool to align fibers for spinning.' },
-            { text: 'Wool cloth is warmer and more durable than linen.' }
+            { text: 'Raise sheep for thick fleece.' },
+            { text: 'Shear in spring using shears.' },
+            { text: 'Clean wool by washing.' },
+            { text: 'Card to align fibers.' },
+            { text: 'Spin into yarn for weaving.' }
         ],
         videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
     },
-    // === TOOLS — Metallurgy Tools ===
     {
-        id: 'crucible',
-        name: 'Crucible',
+        id: 'flax-fibers',
+        name: 'Flax Fibers',
         stage: 2,
-        icon: '🥣',
-        category: 'tool',
-        subcategory: 'Metallurgy Tools',
-        objective: 'Create a heat-resistant clay pot for melting metal.',
-        evolution: 'The crucible allowed for the melting of copper, enabling casting and alloying.',
+        icon: '🌿',
+        category: 'resource',
+        subcategory: 'Agricultural Resources',
+        objective: 'Grow flax for linen fiber and linseed oil.',
+        evolution: 'Flax revolutionized clothing with linen and provided oil for cooking and lamps.',
         requirements: [
-            { name: 'Clay', value: 'High-temperature clay' },
-            { name: 'Grog or sand', value: 'To prevent cracking' }
+            { name: 'Flax seeds', value: 'Fiber or oil variety' },
+            { name: 'Retting pool', value: 'Water for retting' }
         ],
         steps: [
-            { text: 'Mix clay with grog (crushed pottery) for heat resistance.' },
-            { text: 'Shape into a thick-walled cup.' },
-            { text: 'Dry thoroughly and pre-fire to harden.' },
-            { text: 'Place ore or metal inside and heat in a furnace.' },
-            { text: 'The crucible withstands temperatures over 1000°C.' }
-        ],
-        videoUrl: 'https://youtu.be/NHgUMUk3YwY?si=PotteryKiln'
-    },
-    {
-        id: 'bellows',
-        name: 'Bellows',
-        stage: 2,
-        icon: '💨',
-        category: 'tool',
-        subcategory: 'Metallurgy Tools',
-        objective: 'Construct bellows to pump air into the fire for higher temperatures.',
-        evolution: 'Bellows forced oxygen into the fire, raising temperatures enough to smelt copper ore.',
-        requirements: [
-            { name: 'Leather', value: 'For the air bag' },
-            { name: 'Wood/Clay', value: 'For the frame' }
-        ],
-        steps: [
-            { text: 'Build a wooden frame with a leather skin that expands and contracts.' },
-            { text: 'Attach a nozzle directed at the fire.' },
-            { text: 'Operate the bellows rhythmically to pump air into the furnace.' },
-            { text: 'The increased oxygen creates a hotter, more efficient fire.' },
-            { text: 'Bellows are the heart of the smelting furnace.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    {
-        id: 'casting-mold',
-        name: 'Casting Mold',
-        stage: 2,
-        icon: '🗿',
-        category: 'tool',
-        subcategory: 'Metallurgy Tools',
-        objective: 'Carve a mold to cast molten metal into specific shapes.',
-        evolution: 'Casting allowed for mass production of identical, complex metal tools.',
-        requirements: [
-            { name: 'Stone or clay', value: 'For the mold' },
-            { name: 'Carving tools', value: 'For the negative space' }
-        ],
-        steps: [
-            { text: 'Carve the shape of the tool (e.g., axe) into a block of soft stone or clay.' },
-            { text: 'Create a channel for pouring molten metal.' },
-            { text: 'Close the mold if using two halves.' },
-            { text: 'Pour molten copper or bronze into the mold.' },
-            { text: 'Allow to cool and break open the mold to retrieve the metal tool.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    {
-        id: 'copper-anvil',
-        name: 'Copper Anvil',
-        stage: 2,
-        icon: '🔨',
-        category: 'tool',
-        subcategory: 'Metallurgy Tools',
-        objective: 'Use a hard stone anvil for hammering hot metal.',
-        evolution: 'The anvil provided a solid surface for shaping metal, essential for forging tools.',
-        requirements: [
-            { name: 'Large stone', value: 'Granite or basalt' }
-        ],
-        steps: [
-            { text: 'Select a large, flat-topped stone.' },
-            { text: 'Place it near the furnace for easy access.' },
-            { text: 'Use it to hammer hot copper into sheets or to shape cast tools.' },
-            { text: 'The anvil absorbs shock and provides a hard surface.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    // === TOOLS — Advanced Agriculture ===
-    {
-        id: 'wooden-plow',
-        name: 'Wooden Plow (Ard)',
-        stage: 2,
-        icon: '🚜',
-        category: 'tool',
-        subcategory: 'Advanced Agriculture',
-        objective: 'Build a wooden plow pulled by oxen to turn soil.',
-        evolution: 'The plow allowed for deep tillage of heavy soils, vastly increasing crop yields.',
-        requirements: [
-            { name: 'Timber', value: 'For the plow beam' },
-            { name: 'Oxen', value: 'Draft animals' }
-        ],
-        steps: [
-            { text: 'Shape a curved wooden beam and a share (cutting blade).' },
-            { text: 'Attach a harness for oxen.' },
-            { text: 'Drive the oxen to pull the plow through the field.' },
-            { text: 'The plow breaks up the soil, aerating it and burying weeds.' },
-            { text: 'Plowing increased the amount of land one family could farm.' }
+            { text: 'Plant densely to encourage tall stems.' },
+            { text: 'Harvest by pulling entire plants.' },
+            { text: 'Ret stems in water to soften fibers.' },
+            { text: 'Break, scutch, and hackle to extract fibers.' },
+            { text: 'Spin into linen thread.' }
         ],
         videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
     },
+
+    // === RESOURCES — Construction Materials ===
     {
-        id: 'threshing-sled',
-        name: 'Threshing Sled',
+        id: 'river-clay',
+        name: 'River Clay',
         stage: 2,
-        icon: '🌾',
-        category: 'tool',
-        subcategory: 'Advanced Agriculture',
-        objective: 'Create a sled with embedded stones for threshing grain.',
-        evolution: 'The threshing sled mechanized the separation of grain from stalks, saving labor.',
+        icon: '🟫',
+        category: 'resource',
+        subcategory: 'Construction Materials',
+        objective: 'Extract clay from riverbanks for pottery and construction.',
+        evolution: 'Clay was the foundation of ceramics and construction, enabling pottery, bricks, and ziggurats.',
         requirements: [
-            { name: 'Wooden board', value: 'Base of the sled' },
-            { name: 'Flint blades', value: 'Embedded in the bottom' }
+            { name: 'River banks', value: 'Primary clay sources' }
         ],
         steps: [
-            { text: 'Embed sharp flint blades or stones into the bottom of a wooden board.' },
-            { text: 'Drag the sled over harvested grain stalks using an animal.' },
-            { text: 'The blades cut the stalks and release the grain.' },
-            { text: 'Winnow the mixture to separate grain from chaff.' },
-            { text: 'Threshing sleds made large-scale grain processing efficient.' }
-        ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
-    },
-    // === TOOLS — Transport & Mechanics ===
-    {
-        id: 'potter\'s-wheel',
-        name: 'Potter\'s Wheel',
-        stage: 2,
-        icon: '🌀',
-        category: 'tool',
-        subcategory: 'Transport & Mechanics',
-        objective: 'Construct a fast wheel for rapid, symmetrical pottery production.',
-        evolution: 'The potter\'s wheel revolutionized ceramic production, enabling mass production of vessels.',
-        requirements: [
-            { name: 'Stone or wood', value: 'For the wheel head' },
-            { name: 'Axle', value: 'For rotation' }
-        ],
-        steps: [
-            { text: 'Build a heavy wheel head mounted on a vertical axle.' },
-            { text: 'Spin the wheel using a stick or by hand.' },
-            { text: 'Center the clay on the spinning head.' },
-            { text: 'Pull the clay up and shape it using centrifugal force.' },
-            { text: 'Wheels produce perfectly symmetrical pots much faster than hand-building.' }
+            { text: 'Locate sticky, fine-grained soil near rivers.' },
+            { text: 'Extract with digging tools.' },
+            { text: 'Remove rocks and organic matter.' },
+            { text: 'Knead with water to uniform consistency.' },
+            { text: 'Use for pottery, bricks, and construction.' }
         ],
         videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
     },
     {
-        id: 'cart-wheel',
-        name: 'Cart Wheel',
+        id: 'bitumen',
+        name: 'Bitumen',
         stage: 2,
-        icon: '☸️',
-        category: 'tool',
-        subcategory: 'Transport & Mechanics',
-        objective: 'Build solid wood wheels for carts and wagons.',
-        evolution: 'The wheel transformed transport, allowing heavy loads to be moved by animals over long distances.',
+        icon: '⬛',
+        category: 'resource',
+        subcategory: 'Construction Materials',
+        objective: 'Extract natural asphalt for waterproofing and mortar.',
+        evolution: 'Bitumen waterproofed structures and created watertight joints in brickwork, essential for canals and baths.',
         requirements: [
-            { name: 'Timber', value: 'Thick logs' },
-            { name: 'Axe/Adze', value: 'For shaping' }
+            { name: 'Natural seeps', value: 'Bitumen deposits' }
         ],
         steps: [
-            { text: 'Cut thick planks and join them to form a disc.' },
-            { text: 'Carve the disc into a round wheel.' },
-            { text: 'Drill a hole in the center for the axle.' },
-            { text: 'Mount on a wooden cart frame with a fixed axle.' },
-            { text: 'Wheels enabled trade networks and military logistics.' }
+            { text: 'Locate natural bitumen seeps.' },
+            { text: 'Collect soft bitumen.' },
+            { text: 'Heat over fire to soften.' },
+            { text: 'Apply between bricks as mortar.' },
+            { text: 'Creates permanent, waterproof joints.' }
+        ],
+        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
+    },
+    {
+        id: 'timber',
+        name: 'Timber',
+        stage: 2,
+        icon: '🪵',
+        category: 'resource',
+        subcategory: 'Construction Materials',
+        objective: 'Import cedar from Lebanon for roofs, beams, and boats.',
+        evolution: 'Timber enabled construction of roofs, doors, carts, and boats. Local wood was insufficient, requiring long-distance trade.',
+        requirements: [
+            { name: 'Trade networks', value: 'For importing cedar' },
+            { name: 'Transport', value: 'Boats or carts' }
+        ],
+        steps: [
+            { text: 'Trade for cedar from Lebanon.' },
+            { text: 'Transport via river or land.' },
+            { text: 'Use for roof beams and doors.' },
+            { text: 'Use for cart frames and boat hulls.' },
+            { text: 'Essential for construction and transport.' }
         ],
         videoUrl: 'https://youtu.be/2Y0pM2z1x3k?si=Wheel'
     },
-    // === SKILLS — Metallurgy ===
     {
-        id: 'smelting-copper',
-        name: 'Smelting Copper',
+        id: 'reeds',
+        name: 'Reeds',
         stage: 2,
-        icon: '🔥',
-        category: 'skill',
-        subcategory: 'Metallurgy',
-        objective: 'Extract pure copper metal from crushed ore using a furnace and charcoal.',
-        evolution: 'Smelting was the defining skill of the Chalcolithic, turning rock into useful metal.',
+        icon: '🌾',
+        category: 'resource',
+        subcategory: 'Construction Materials',
+        objective: 'Harvest reeds for pipes, baskets, and thatching.',
+        evolution: 'Reeds were versatile building materials, used for everything from baskets to boat construction.',
         requirements: [
-            { name: 'Crushed ore', value: 'Malachite or similar' },
-            { name: 'Charcoal', value: 'Fuel' },
-            { name: 'Furnace', value: 'Clay structure' }
+            { name: 'Marshland', value: 'Where reeds grow' }
         ],
         steps: [
-            { text: 'Build a clay furnace with a tap hole at the bottom.' },
-            { text: 'Layer charcoal and crushed ore inside the furnace.' },
-            { text: 'Light the fire and use bellows to increase temperature.' },
-            { text: 'The copper melts and flows to the bottom as a liquid pool.' },
-            { text: 'Tap the hole to pour out the molten copper into a mold.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    {
-        id: 'cold-hammering',
-        name: 'Cold Hammering',
-        stage: 2,
-        icon: '🔨',
-        category: 'skill',
-        subcategory: 'Metallurgy',
-        objective: 'Shape metal by hammering it while cold.',
-        evolution: 'Cold hammering hardens copper (work hardening), making tools sharper and more durable.',
-        requirements: [
-            { name: 'Metal piece', value: 'Copper or bronze' },
-            { name: 'Anvil', value: 'Hard surface' }
-        ],
-        steps: [
-            { text: 'Place the metal on the anvil.' },
-            { text: 'Hammer the metal to flatten or shape it.' },
-            { text: 'Hammering increases hardness but makes the metal brittle.' },
-            { text: 'Anneal (heat) the metal to soften it before further shaping.' },
-            { text: 'This cycle of hammering and annealing creates strong tools.' }
-        ],
-        videoUrl: 'https://youtu.be/d4X8yZ1qW2M?si=Metal'
-    },
-    // === SKILLS — Advanced Farming ===
-    {
-        id: 'plowing',
-        name: 'Plowing',
-        stage: 2,
-        icon: '🚜',
-        category: 'skill',
-        subcategory: 'Advanced Farming',
-        objective: 'Plow fields using oxen to prepare soil for planting.',
-        evolution: 'Plowing allowed cultivation of heavy, fertile soils that were previously unfarmable.',
-        requirements: [
-            { name: 'Plow', value: 'Wooden ard' },
-            { name: 'Oxen', value: 'Draft animals' }
-        ],
-        steps: [
-            { text: 'Hitch oxen to the plow.' },
-            { text: 'Guide the plow through the field in straight lines.' },
-            { text: 'The plow turns the soil, bringing nutrients to the surface.' },
-            { text: 'Plant seeds in the furrows.' },
-            { text: 'Plowing dramatically increases crop yields and food security.' }
-        ],
-        videoUrl: 'https://youtu.be/W2KpP51sPeA?si=Farming'
-    },
-    {
-        id: 'irrigation-management',
-        name: 'Irrigation Management',
-        stage: 2,
-        icon: '💧',
-        category: 'skill',
-        subcategory: 'Advanced Farming',
-        objective: 'Build and maintain canals to water crops in dry regions.',
-        evolution: 'Irrigation allowed farming in arid regions, leading to the rise of great river civilizations.',
-        requirements: [
-            { name: 'River access', value: 'Water source' },
-            { name: 'Labor force', value: 'For digging canals' }
-        ],
-        steps: [
-            { text: 'Dig main canals from the river to the fields.' },
-            { text: 'Create smaller ditches to distribute water evenly.' },
-            { text: 'Build sluice gates to control water flow.' },
-            { text: 'Maintain canals by removing silt and weeds.' },
-            { text: 'Irrigation systems require social organization to manage water rights.' }
-        ],
-        videoUrl: 'https://youtu.be/QcwFHG-aH_k?si=Irrigation'
-    },
-    // === SKILLS — Craft Specialization ===
-    {
-        id: 'wheel-throwing',
-        name: 'Wheel Throwing',
-        stage: 2,
-        icon: '🌀',
-        category: 'skill',
-        subcategory: 'Craft Specialization',
-        objective: 'Throw pottery on a fast wheel to create uniform vessels.',
-        evolution: 'Wheel throwing allowed potters to produce vessels faster and with thinner walls.',
-        requirements: [
-            { name: 'Potter\'s wheel', value: 'Fast wheel' },
-            { name: 'Clay', value: 'Prepared clay' }
-        ],
-        steps: [
-            { text: 'Center a ball of clay on the spinning wheel.' },
-            { text: 'Open the center and pull the walls up.' },
-            { text: 'Shape the vessel using wet hands.' },
-            { text: 'Trim the base and add handles if needed.' },
-            { text: 'Wheel-thrown pots are thinner and more symmetrical.' }
-        ],
-        videoUrl: 'https://youtu.be/J8MLpv_utfM?si=PotteryWheel'
-    },
-    {
-        id: 'weaving-wool',
-        name: 'Weaving Wool',
-        stage: 2,
-        icon: '🧶',
-        category: 'skill',
-        subcategory: 'Craft Specialization',
-        objective: 'Weave wool on a loom to create warm textiles.',
-        evolution: 'Wool weaving provided warm, durable clothing suitable for colder climates.',
-        requirements: [
-            { name: 'Wool yarn', value: 'Spun wool' },
-            { name: 'Loom', value: 'Vertical or horizontal' }
-        ],
-        steps: [
-            { text: 'Set up the warp threads on the loom.' },
-            { text: 'Weave the wool weft through the warp.' },
-            { text: 'Beat the weft tightly to create a dense fabric.' },
-            { text: 'Wool cloth is felted slightly during finishing for warmth.' },
-            { text: 'Wool became the primary textile material in many regions.' }
+            { text: 'Harvest reeds from marshlands.' },
+            { text: 'Dry for preservation.' },
+            { text: 'Use for baskets, mats, and thatching.' },
+            { text: 'Use for bellows pipes.' },
+            { text: 'Versatile and abundant resource.' }
         ],
         videoUrl: 'https://youtu.be/b8YHxToejsc?si=Weaving'
-    },
-    // === SKILLS — Social Organization ===
-    {
-        id: 'long-distance-trade',
-        name: 'Long-Distance Trade',
-        stage: 2,
-        icon: '🤝',
-        category: 'skill',
-        subcategory: 'Social Organization',
-        objective: 'Organize trade networks to exchange resources over long distances.',
-        evolution: 'Trade networks connected distant regions, spreading technology and culture.',
-        requirements: [
-            { name: 'Surplus goods', value: 'To trade' },
-            { name: 'Transport', value: 'Carts or boats' }
-        ],
-        steps: [
-            { text: 'Identify resources not available locally (e.g., tin, lapis lazuli).' },
-            { text: 'Organize caravans or ships to transport goods.' },
-            { text: 'Establish trade routes and safe stopping points.' },
-            { text: 'Exchange goods using a system of value or barter.' },
-            { text: 'Trade networks led to the rise of merchant classes and cities.' }
-        ],
-        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
-    },
-    {
-        id: 'record-keeping',
-        name: 'Record Keeping',
-        stage: 2,
-        icon: '📜',
-        category: 'skill',
-        subcategory: 'Social Organization',
-        objective: 'Use clay tokens or proto-writing to track goods and transactions.',
-        evolution: 'Record keeping was the precursor to writing, essential for managing complex economies.',
-        requirements: [
-            { name: 'Clay', value: 'For tokens' },
-            { name: 'Storage', value: 'For records' }
-        ],
-        steps: [
-            { text: 'Create small clay tokens representing different goods (e.g., sheep, grain).' },
-            { text: 'Store tokens in clay envelopes (bullae) to secure transactions.' },
-            { text: 'Press tokens into the clay to create impressions.' },
-            { text: 'This system evolved into cuneiform writing.' },
-            { text: 'Record keeping enabled taxation and state administration.' }
-        ],
-        videoUrl: 'https://youtu.be/cdwOIdQ4VuI?si=SocialCognitive'
-    },
+    }
 ];
 
 // Persisted user data
