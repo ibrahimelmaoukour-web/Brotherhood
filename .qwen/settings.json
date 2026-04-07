@@ -12,7 +12,18 @@
       "Bash(git fetch *)",
       "Bash(git rebase *)",
       "Bash(git stash)",
-      "Bash(start *)"
+      "Bash(start *)",
+      "WebSearch",
+      "WebFetch(www.britannica.com)",
+      "WebFetch(www.stoneagetools.co.uk)",
+      "WebFetch(banotes.org)",
+      "WebFetch(en.wikipedia.org)",
+      "Bash(powershell *)",
+      "Bash(del *)",
+      "Bash(findstr *)",
+      "Bash(py *)",
+      "Bash(node *)",
+      "Bash(echo *)"
     ]
   },
   "$version": 3
